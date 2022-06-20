@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Fontbakery Check Report</title>
+                        <style>
+                            
+            html {
+                font-family: sans-serif;
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+
+            h3 {
+                margin-bottom: 1px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 0.5em
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr {
+                text-align: left;
+            }
+
+            ul {
+                margin-top: 0;
+            }
+
+            .details_item {
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+            }
+
+            .details_indicator {
+                flex: 0 0 5em;
+                font-weight: bold;
+                padding-right: 0.5em;
+                text-align: right;
+            }
+
+            .details_text {
+                flex: 1 0;
+            }
+            
+                        </style>
+                    </head>
+                    <body>
+                    <h1>Fontbakery Technical Report</h1>
+<div>If you think a check is flawed or have an idea for a check, please  file an issue at <a href='https://github.com/googlefonts/fontbakery/issues'>https://github.com/googlefonts/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</div>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✔️ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>73</td>
+                <td>103</td>
+                <td>1235</td>
+                <td>77</td>
+                <td>947</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>4%</td>
+                <td>5%</td>
+                <td>60%</td>
+                <td>4%</td>
+                <td>46%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+<h2>&lt;Section: Google Fonts&gt; 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Checking file is named canonically.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The file 'NotoSerifGurmukhi-MM[wght].ttf' must be renamed to 'NotoSerifGurmukhi[wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The file 'NotoSerifGurmukhi-MM[wght].ttf' must be renamed to 'NotoSerifGurmukhi[wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00AF (MACRON)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
+If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
+GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2017 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Glyphs are similiar to Google Fonts version?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/production_glyphs_similarity&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* eeaddakguru
+* aiaddakguru
+* iibindiguru
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* iiaddakguru
+* ganuktaprehalfguru
+* iguru
+* ganuktaguru
+* ooaddakguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* iibindiguru
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* iiaddakguru
+* ganuktaprehalfguru
+* iguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* aiaddakguru
+* iibindiguru
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* iiaddakguru
+* ganuktaprehalfguru
+* iguru
+* ganuktaguru
+* ooaddakguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* ganuktaprehalfguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* ganuktaprehalfguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* ganuktaprehalfguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* ganuktaprehalfguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* iiaddakguru
+* ganuktaprehalfguru
+* iguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* phuunuktaguru
+* phunuktaguru
+* phanuktaguru
+* ganuktaprehalfguru
+* ganuktaguru and phanuktaprehalfguru</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>Combined length of family and style must not exceed 27 characters.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_and_style_max_length&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi Black' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi ExtraBold' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi ExtraLight' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi Light' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi Medium' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi SemiBold' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Serif Gurmukhi Thin' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<h3>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Universal&gt; 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Checking all files are in the same directory.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/single_directory&gt;</div>
+
+<details><summary>🔥 <strong>Family check</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf'] [code: single-directory]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- zero
+
+- plus
+
+- period
+
+- underscore
+
+- divide
+
+- quotedbl
+
+- one
+
+- parenleft
+
+- quotedblright
+
+- question 
+
+- And 36 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists.
+[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD.guru	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- tippiguru
+
+- adakbindiguru
+
+- uumatraguru
+
+- addakguru
+
+- halantguru
+
+- umatraguru
+
+- oomatraguru
+
+- yakashguru
+
+- eematraguru
+
+- uni0952 
+
+- And 5 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: fontbakery.profiles.gdef&gt; ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️</h2>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+visargaguru (U+0A03) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h3>Check GDEF mark glyph class doesn't have characters that are not marks.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0A03 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: fontbakery.profiles.fvar&gt; 🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩</h2>
+<h3>Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 260. [code: invalid-default-instance-subfamily-nameid:260]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>'Regular' instance has the same coordinates as the default instance; its postScriptNameID should be 6, instead of 269. [code: invalid-default-instance-postscript-nameid:269]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 278. [code: invalid-default-instance-subfamily-nameid:278]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩</h2>
+<h3>Are there any misaligned on-curve points?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_alignment_miss&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
+
+* five.guru (U+0035): X=322.5,Y=-1.5 (should be at baseline 0?)
+
+* eight.guru (U+0038): X=396.0,Y=621.0 (should be at cap-height 622?)
+
+* C (U+0043): X=457.5,Y=0.5 (should be at baseline 0?)
+
+* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
+
+* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
+
+* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
+
+* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
+
+* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
+
+* And 82 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* dollar (U+0024): X=324.0,Y=624.0 (should be at cap-height 622?)
+
+* percent.guru (U+0025): X=266.0,Y=623.0 (should be at cap-height 622?)
+
+* percent.guru (U+0025): X=170.5,Y=623.0 (should be at cap-height 622?)
+
+* question.guru (U+003F): X=211.5,Y=621.0 (should be at cap-height 622?)
+
+* at (U+0040): X=765.0,Y=-2.0 (should be at baseline 0?)
+
+* B (U+0042): X=423.0,Y=620.0 (should be at cap-height 622?)
+
+* J (U+004A): X=117.0,Y=1.0 (should be at baseline 0?)
+
+* J (U+004A): X=317.0,Y=2.0 (should be at baseline 0?)
+
+* Q (U+0051): X=317.0,Y=-1.0 (should be at baseline 0?)
+
+* X (U+0058): X=350.0,Y=621.0 (should be at cap-height 622?) 
+
+* And 46 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* five.guru (U+0035): X=336.5,Y=0.5 (should be at baseline 0?)
+
+* six.guru (U+0036): X=119.0,Y=623.0 (should be at cap-height 622?)
+
+* J (U+004A): X=282.0,Y=-2.0 (should be at baseline 0?)
+
+* R (U+0052): X=433.0,Y=623.0 (should be at cap-height 622?)
+
+* bracketleft.guru (U+005B): X=250.0,Y=-1.0 (should be at baseline 0?)
+
+* bracketright.guru (U+005D): X=162.0,Y=-1.0 (should be at baseline 0?)
+
+* a (U+0061): X=264.5,Y=-1.5 (should be at baseline 0?)
+
+* p (U+0070): X=247.0,Y=1.5 (should be at baseline 0?)
+
+* t (U+0074): X=334.5,Y=-1.0 (should be at baseline 0?)
+
+* sterling (U+00A3): X=68.0,Y=2.0 (should be at baseline 0?) 
+
+* And 38 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* zero.guru (U+0030): X=234.5,Y=621.5 (should be at cap-height 622?)
+
+* five.guru (U+0035): X=335.5,Y=-0.5 (should be at baseline 0?)
+
+* six.guru (U+0036): X=113.5,Y=620.0 (should be at cap-height 622?)
+
+* less.guru (U+003C): X=507.0,Y=623.0 (should be at cap-height 622?)
+
+* greater.guru (U+003E): X=61.0,Y=623.0 (should be at cap-height 622?)
+
+* B (U+0042): X=422.5,Y=623.0 (should be at cap-height 622?)
+
+* J (U+004A): X=120.0,Y=-1.0 (should be at baseline 0?)
+
+* Q (U+0051): X=319.0,Y=-2.0 (should be at baseline 0?)
+
+* Q (U+0051): X=509.0,Y=2.0 (should be at baseline 0?)
+
+* Z (U+005A): X=167.0,Y=623.5 (should be at cap-height 622?) 
+
+* And 43 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* dollar (U+0024): X=442.5,Y=624.0 (should be at cap-height 622?)
+
+* comma.guru (U+002C): X=101.0,Y=-1.0 (should be at baseline 0?)
+
+* five.guru (U+0035): X=422.0,Y=624.0 (should be at cap-height 622?)
+
+* six.guru (U+0036): X=467.0,Y=623.0 (should be at cap-height 622?)
+
+* semicolon.guru (U+003B): X=112.0,Y=-1.0 (should be at baseline 0?)
+
+* A (U+0041): X=310.5,Y=621.5 (should be at cap-height 622?)
+
+* G (U+0047): X=486.5,Y=-1.0 (should be at baseline 0?)
+
+* Y (U+0059): X=137.0,Y=620.0 (should be at cap-height 622?)
+
+* w (U+0077): X=411.0,Y=535.0 (should be at x-height 536?)
+
+* w (U+0077): X=452.0,Y=535.0 (should be at x-height 536?) 
+
+* And 87 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* asterisk.guru (U+002A): X=44.0,Y=624.0 (should be at cap-height 622?)
+
+* asterisk.guru (U+002A): X=392.0,Y=623.0 (should be at cap-height 622?)
+
+* comma.guru (U+002C): X=104.0,Y=-1.0 (should be at baseline 0?)
+
+* six.guru (U+0036): X=475.0,Y=621.0 (should be at cap-height 622?)
+
+* eight.guru (U+0038): X=409.0,Y=623.5 (should be at cap-height 622?)
+
+* semicolon.guru (U+003B): X=114.0,Y=-1.0 (should be at baseline 0?)
+
+* question.guru (U+003F): X=98.0,Y=621.0 (should be at cap-height 622?)
+
+* Y (U+0059): X=503.0,Y=620.0 (should be at cap-height 622?)
+
+* t (U+0074): X=297.0,Y=1.0 (should be at baseline 0?)
+
+* w (U+0077): X=412.0,Y=534.0 (should be at x-height 536?) 
+
+* And 54 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* A (U+0041): X=337.0,Y=620.0 (should be at cap-height 622?)
+
+* D (U+0044): X=594.0,Y=623.0 (should be at cap-height 622?)
+
+* G (U+0047): X=528.0,Y=2.0 (should be at baseline 0?)
+
+* P (U+0050): X=422.0,Y=623.0 (should be at cap-height 622?)
+
+* W (U+0057): X=215.0,Y=621.0 (should be at cap-height 622?)
+
+* W (U+0057): X=886.0,Y=620.0 (should be at cap-height 622?)
+
+* Y (U+0059): X=486.0,Y=624.0 (should be at cap-height 622?)
+
+* a (U+0061): X=183.5,Y=537.0 (should be at x-height 536?)
+
+* a (U+0061): X=271.0,Y=1.5 (should be at baseline 0?)
+
+* b (U+0062): X=215.5,Y=536.5 (should be at x-height 536?) 
+
+* And 79 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
+
+* D (U+0044): X=584.5,Y=621.0 (should be at cap-height 622?)
+
+* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
+
+* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
+
+* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
+
+* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
+
+* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?)
+
+* a (U+0061): X=182.0,Y=536.5 (should be at x-height 536?)
+
+* c (U+0063): X=360.0,Y=535.0 (should be at x-height 536?) 
+
+* And 62 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* five.guru (U+0035): X=338.0,Y=1.5 (should be at baseline 0?)
+
+* seven.guru (U+0037): X=439.0,Y=623.0 (should be at cap-height 622?)
+
+* seven.guru (U+0037): X=165.0,Y=623.0 (should be at cap-height 622?)
+
+* nine.guru (U+0039): X=188.0,Y=621.5 (should be at cap-height 622?)
+
+* M (U+004D): X=689.0,Y=624.0 (should be at cap-height 622?)
+
+* M (U+004D): X=195.0,Y=623.0 (should be at cap-height 622?)
+
+* P (U+0050): X=422.5,Y=620.0 (should be at cap-height 622?)
+
+* Q (U+0051): X=470.0,Y=-1.0 (should be at baseline 0?)
+
+* a (U+0061): X=186.5,Y=538.0 (should be at x-height 536?)
+
+* y (U+0079): X=254.0,Y=-2.0 (should be at baseline 0?) 
+
+* And 39 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
+
+* five.guru (U+0035): X=322.5,Y=-1.5 (should be at baseline 0?)
+
+* eight.guru (U+0038): X=396.0,Y=621.0 (should be at cap-height 622?)
+
+* C (U+0043): X=457.5,Y=0.5 (should be at baseline 0?)
+
+* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
+
+* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
+
+* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
+
+* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
+
+* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
+
+* And 82 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
+<h3>Do outlines contain any jaggy segments?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_jaggy_segments&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* V (U+0056): B&lt;&lt;402.5,227.0&gt;-&lt;406.0,208.0&gt;-&lt;407.0,194.0&gt;&gt;/B&lt;&lt;407.0,194.0&gt;-&lt;409.0,211.0&gt;-&lt;416.0,238.5&gt;&gt; = 10.79545358773178
+
+* aiguru (U+0A10): B&lt;&lt;652.0,706.5&gt;-&lt;675.0,673.0&gt;-&lt;701.0,618.0&gt;&gt;/B&lt;&lt;701.0,618.0&gt;-&lt;678.0,687.0&gt;-&lt;658.5,729.0&gt;&gt; = 6.866429802497619
+
+* aimatraguru (U+0A48): B&lt;&lt;-189.0,706.5&gt;-&lt;-166.0,673.0&gt;-&lt;-140.0,618.0&gt;&gt;/B&lt;&lt;-140.0,618.0&gt;-&lt;-163.0,687.0&gt;-&lt;-182.5,729.0&gt;&gt; = 6.866429802497619
+
+* eogonek (U+0119): B&lt;&lt;282.5,-58.0&gt;-&lt;309.0,-25.0&gt;-&lt;346.0,-9.0&gt;&gt;/B&lt;&lt;346.0,-9.0&gt;-&lt;340.0,-10.0&gt;-&lt;333.5,-10.0&gt;&gt; = 13.922898849188117
+
+* y (U+0079): B&lt;&lt;336.0,187.0&gt;-&lt;342.0,160.0&gt;-&lt;343.0,142.0&gt;&gt;/B&lt;&lt;343.0,142.0&gt;-&lt;346.0,164.0&gt;-&lt;349.5,180.0&gt;&gt; = 10.944996138289511
+
+* yacute (U+00FD): B&lt;&lt;336.0,187.0&gt;-&lt;342.0,160.0&gt;-&lt;343.0,142.0&gt;&gt;/B&lt;&lt;343.0,142.0&gt;-&lt;346.0,164.0&gt;-&lt;349.5,180.0&gt;&gt; = 10.944996138289511
+
+* ycircumflex (U+0177): B&lt;&lt;336.0,187.0&gt;-&lt;342.0,160.0&gt;-&lt;343.0,142.0&gt;&gt;/B&lt;&lt;343.0,142.0&gt;-&lt;346.0,164.0&gt;-&lt;349.5,180.0&gt;&gt; = 10.944996138289511
+
+* ydieresis (U+00FF): B&lt;&lt;336.0,187.0&gt;-&lt;342.0,160.0&gt;-&lt;343.0,142.0&gt;&gt;/B&lt;&lt;343.0,142.0&gt;-&lt;346.0,164.0&gt;-&lt;349.5,180.0&gt;&gt; = 10.944996138289511 
+
+* And ygrave (U+1EF3): B&lt;&lt;336.0,187.0&gt;-&lt;342.0,160.0&gt;-&lt;343.0,142.0&gt;&gt;/B&lt;&lt;343.0,142.0&gt;-&lt;346.0,164.0&gt;-&lt;349.5,180.0&gt;&gt; = 10.944996138289511 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;632.0,707.5&gt;-&lt;655.0,675.0&gt;-&lt;680.0,625.0&gt;&gt;/B&lt;&lt;680.0,625.0&gt;-&lt;655.0,701.0&gt;-&lt;634.0,745.5&gt;&gt; = 8.35656670649712 
+
+* And aimatraguru (U+0A48): B&lt;&lt;-184.0,707.5&gt;-&lt;-161.0,675.0&gt;-&lt;-136.0,625.0&gt;&gt;/B&lt;&lt;-136.0,625.0&gt;-&lt;-161.0,701.0&gt;-&lt;-182.0,745.5&gt;&gt; = 8.35656670649712 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;643.0,707.0&gt;-&lt;666.0,674.0&gt;-&lt;692.0,621.0&gt;&gt;/B&lt;&lt;692.0,621.0&gt;-&lt;668.0,693.0&gt;-&lt;647.5,736.5&gt;&gt; = 7.696051722016556
+
+* aimatraguru (U+0A48): B&lt;&lt;-187.0,707.0&gt;-&lt;-164.0,674.0&gt;-&lt;-138.0,621.0&gt;&gt;/B&lt;&lt;-138.0,621.0&gt;-&lt;-162.0,693.0&gt;-&lt;-182.5,736.5&gt;&gt; = 7.696051722016556
+
+* four.guru (U+0034): B&lt;&lt;283.5,515.5&gt;-&lt;285.0,564.0&gt;-&lt;288.0,611.0&gt;&gt;/B&lt;&lt;288.0,611.0&gt;-&lt;284.0,598.0&gt;-&lt;273.5,577.5&gt;&gt; = 13.450506188746006
+
+* y (U+0079): B&lt;&lt;327.5,180.5&gt;-&lt;335.0,151.0&gt;-&lt;337.0,131.0&gt;&gt;/B&lt;&lt;337.0,131.0&gt;-&lt;340.0,154.0&gt;-&lt;345.5,173.0&gt;&gt; = 13.142001108672124
+
+* yacute (U+00FD): B&lt;&lt;327.5,180.5&gt;-&lt;335.0,151.0&gt;-&lt;337.0,131.0&gt;&gt;/B&lt;&lt;337.0,131.0&gt;-&lt;340.0,154.0&gt;-&lt;345.5,173.0&gt;&gt; = 13.142001108672124
+
+* ycircumflex (U+0177): B&lt;&lt;327.5,180.5&gt;-&lt;335.0,151.0&gt;-&lt;337.0,131.0&gt;&gt;/B&lt;&lt;337.0,131.0&gt;-&lt;340.0,154.0&gt;-&lt;345.5,173.0&gt;&gt; = 13.142001108672124
+
+* ydieresis (U+00FF): B&lt;&lt;327.5,180.5&gt;-&lt;335.0,151.0&gt;-&lt;337.0,131.0&gt;&gt;/B&lt;&lt;337.0,131.0&gt;-&lt;340.0,154.0&gt;-&lt;345.5,173.0&gt;&gt; = 13.142001108672124 
+
+* And ygrave (U+1EF3): B&lt;&lt;327.5,180.5&gt;-&lt;335.0,151.0&gt;-&lt;337.0,131.0&gt;&gt;/B&lt;&lt;337.0,131.0&gt;-&lt;340.0,154.0&gt;-&lt;345.5,173.0&gt;&gt; = 13.142001108672124 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* eth (U+00F0): B&lt;&lt;356.5,474.5&gt;-&lt;399.0,456.0&gt;-&lt;423.0,417.0&gt;&gt;/B&lt;&lt;423.0,417.0&gt;-&lt;401.0,487.0&gt;-&lt;370.5,540.5&gt;&gt; = 14.160313822966648 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;587.5,710.0&gt;-&lt;611.0,681.0&gt;-&lt;635.0,639.0&gt;&gt;/B&lt;&lt;635.0,639.0&gt;-&lt;607.0,729.0&gt;-&lt;582.5,779.5&gt;&gt; = 12.463382925125549 
+
+* And aimatraguru (U+0A48): B&lt;&lt;-174.5,710.0&gt;-&lt;-151.0,681.0&gt;-&lt;-127.0,639.0&gt;&gt;/B&lt;&lt;-127.0,639.0&gt;-&lt;-155.0,729.0&gt;-&lt;-179.5,779.5&gt;&gt; = 12.463382925125549 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;611.0,708.5&gt;-&lt;634.0,678.0&gt;-&lt;659.0,631.0&gt;&gt;/B&lt;&lt;659.0,631.0&gt;-&lt;633.0,714.0&gt;-&lt;610.5,761.0&gt;&gt; = 10.615854561101804 
+
+* And aimatraguru (U+0A48): B&lt;&lt;-180.0,708.5&gt;-&lt;-157.0,678.0&gt;-&lt;-132.0,631.0&gt;&gt;/B&lt;&lt;-132.0,631.0&gt;-&lt;-158.0,714.0&gt;-&lt;-180.5,761.0&gt;&gt; = 10.615854561101804 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;603.0,709.0&gt;-&lt;626.0,679.0&gt;-&lt;651.0,634.0&gt;&gt;/B&lt;&lt;651.0,634.0&gt;-&lt;624.0,720.0&gt;-&lt;601.0,768.0&gt;&gt; = 11.624741281409307 
+
+* And aimatraguru (U+0A48): B&lt;&lt;-178.0,709.0&gt;-&lt;-155.0,679.0&gt;-&lt;-130.0,634.0&gt;&gt;/B&lt;&lt;-130.0,634.0&gt;-&lt;-157.0,720.0&gt;-&lt;-180.0,768.0&gt;&gt; = 11.624741281409307 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* aiguru (U+0A10): B&lt;&lt;572.0,760.0&gt;-&lt;621.0,722.0&gt;-&lt;669.0,628.0&gt;&gt;/B&lt;&lt;669.0,628.0&gt;-&lt;644.0,708.0&gt;-&lt;622.0,754.0&gt;&gt; = 9.69657237082479 
+
+* And aimatraguru (U+0A48): B&lt;&lt;-231.0,760.0&gt;-&lt;-182.0,722.0&gt;-&lt;-134.0,628.0&gt;&gt;/B&lt;&lt;-134.0,628.0&gt;-&lt;-159.0,708.0&gt;-&lt;-181.0,754.0&gt;&gt; = 9.69657237082479 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* eth (U+00F0): B&lt;&lt;385.5,450.5&gt;-&lt;412.0,431.0&gt;-&lt;428.0,400.0&gt;&gt;/B&lt;&lt;428.0,400.0&gt;-&lt;403.0,480.0&gt;-&lt;371.5,537.5&gt;&gt; = 9.945547575071476 
+
+* And sterling (U+00A3): B&lt;&lt;192.0,89.0&gt;-&lt;173.0,58.0&gt;-&lt;145.0,40.0&gt;&gt;/L&lt;&lt;145.0,40.0&gt;--&lt;149.0,42.0&gt;&gt; = 6.170175095029526 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_semi_vertical&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* sterling (U+00A3): L&lt;&lt;454.0,335.0&gt;--&lt;295.0,336.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* sterling (U+00A3): L&lt;&lt;444.0,335.0&gt;--&lt;285.0,336.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* sterling (U+00A3): L&lt;&lt;419.0,336.0&gt;--&lt;262.0,337.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ <strong>fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* exclam.guru (U+0021): L&lt;&lt;123.0,167.0&gt;--&lt;120.0,714.0&gt;&gt;
+
+* exclam.guru (U+0021): L&lt;&lt;149.0,714.0&gt;--&lt;148.0,167.0&gt;&gt;
+
+* exclamdown (U+00A1): L&lt;&lt;123.0,-177.0&gt;--&lt;124.0,370.0&gt;&gt; 
+
+* And exclamdown (U+00A1): L&lt;&lt;149.0,370.0&gt;--&lt;152.0,-177.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+                    </body>
+                </html>
