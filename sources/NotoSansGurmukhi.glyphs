@@ -421,6 +421,10 @@ value = 1;
 {
 name = "Propagate Anchors";
 value = 0;
+},
+{
+name = "Use Typo Metrics";
+value = 1;
 }
 );
 date = "2019-02-21 07:18:04 +0000";
@@ -817,6 +821,7 @@ iconName = Light;
 id = "AD832606-5186-48BF-AC4A-95D20F9D6762";
 metricValues = (
 {
+over = 0;
 pos = 896;
 },
 {
@@ -36050,8 +36055,7 @@ pos = (-214,0);
 hints = (
 {
 horizontal = 1;
-place = (-271, 42);
-place = (-271, 42);
+place = (-271,42);
 type = Stem;
 }
 );
@@ -36150,8 +36154,7 @@ pos = (-247,0);
 hints = (
 {
 horizontal = 1;
-place = (-271, 42);
-place = (-271, 42);
+place = (-271,42);
 type = Stem;
 }
 );
@@ -36250,8 +36253,7 @@ pos = (-204,0);
 hints = (
 {
 horizontal = 1;
-place = (-273, -27);
-place = (-273, -27);
+place = (-273,-27);
 type = Stem;
 }
 );
@@ -119035,12 +119037,7 @@ name = aumatraaddak_tta_fix;
 properties = (
 {
 key = copyrights;
-values = (
-{
-language = dflt;
-value = "Copyright 2019-2022 Google Inc. All Rights Reserved.";
-}
-);
+value = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gurmukhi)";
 },
 {
 key = designers;
@@ -119101,7 +119098,7 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 },
 {
 key = versionString;
-value = "Version 2.002";
+value = "Version 2.003";
 }
 );
 settings = {
@@ -119127,5 +119124,5 @@ HV = "75";
 };
 };
 versionMajor = 2;
-versionMinor = 2;
+versionMinor = 3;
 }
