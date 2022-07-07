@@ -5,364 +5,30 @@ Fontbakery version: 0.8.9
 <details><summary><b>[1] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
-* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf'] [code: single-directory]
-</div></details><br></div></details><details><summary><b>[30] NotoSerifGurmukhi-MM[wght].ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
+* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSerifGurmukhi/googlefonts/ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf'] [code: single-directory]
+</div></details><br></div></details><details><summary><b>[13] NotoSerifGurmukhi-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** The file 'NotoSerifGurmukhi-MM[wght].ttf' must be renamed to 'NotoSerifGurmukhi[wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/gasp">com.google.fonts/check/gasp</a>)</summary><div>
-
-
-* 🔥 **FAIL** Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
-If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
-GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/smart_dropout">com.google.fonts/check/smart_dropout</a>)</summary><div>
-
-
-* 🔥 **FAIL** The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the `gftools fix-nonhinting` script. [code: lacks-smart-dropout]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
-
-
-* 🔥 **FAIL** The file 'NotoSerifGurmukhi-MM[wght].ttf' must be renamed to 'NotoSerifGurmukhi[wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
-
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 260. [code: invalid-default-instance-subfamily-nameid:260]
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its postScriptNameID should be 6, instead of 269. [code: invalid-default-instance-postscript-nameid:269]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
-
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 278. [code: invalid-default-instance-subfamily-nameid:278]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-
-	- zero
-
-	- plus
-
-	- period
-
-	- underscore
-
-	- divide
-
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
-
-	- question 
-
-	- And 36 more.
-
-Use -F or --full-lists to disable shortening of long lists.
- [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-
-	- zero
-
-	- plus
-
-	- period
-
-	- underscore
-
-	- divide
-
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
-
-	- question 
-
-	- And 36 more.
-
-Use -F or --full-lists to disable shortening of long lists.
- [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
-
-
-* ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 visargaguru (U+0A03) [code: spacing-mark-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
-	 U+0A03 [code: non-mark-chars]
-</div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
-
-
-* ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 visargaguru (U+0A03) [code: spacing-mark-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
-	 U+0A03 [code: non-mark-chars]
-</div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-
-	* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
-
-	* five.guru (U+0035): X=322.5,Y=-1.5 (should be at baseline 0?)
-
-	* eight.guru (U+0038): X=396.0,Y=621.0 (should be at cap-height 622?)
-
-	* C (U+0043): X=457.5,Y=0.5 (should be at baseline 0?)
-
-	* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
-
-	* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
-
-	* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
-
-	* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
-
-	* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
-
-	* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
-
-	* And 82 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
-</div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-
-	* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
-
-	* five.guru (U+0035): X=322.5,Y=-1.5 (should be at baseline 0?)
-
-	* eight.guru (U+0038): X=396.0,Y=621.0 (should be at cap-height 622?)
-
-	* C (U+0043): X=457.5,Y=0.5 (should be at baseline 0?)
-
-	* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
-
-	* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
-
-	* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
-
-	* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
-
-	* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
-
-	* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
-
-	* And 82 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
-</div></details><br></div></details><details><summary><b>[17] NotoSerifGurmukhi-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
 	* eeaddakguru
-	* aiaddakguru
-	* iibindiguru
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* iiaddakguru
-	* ganuktaprehalfguru
-	* iguru
 	* ganuktaguru
-	* ooaddakguru and phanuktaprehalfguru
+	* iguru
+	* ooaddakguru
+	* phuunuktaguru
+	* aiaddakguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru
+	* iibindiguru
+	* phanuktaguru and iiaddakguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -379,23 +45,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -498,71 +164,26 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<454.0,335.0>--<295.0,336.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[15] NotoSerifGurmukhi-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSerifGurmukhi-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* iibindiguru
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* iiaddakguru
-	* ganuktaprehalfguru
+	* ganuktaguru
 	* iguru
-	* ganuktaguru and phanuktaprehalfguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru
+	* iibindiguru
+	* phanuktaguru and iiaddakguru
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -572,23 +193,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -671,73 +292,28 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* aiguru (U+0A10): B<<632.0,707.5>-<655.0,675.0>-<680.0,625.0>>/B<<680.0,625.0>-<655.0,701.0>-<634.0,745.5>> = 8.35656670649712 
 
 	* And aimatraguru (U+0A48): B<<-184.0,707.5>-<-161.0,675.0>-<-136.0,625.0>>/B<<-136.0,625.0>-<-161.0,701.0>-<-182.0,745.5>> = 8.35656670649712 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[17] NotoSerifGurmukhi-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSerifGurmukhi-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* aiaddakguru
-	* iibindiguru
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* iiaddakguru
-	* ganuktaprehalfguru
-	* iguru
 	* ganuktaguru
-	* ooaddakguru and phanuktaprehalfguru
+	* iguru
+	* ooaddakguru
+	* phuunuktaguru
+	* aiaddakguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru
+	* iibindiguru
+	* phanuktaguru and iiaddakguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -754,23 +330,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -871,68 +447,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<444.0,335.0>--<285.0,336.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[16] NotoSerifGurmukhi-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifGurmukhi-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* ganuktaprehalfguru
-	* ganuktaguru and phanuktaprehalfguru
+	* ganuktaguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru and phanuktaguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -949,23 +480,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1046,68 +577,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* eth (U+00F0): B<<356.5,474.5>-<399.0,456.0>-<423.0,417.0>>/B<<423.0,417.0>-<401.0,487.0>-<370.5,540.5>> = 14.160313822966648 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSerifGurmukhi-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifGurmukhi-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* ganuktaprehalfguru
-	* ganuktaguru and phanuktaprehalfguru
+	* ganuktaguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru and phanuktaguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1124,23 +610,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1223,68 +709,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* aiguru (U+0A10): B<<587.5,710.0>-<611.0,681.0>-<635.0,639.0>>/B<<635.0,639.0>-<607.0,729.0>-<582.5,779.5>> = 12.463382925125549 
 
 	* And aimatraguru (U+0A48): B<<-174.5,710.0>-<-151.0,681.0>-<-127.0,639.0>>/B<<-127.0,639.0>-<-155.0,729.0>-<-179.5,779.5>> = 12.463382925125549 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSerifGurmukhi-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifGurmukhi-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* ganuktaprehalfguru
-	* ganuktaguru and phanuktaprehalfguru
+	* ganuktaguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru and phanuktaguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1301,23 +742,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1400,68 +841,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* aiguru (U+0A10): B<<611.0,708.5>-<634.0,678.0>-<659.0,631.0>>/B<<659.0,631.0>-<633.0,714.0>-<610.5,761.0>> = 10.615854561101804 
 
 	* And aimatraguru (U+0A48): B<<-180.0,708.5>-<-157.0,678.0>-<-132.0,631.0>>/B<<-132.0,631.0>-<-158.0,714.0>-<-180.5,761.0>> = 10.615854561101804 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSerifGurmukhi-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSerifGurmukhi-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* ganuktaprehalfguru
-	* ganuktaguru and phanuktaprehalfguru
+	* ganuktaguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru and phanuktaguru
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -1471,23 +867,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1570,70 +966,25 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* aiguru (U+0A10): B<<603.0,709.0>-<626.0,679.0>-<651.0,634.0>>/B<<651.0,634.0>-<624.0,720.0>-<601.0,768.0>> = 11.624741281409307 
 
 	* And aimatraguru (U+0A48): B<<-178.0,709.0>-<-155.0,679.0>-<-130.0,634.0>>/B<<-130.0,634.0>-<-157.0,720.0>-<-180.0,768.0>> = 11.624741281409307 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[17] NotoSerifGurmukhi-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSerifGurmukhi-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* iiaddakguru
-	* ganuktaprehalfguru
+	* ganuktaguru
 	* iguru
-	* ganuktaguru and phanuktaprehalfguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru
+	* phanuktaguru and iiaddakguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1650,23 +1001,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1755,68 +1106,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<419.0,336.0>--<262.0,337.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[16] NotoSerifGurmukhi-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifGurmukhi-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifGurmukhi/googlefonts/slim-variable-ttf/NotoSerifGurmukhi-MM[wght].ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Black.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Bold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-ExtraLight.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Light.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Medium.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Regular.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-SemiBold.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/ttf/NotoSerifGurmukhi-Thin.ttf', 'fonts/NotoSerifGurmukhi/googlefonts/variable-ttf/NotoSerifGurmukhi-MM[wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- tippiguru
-
-	- adakbindiguru
-
-	- uumatraguru
-
-	- addakguru
-
-	- halantguru
-
-	- umatraguru
-
-	- oomatraguru
-
-	- yakashguru
-
-	- eematraguru
-
-	- uni0952 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* phuunuktaguru
 	* phunuktaguru
-	* phanuktaguru
-	* ganuktaprehalfguru
-	* ganuktaguru and phanuktaprehalfguru
+	* ganuktaguru
+	* phuunuktaguru
+	* phanuktaprehalfguru
+	* ganuktaprehalfguru and phanuktaguru
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1833,23 +1139,23 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- zero
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
 
 	- plus
 
-	- period
+	- braceleft
 
-	- underscore
+	- three
 
-	- divide
+	- colon
 
-	- quotedbl
-
-	- one
-
-	- parenleft
-
-	- quotedblright
+	- two
 
 	- question 
 
@@ -1916,13 +1222,103 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* exclamdown (U+00A1): L<<123.0,-177.0>--<124.0,370.0>> 
 
 	* And exclamdown (U+00A1): L<<149.0,370.0>--<152.0,-177.0>> [code: found-semi-vertical]
+</div></details><br></div></details><details><summary><b>[9] NotoSerifGurmukhi[wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+
+
+* 💔 **ERROR** Failed with IndexError: list index out of range
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+
+
+* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 749, but got 428 instead. [code: descent]
+</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
+
+
+* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 269. [code: invalid-default-instance-subfamily-nameid:269]
+</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
+
+
+* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
+
+
+* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
+
+	- quoteright
+
+	- uni00A0.1
+
+	- multiply
+
+	- bracketleft
+
+	- plus
+
+	- braceleft
+
+	- three
+
+	- colon
+
+	- two
+
+	- question 
+
+	- And 36 more.
+
+Use -F or --full-lists to disable shortening of long lists.
+ [code: unreachable-glyphs]
+</div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
+
+
+* ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+	 visargaguru (U+0A03) [code: spacing-mark-glyphs]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+</div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
+	 U+0A03 [code: non-mark-chars]
+</div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
+
+
+* ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+
+	* four.guru (U+0034): X=320.0,Y=621.0 (should be at cap-height 622?)
+
+	* five.guru (U+0035): X=322.5,Y=-1.5 (should be at baseline 0?)
+
+	* eight.guru (U+0038): X=396.0,Y=621.0 (should be at cap-height 622?)
+
+	* C (U+0043): X=457.5,Y=0.5 (should be at baseline 0?)
+
+	* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
+
+	* V (U+0056): X=192.0,Y=624.0 (should be at cap-height 622?)
+
+	* V (U+0056): X=520.0,Y=623.0 (should be at cap-height 622?)
+
+	* W (U+0057): X=201.0,Y=624.0 (should be at cap-height 622?)
+
+	* W (U+0057): X=883.0,Y=623.0 (should be at cap-height 622?)
+
+	* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
+
+	* And 82 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><br></div></details>
 ### Summary
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 73 | 103 | 1235 | 77 | 947 | 0 |
-| 0% | 3% | 4% | 51% | 3% | 39% | 0% |
+| 10 | 12 | 97 | 1112 | 62 | 922 | 0 |
+| 0% | 1% | 4% | 50% | 3% | 42% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
