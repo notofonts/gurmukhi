@@ -1,23 +1,10 @@
 {
-.appVersion = "1296";
+.appVersion = "3072";
+DisplayStrings = (
+"/uni25CC"
+);
 copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gurmukhi)";
 customParameters = (
-{
-name = description;
-value = "Designed by Monotype design team.";
-},
-{
-name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
-},
-{
-name = licenseURL;
-value = "https://scripts.sil.org/OFL";
-},
-{
-name = vendorID;
-value = GOOG;
-},
 {
 name = unicodeRanges;
 value = (
@@ -355,20 +342,45 @@ value = (
 );
 },
 {
-name = versionString;
-value = "Version 2.003";
-},
-{
 name = "Has WWS Names";
 value = 1;
+},
+{
+name = "Use Typo Metrics";
+value = 1;
+},
+{
+name = description;
+value = "Designed by Monotype design team.";
+},
+{
+name = license;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
+},
+{
+name = licenseURL;
+value = "https://scripts.sil.org/OFL";
+},
+{
+name = vendorID;
+value = GOOG;
+},
+{
+name = versionString;
+value = "Version 2.003";
 },
 {
 name = trademark;
 value = "Noto is a trademark of Google Inc.";
 },
 {
-name = "Use Typo Metrics";
-value = 1;
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+}
+);
 }
 );
 date = "2017-08-08 20:51:13 +0000";
@@ -29780,9 +29792,19 @@ unicode = 200D;
 },
 {
 glyphname = uni25CC;
-lastChange = "2020-02-26 20:16:57 +0000";
+lastChange = "2022-07-07 15:32:24 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+position = "{432, -1}";
+},
+{
+name = top;
+position = "{428, 624}";
+}
+);
 layerId = "1D4F67F9-897D-45AD-B7F0-CA61A6862C03";
 paths = (
 {
@@ -30061,6 +30083,16 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{441, -18}";
+},
+{
+name = top;
+position = "{390, 630}";
+}
+);
 layerId = "E17BEC9D-CAAD-449F-91D9-03766E30097E";
 paths = (
 {
@@ -30339,6 +30371,16 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{436, -8}";
+},
+{
+name = top;
+position = "{411, 626}";
+}
+);
 layerId = "7DD510ED-E696-4B04-90C7-292E6BE56412";
 paths = (
 {
@@ -33449,10 +33491,6 @@ instances = (
 {
 customParameters = (
 {
-name = weightClass;
-value = 100;
-},
-{
 name = panose;
 value = (
 2,
@@ -33514,10 +33552,6 @@ weightClass = Thin;
 {
 customParameters = (
 {
-name = weightClass;
-value = 200;
-},
-{
 name = panose;
 value = (
 2,
@@ -33575,14 +33609,10 @@ instanceInterpolations = {
 "7DD510ED-E696-4B04-90C7-292E6BE56412" = 0.21212;
 };
 name = ExtraLight;
-weightClass = "Extra Light";
+weightClass = ExtraLight;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -33646,10 +33676,6 @@ weightClass = Light;
 {
 customParameters = (
 {
-name = weightClass;
-value = 400;
-},
-{
 name = panose;
 value = (
 2,
@@ -33709,10 +33735,6 @@ name = Regular;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 500;
-},
 {
 name = panose;
 value = (
@@ -33776,10 +33798,6 @@ weightClass = Medium;
 {
 customParameters = (
 {
-name = weightClass;
-value = 600;
-},
-{
 name = panose;
 value = (
 2,
@@ -33841,10 +33859,6 @@ weightClass = SemiBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -33910,10 +33924,6 @@ weightClass = Bold;
 {
 customParameters = (
 {
-name = weightClass;
-value = 800;
-},
-{
 name = panose;
 value = (
 2,
@@ -33975,10 +33985,6 @@ weightClass = ExtraBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 900;
-},
 {
 name = panose;
 value = (
