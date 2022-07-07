@@ -1,9 +1,6 @@
 {
 .appVersion = "3072";
 .formatVersion = 3;
-DisplayStrings = (
-"ਵ"
-);
 axes = (
 {
 name = Weight;
@@ -38,10 +35,6 @@ name = class6;
 }
 );
 customParameters = (
-{
-name = openTypeOS2VendorID;
-value = GOOG;
-},
 {
 name = glyphOrder;
 value = (
@@ -90230,7 +90223,7 @@ unicode = 8205;
 },
 {
 glyphname = uni25CC;
-lastChange = "2020-02-26 16:12:49 +0000";
+lastChange = "2022-07-07 15:19:09 +0000";
 layers = (
 {
 anchors = (
@@ -90241,6 +90234,10 @@ pos = (323,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (378,0);
 }
 );
 layerId = UUID0;
@@ -90393,6 +90390,10 @@ pos = (349,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (353,0);
 }
 );
 layerId = "397B4BA1-1DC1-423A-91EE-9CBCF179C3D0";
@@ -90545,6 +90546,10 @@ pos = (310,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (400,0);
 }
 );
 layerId = "AD832606-5186-48BF-AC4A-95D20F9D6762";
@@ -90697,6 +90702,10 @@ pos = (371,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (331,0);
 }
 );
 layerId = "F506C8C4-888D-41F0-91C9-49F2C7D2D9C4";
@@ -90849,6 +90858,10 @@ pos = (296,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (379,0);
 }
 );
 layerId = "C86CFEE0-D181-456A-AA08-2B118FAF25CE";
@@ -91001,6 +91014,10 @@ pos = (358,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (322,0);
 }
 );
 layerId = "CBEC276F-1F9B-404D-BC73-2CB92054D876";
@@ -91153,6 +91170,10 @@ pos = (320,622);
 {
 name = Anchor4;
 pos = (283,0);
+},
+{
+name = Anchor6;
+pos = (359,0);
 }
 );
 layerId = "04B5D069-3E89-43E6-853C-EFCF876AEDC5";
@@ -96457,6 +96478,10 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 {
 key = versionString;
 value = "Version 2.003";
+},
+{
+key = vendorID;
+value = GOOG;
 }
 );
 settings = {
