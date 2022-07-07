@@ -356,7 +356,7 @@ value = (
 },
 {
 name = versionString;
-value = "Version 2.3";
+value = "Version 2.003";
 },
 {
 name = "Has WWS Names";
