@@ -7,32 +7,32 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "dhaguru=0+593|.notdef=1+600|dhaguru=2+593|rasubscriptguru=2+0|.notdef=5+600|dhaguru=6+593|hasubscriptguru=6+0|.notdef=9+600|dhaguru=10+593|vasubscriptguru=10+0|.notdef=13+600|dhaguru=14+593|yapostformguru=14+666|.notdef=17+600|dhaprehalfguru=18+593|gaguru=20+750|.notdef=21+600|dhaprehalfguru=22+593|caguru=24+657|.notdef=25+600|dhaprehalfguru=26+593|ttaguru=28+575|.notdef=29+600|dhaprehalfguru=30+593|tthaguru=32+660|.notdef=33+600|dhaprehalfguru=34+593|taguru=36+542|.notdef=37+600|dhaprehalfguru=38+593|thaguru=40+598|.notdef=41+600|dhaprehalfguru=42+593|daguru=44+617|.notdef=45+600|dhaprehalfguru=46+593|naguru=48+648|.notdef=49+600|dhaprehalfguru=50+593|paguru=52+593|.notdef=53+600|dhaprehalfguru=54+593|maguru=56+596|.notdef=57+600|dhaprehalfguru=58+593|laguru=60+674",
-            "input": "ਧ\tਧ੍ਰ\tਧ੍ਹ\tਧ੍ਵ\tਧ੍ਯ\tਧ੍ਗ\tਧ੍ਚ\tਧ੍ਟ\tਧ੍ਠ\tਧ੍ਤ\tਧ੍ਥ\tਧ੍ਦ\tਧ੍ਨ\tਧ੍ਪ\tਧ੍ਮ\tਧ੍ਲ",
+            "expectation": "dhaguru=0+593|space=1+260|dhaguru=2+593|rasubscriptguru=2+0|space=5+260|dhaguru=6+593|hasubscriptguru=6+0|space=9+260|dhaguru=10+593|vasubscriptguru=10+0|space=13+260|dhaguru=14+593|yapostformguru=14+666|space=17+260|dhaguru=18+593|halantguru=18+0|gaguru=20+750|space=21+260|dhaguru=22+593|halantguru=22+0|caguru=24+657|space=25+260|dhaguru=26+593|halantguru=26+0|ttaguru=28+575|space=29+260|dhaguru=30+593|halantguru=30+0|tthaguru=32+660|space=33+260|dhaguru=34+593|halantguru=34+0|taguru=36+542|space=37+260|dhaguru=38+593|halantguru=38+0|thaguru=40+598|space=41+260|dhaguru=42+593|halantguru=42+0|daguru=44+617|space=45+260|dhaguru=46+593|halantguru=46+0|naguru=48+648|space=49+260|dhaguru=50+593|halantguru=50+0|paguru=52+593|space=53+260|dhaguru=54+593|halantguru=54+0|maguru=56+596|space=57+260|dhaguru=58+593|halantguru=58+0|laguru=60+674",
+            "input": "ਧ ਧ੍ਰ ਧ੍ਹ ਧ੍ਵ ਧ੍ਯ ਧ੍ਗ ਧ੍ਚ ਧ੍ਟ ਧ੍ਠ ਧ੍ਤ ਧ੍ਥ ਧ੍ਦ ਧ੍ਨ ਧ੍ਪ ਧ੍ਮ ਧ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "nnaguru=0+622|.notdef=1+600|nnaguru=2+622|rasubscript1guru=2+0|.notdef=5+600|nnaguru=6+622|hasubscript1guru=6+0|.notdef=9+600|nnaguru=10+622|vasubscript1guru=10+0|.notdef=13+600|nnaguru=14+622|yapostformguru=14+666|.notdef=17+600|nnaprehalfguru=18+622|gaguru=20+750|.notdef=21+600|nnaprehalfguru=22+622|caguru=24+657|.notdef=25+600|nnaprehalfguru=26+622|ttaguru=28+575|.notdef=29+600|nnaprehalfguru=30+622|tthaguru=32+660|.notdef=33+600|nnaprehalfguru=34+622|taguru=36+542|.notdef=37+600|nnaprehalfguru=38+622|thaguru=40+598|.notdef=41+600|nnaprehalfguru=42+622|daguru=44+617|.notdef=45+600|nnaprehalfguru=46+622|naguru=48+648|.notdef=49+600|nnaprehalfguru=50+622|paguru=52+593|.notdef=53+600|nnaprehalfguru=54+622|maguru=56+596|.notdef=57+600|nnaprehalfguru=58+622|laguru=60+674",
-            "input": "ਣ\tਣ੍ਰ\tਣ੍ਹ\tਣ੍ਵ\tਣ੍ਯ\tਣ੍ਗ\tਣ੍ਚ\tਣ੍ਟ\tਣ੍ਠ\tਣ੍ਤ\tਣ੍ਥ\tਣ੍ਦ\tਣ੍ਨ\tਣ੍ਪ\tਣ੍ਮ\tਣ੍ਲ",
+            "expectation": "nnaguru=0+622|space=1+260|nnaguru=2+622|rasubscript1guru=2+0|space=5+260|nnaguru=6+622|hasubscript1guru=6+0|space=9+260|nnaguru=10+622|vasubscript1guru=10+0|space=13+260|nnaguru=14+622|yapostformguru=14+666|space=17+260|nnaguru=18+622|halantguru=18@-117,0+0|gaguru=20+750|space=21+260|nnaguru=22+622|halantguru=22@-117,0+0|caguru=24+657|space=25+260|nnaguru=26+622|halantguru=26@-117,0+0|ttaguru=28+575|space=29+260|nnaguru=30+622|halantguru=30@-117,0+0|tthaguru=32+660|space=33+260|nnaguru=34+622|halantguru=34@-117,0+0|taguru=36+542|space=37+260|nnaguru=38+622|halantguru=38@-117,0+0|thaguru=40+598|space=41+260|nnaguru=42+622|halantguru=42@-117,0+0|daguru=44+617|space=45+260|nnaguru=46+622|halantguru=46@-117,0+0|naguru=48+648|space=49+260|nnaguru=50+622|halantguru=50@-117,0+0|paguru=52+593|space=53+260|nnaguru=54+622|halantguru=54@-117,0+0|maguru=56+596|space=57+260|nnaguru=58+622|halantguru=58@-117,0+0|laguru=60+674",
+            "input": "ਣ ਣ੍ਰ ਣ੍ਹ ਣ੍ਵ ਣ੍ਯ ਣ੍ਗ ਣ੍ਚ ਣ੍ਟ ਣ੍ਠ ਣ੍ਤ ਣ੍ਥ ਣ੍ਦ ਣ੍ਨ ਣ੍ਪ ਣ੍ਮ ਣ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "bhaguru=0+577|.notdef=1+600|bhaguru=2+577|rasubscript1guru=2@-48,0+0|.notdef=5+600|bhaguru=6+577|hasubscript1guru=6@-48,0+0|.notdef=9+600|bhaguru=10+577|vasubscript1guru=10@-48,0+0|.notdef=13+600|bhaguru=14+577|yapostformguru=14+666|.notdef=17+600|bhaprehalfguru=18+577|gaguru=20+750|.notdef=21+600|bhaprehalfguru=22+577|caguru=24+657|.notdef=25+600|bhaprehalfguru=26+577|ttaguru=28+575|.notdef=29+600|bhaprehalfguru=30+577|tthaguru=32+660|.notdef=33+600|bhaprehalfguru=34+577|taguru=36+542|.notdef=37+600|bhaprehalfguru=38+577|thaguru=40+598|.notdef=41+600|bhaprehalfguru=42+577|daguru=44+617|.notdef=45+600|bhaprehalfguru=46+577|naguru=48+648|.notdef=49+600|bhaprehalfguru=50+577|paguru=52+593|.notdef=53+600|bhaprehalfguru=54+577|maguru=56+596|.notdef=57+600|bhaprehalfguru=58+577|laguru=60+674",
-            "input": "ਭ\tਭ੍ਰ\tਭ੍ਹ\tਭ੍ਵ\tਭ੍ਯ\tਭ੍ਗ\tਭ੍ਚ\tਭ੍ਟ\tਭ੍ਠ\tਭ੍ਤ\tਭ੍ਥ\tਭ੍ਦ\tਭ੍ਨ\tਭ੍ਪ\tਭ੍ਮ\tਭ੍ਲ",
+            "expectation": "bhaguru=0+577|space=1+260|bhaguru=2+577|rasubscript1guru=2@-48,0+0|space=5+260|bhaguru=6+577|hasubscript1guru=6@-48,0+0|space=9+260|bhaguru=10+577|vasubscript1guru=10@-48,0+0|space=13+260|bhaguru=14+577|yapostformguru=14+666|space=17+260|bhaguru=18+577|halantguru=18@-129,0+0|gaguru=20+750|space=21+260|bhaguru=22+577|halantguru=22@-129,0+0|caguru=24+657|space=25+260|bhaguru=26+577|halantguru=26@-129,0+0|ttaguru=28+575|space=29+260|bhaguru=30+577|halantguru=30@-129,0+0|tthaguru=32+660|space=33+260|bhaguru=34+577|halantguru=34@-129,0+0|taguru=36+542|space=37+260|bhaguru=38+577|halantguru=38@-129,0+0|thaguru=40+598|space=41+260|bhaguru=42+577|halantguru=42@-129,0+0|daguru=44+617|space=45+260|bhaguru=46+577|halantguru=46@-129,0+0|naguru=48+648|space=49+260|bhaguru=50+577|halantguru=50@-129,0+0|paguru=52+593|space=53+260|bhaguru=54+577|halantguru=54@-129,0+0|maguru=56+596|space=57+260|bhaguru=58+577|halantguru=58@-129,0+0|laguru=60+674",
+            "input": "ਭ ਭ੍ਰ ਭ੍ਹ ਭ੍ਵ ਭ੍ਯ ਭ੍ਗ ਭ੍ਚ ਭ੍ਟ ਭ੍ਠ ਭ੍ਤ ਭ੍ਥ ਭ੍ਦ ਭ੍ਨ ਭ੍ਪ ਭ੍ਮ ਭ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "saguru=0+596|.notdef=1+600|saguru=2+596|rasubscriptguru=2+0|.notdef=5+600|saguru=6+596|hasubscriptguru=6+0|.notdef=9+600|saguru=10+596|vasubscriptguru=10+0|.notdef=13+600|saguru=14+596|yapostformguru=14+666|.notdef=17+600|saprehalfguru=18+596|gaguru=20+750|.notdef=21+600|saprehalfguru=22+596|caguru=24+657|.notdef=25+600|saprehalfguru=26+596|ttaguru=28+575|.notdef=29+600|saprehalfguru=30+596|tthaguru=32+660|.notdef=33+600|saprehalfguru=34+596|taguru=36+542|.notdef=37+600|saprehalfguru=38+596|thaguru=40+598|.notdef=41+600|saprehalfguru=42+596|daguru=44+617|.notdef=45+600|saprehalfguru=46+596|naguru=48+648|.notdef=49+600|saprehalfguru=50+596|paguru=52+593|.notdef=53+600|saprehalfguru=54+596|maguru=56+596|.notdef=57+600|saprehalfguru=58+596|laguru=60+674",
-            "input": "ਸ\tਸ੍ਰ\tਸ੍ਹ\tਸ੍ਵ\tਸ੍ਯ\tਸ੍ਗ\tਸ੍ਚ\tਸ੍ਟ\tਸ੍ਠ\tਸ੍ਤ\tਸ੍ਥ\tਸ੍ਦ\tਸ੍ਨ\tਸ੍ਪ\tਸ੍ਮ\tਸ੍ਲ",
+            "expectation": "saguru=0+596|space=1+260|saguru=2+596|rasubscriptguru=2+0|space=5+260|saguru=6+596|hasubscriptguru=6+0|space=9+260|saguru=10+596|vasubscriptguru=10+0|space=13+260|saguru=14+596|yapostformguru=14+666|space=17+260|saguru=18+596|halantguru=18+0|gaguru=20+750|space=21+260|saguru=22+596|halantguru=22+0|caguru=24+657|space=25+260|saguru=26+596|halantguru=26+0|ttaguru=28+575|space=29+260|saguru=30+596|halantguru=30+0|tthaguru=32+660|space=33+260|saguru=34+596|halantguru=34+0|taguru=36+542|space=37+260|saguru=38+596|halantguru=38+0|thaguru=40+598|space=41+260|saguru=42+596|halantguru=42+0|daguru=44+617|space=45+260|saguru=46+596|halantguru=46+0|naguru=48+648|space=49+260|saguru=50+596|halantguru=50+0|paguru=52+593|space=53+260|saguru=54+596|halantguru=54+0|maguru=56+596|space=57+260|saguru=58+596|halantguru=58+0|laguru=60+674",
+            "input": "ਸ ਸ੍ਰ ਸ੍ਹ ਸ੍ਵ ਸ੍ਯ ਸ੍ਗ ਸ੍ਚ ਸ੍ਟ ਸ੍ਠ ਸ੍ਤ ਸ੍ਥ ਸ੍ਦ ਸ੍ਨ ਸ੍ਪ ਸ੍ਮ ਸ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "jaguru=0+612|.notdef=1+600|jaguru=2+612|rasubscriptguru=2+0|.notdef=5+600|jaguru=6+612|hasubscriptguru=6+0|.notdef=9+600|jaguru=10+612|vasubscriptguru=10+0|.notdef=13+600|jaguru=14+612|yapostformguru=14+666|.notdef=17+600|japrehalfguru=18+612|gaguru=20+750|.notdef=21+600|japrehalfguru=22+612|caguru=24+657|.notdef=25+600|japrehalfguru=26+612|ttaguru=28+575|.notdef=29+600|japrehalfguru=30+612|tthaguru=32+660|.notdef=33+600|japrehalfguru=34+612|taguru=36+542|.notdef=37+600|japrehalfguru=38+612|thaguru=40+598|.notdef=41+600|japrehalfguru=42+612|daguru=44+617|.notdef=45+600|japrehalfguru=46+612|naguru=48+648|.notdef=49+600|japrehalfguru=50+612|paguru=52+593|.notdef=53+600|japrehalfguru=54+612|maguru=56+596|.notdef=57+600|japrehalfguru=58+612|laguru=60+674",
-            "input": "ਜ\tਜ੍ਰ\tਜ੍ਹ\tਜ੍ਵ\tਜ੍ਯ\tਜ੍ਗ\tਜ੍ਚ\tਜ੍ਟ\tਜ੍ਠ\tਜ੍ਤ\tਜ੍ਥ\tਜ੍ਦ\tਜ੍ਨ\tਜ੍ਪ\tਜ੍ਮ\tਜ੍ਲ",
+            "expectation": "jaguru=0+612|space=1+260|jaguru=2+612|rasubscriptguru=2+0|space=5+260|jaguru=6+612|hasubscriptguru=6+0|space=9+260|jaguru=10+612|vasubscriptguru=10+0|space=13+260|jaguru=14+612|yapostformguru=14+666|space=17+260|jaguru=18+612|halantguru=18+0|gaguru=20+750|space=21+260|jaguru=22+612|halantguru=22+0|caguru=24+657|space=25+260|jaguru=26+612|halantguru=26+0|ttaguru=28+575|space=29+260|jaguru=30+612|halantguru=30+0|tthaguru=32+660|space=33+260|jaguru=34+612|halantguru=34+0|taguru=36+542|space=37+260|jaguru=38+612|halantguru=38+0|thaguru=40+598|space=41+260|jaguru=42+612|halantguru=42+0|daguru=44+617|space=45+260|jaguru=46+612|halantguru=46+0|naguru=48+648|space=49+260|jaguru=50+612|halantguru=50+0|paguru=52+593|space=53+260|jaguru=54+612|halantguru=54+0|maguru=56+596|space=57+260|jaguru=58+612|halantguru=58+0|laguru=60+674",
+            "input": "ਜ ਜ੍ਰ ਜ੍ਹ ਜ੍ਵ ਜ੍ਯ ਜ੍ਗ ਜ੍ਚ ਜ੍ਟ ਜ੍ਠ ਜ੍ਤ ਜ੍ਥ ਜ੍ਦ ਜ੍ਨ ਜ੍ਪ ਜ੍ਮ ਜ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
@@ -43,56 +43,56 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ghaguru=0+757|.notdef=1+600|ghaguru=2+757|rasubscriptguru=2+0|.notdef=5+600|ghaguru=6+757|hasubscriptguru=6+0|.notdef=9+600|ghaguru=10+757|vasubscriptguru=10+0|.notdef=13+600|ghaguru=14+757|yapostformguru=14+666|.notdef=17+600|ghaprehalfguru=18+757|gaguru=20+750|.notdef=21+600|ghaprehalfguru=22+757|caguru=24+657|.notdef=25+600|ghaprehalfguru=26+757|ttaguru=28+575|.notdef=29+600|ghaprehalfguru=30+757|tthaguru=32+660|.notdef=33+600|ghaprehalfguru=34+757|taguru=36+542|.notdef=37+600|ghaprehalfguru=38+757|thaguru=40+598|.notdef=41+600|ghaprehalfguru=42+757|daguru=44+617|.notdef=45+600|ghaprehalfguru=46+757|naguru=48+648|.notdef=49+600|ghaprehalfguru=50+757|paguru=52+593|.notdef=53+600|ghaprehalfguru=54+757|maguru=56+596|.notdef=57+600|ghaprehalfguru=58+757|laguru=60+674",
-            "input": "ਘ\tਘ੍ਰ\tਘ੍ਹ\tਘ੍ਵ\tਘ੍ਯ\tਘ੍ਗ\tਘ੍ਚ\tਘ੍ਟ\tਘ੍ਠ\tਘ੍ਤ\tਘ੍ਥ\tਘ੍ਦ\tਘ੍ਨ\tਘ੍ਪ\tਘ੍ਮ\tਘ੍ਲ",
+            "expectation": "ghaguru=0+757|space=1+260|ghaguru=2+757|rasubscriptguru=2+0|space=5+260|ghaguru=6+757|hasubscriptguru=6+0|space=9+260|ghaguru=10+757|vasubscriptguru=10+0|space=13+260|ghaguru=14+757|yapostformguru=14+666|space=17+260|ghaguru=18+757|halantguru=18+0|gaguru=20+750|space=21+260|ghaguru=22+757|halantguru=22+0|caguru=24+657|space=25+260|ghaguru=26+757|halantguru=26+0|ttaguru=28+575|space=29+260|ghaguru=30+757|halantguru=30+0|tthaguru=32+660|space=33+260|ghaguru=34+757|halantguru=34+0|taguru=36+542|space=37+260|ghaguru=38+757|halantguru=38+0|thaguru=40+598|space=41+260|ghaguru=42+757|halantguru=42+0|daguru=44+617|space=45+260|ghaguru=46+757|halantguru=46+0|naguru=48+648|space=49+260|ghaguru=50+757|halantguru=50+0|paguru=52+593|space=53+260|ghaguru=54+757|halantguru=54+0|maguru=56+596|space=57+260|ghaguru=58+757|halantguru=58+0|laguru=60+674",
+            "input": "ਘ ਘ੍ਰ ਘ੍ਹ ਘ੍ਵ ਘ੍ਯ ਘ੍ਗ ਘ੍ਚ ਘ੍ਟ ਘ੍ਠ ਘ੍ਤ ਘ੍ਥ ਘ੍ਦ ਘ੍ਨ ਘ੍ਪ ਘ੍ਮ ਘ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ddaguru=0+597|.notdef=1+600|ddaguru=2+597|rasubscript1guru=2@-61,0+0|.notdef=5+600|ddaguru=6+597|hasubscript1guru=6@-61,0+0|.notdef=9+600|ddaguru=10+597|vasubscript1guru=10@-61,0+0|.notdef=13+600|ddaguru=14+597|yapostformguru=14+666|.notdef=17+600|ddaprehalfguru=18+597|gaguru=20+750|.notdef=21+600|ddaprehalfguru=22+597|caguru=24+657|.notdef=25+600|ddaprehalfguru=26+597|ttaguru=28+575|.notdef=29+600|ddaprehalfguru=30+597|tthaguru=32+660|.notdef=33+600|ddaprehalfguru=34+597|taguru=36+542|.notdef=37+600|ddaprehalfguru=38+597|thaguru=40+598|.notdef=41+600|ddaprehalfguru=42+597|daguru=44+617|.notdef=45+600|ddaprehalfguru=46+597|naguru=48+648|.notdef=49+600|ddaprehalfguru=50+597|paguru=52+593|.notdef=53+600|ddaprehalfguru=54+597|maguru=56+596|.notdef=57+600|ddaprehalfguru=58+597|laguru=60+674",
-            "input": "ਡ\tਡ੍ਰ\tਡ੍ਹ\tਡ੍ਵ\tਡ੍ਯ\tਡ੍ਗ\tਡ੍ਚ\tਡ੍ਟ\tਡ੍ਠ\tਡ੍ਤ\tਡ੍ਥ\tਡ੍ਦ\tਡ੍ਨ\tਡ੍ਪ\tਡ੍ਮ\tਡ੍ਲ",
+            "expectation": "ddaguru=0+597|space=1+260|ddaguru=2+597|rasubscript1guru=2@-61,0+0|space=5+260|ddaguru=6+597|hasubscript1guru=6@-61,0+0|space=9+260|ddaguru=10+597|vasubscript1guru=10@-61,0+0|space=13+260|ddaguru=14+597|yapostformguru=14+666|space=17+260|ddaguru=18+597|halantguru=18@-147,0+0|gaguru=20+750|space=21+260|ddaguru=22+597|halantguru=22@-147,0+0|caguru=24+657|space=25+260|ddaguru=26+597|halantguru=26@-147,0+0|ttaguru=28+575|space=29+260|ddaguru=30+597|halantguru=30@-147,0+0|tthaguru=32+660|space=33+260|ddaguru=34+597|halantguru=34@-147,0+0|taguru=36+542|space=37+260|ddaguru=38+597|halantguru=38@-147,0+0|thaguru=40+598|space=41+260|ddaguru=42+597|halantguru=42@-147,0+0|daguru=44+617|space=45+260|ddaguru=46+597|halantguru=46@-147,0+0|naguru=48+648|space=49+260|ddaguru=50+597|halantguru=50@-147,0+0|paguru=52+593|space=53+260|ddaguru=54+597|halantguru=54@-147,0+0|maguru=56+596|space=57+260|ddaguru=58+597|halantguru=58@-147,0+0|laguru=60+674",
+            "input": "ਡ ਡ੍ਰ ਡ੍ਹ ਡ੍ਵ ਡ੍ਯ ਡ੍ਗ ਡ੍ਚ ਡ੍ਟ ਡ੍ਠ ਡ੍ਤ ਡ੍ਥ ਡ੍ਦ ਡ੍ਨ ਡ੍ਪ ਡ੍ਮ ਡ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "space=0+260|kaguru=1+622|uni25CC=2+566|rasubscriptguru=2+0|space=5+260",
+            "expectation": "space=0+260|kaguru=1+622|uni25CC=2+566|rasubscriptguru=2@-18,0+0|space=5+260",
             "input": " ਕ◌੍ਰ ",
             "note": "Issue #387",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "chaguru=0+634|.notdef=1+600|chaguru=2+634|rasubscript1guru=2@-14,0+0|.notdef=5+600|chaguru=6+634|hasubscript1guru=6@-14,0+0|.notdef=9+600|chaguru=10+634|vasubscript1guru=10@-14,0+0|.notdef=13+600|chaguru=14+634|yapostformguru=14+666|.notdef=17+600|chaprehalfguru=18+634|gaguru=20+750|.notdef=21+600|chaprehalfguru=22+634|caguru=24+657|.notdef=25+600|chaprehalfguru=26+634|ttaguru=28+575|.notdef=29+600|chaprehalfguru=30+634|tthaguru=32+660|.notdef=33+600|chaprehalfguru=34+634|taguru=36+542|.notdef=37+600|chaprehalfguru=38+634|thaguru=40+598|.notdef=41+600|chaprehalfguru=42+634|daguru=44+617|.notdef=45+600|chaprehalfguru=46+634|naguru=48+648|.notdef=49+600|chaprehalfguru=50+634|paguru=52+593|.notdef=53+600|chaprehalfguru=54+634|maguru=56+596|.notdef=57+600|chaprehalfguru=58+634|laguru=60+674",
-            "input": "ਛ\tਛ੍ਰ\tਛ੍ਹ\tਛ੍ਵ\tਛ੍ਯ\tਛ੍ਗ\tਛ੍ਚ\tਛ੍ਟ\tਛ੍ਠ\tਛ੍ਤ\tਛ੍ਥ\tਛ੍ਦ\tਛ੍ਨ\tਛ੍ਪ\tਛ੍ਮ\tਛ੍ਲ",
+            "expectation": "chaguru=0+634|space=1+260|chaguru=2+634|rasubscript1guru=2@-14,0+0|space=5+260|chaguru=6+634|hasubscript1guru=6@-14,0+0|space=9+260|chaguru=10+634|vasubscript1guru=10@-14,0+0|space=13+260|chaguru=14+634|yapostformguru=14+666|space=17+260|chaguru=18+634|halantguru=18@-58,0+0|gaguru=20+750|space=21+260|chaguru=22+634|halantguru=22@-58,0+0|caguru=24+657|space=25+260|chaguru=26+634|halantguru=26@-58,0+0|ttaguru=28+575|space=29+260|chaguru=30+634|halantguru=30@-58,0+0|tthaguru=32+660|space=33+260|chaguru=34+634|halantguru=34@-58,0+0|taguru=36+542|space=37+260|chaguru=38+634|halantguru=38@-58,0+0|thaguru=40+598|space=41+260|chaguru=42+634|halantguru=42@-58,0+0|daguru=44+617|space=45+260|chaguru=46+634|halantguru=46@-58,0+0|naguru=48+648|space=49+260|chaguru=50+634|halantguru=50@-58,0+0|paguru=52+593|space=53+260|chaguru=54+634|halantguru=54@-58,0+0|maguru=56+596|space=57+260|chaguru=58+634|halantguru=58@-58,0+0|laguru=60+674",
+            "input": "ਛ ਛ੍ਰ ਛ੍ਹ ਛ੍ਵ ਛ੍ਯ ਛ੍ਗ ਛ੍ਚ ਛ੍ਟ ਛ੍ਠ ਛ੍ਤ ਛ੍ਥ ਛ੍ਦ ਛ੍ਨ ਛ੍ਪ ਛ੍ਮ ਛ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "thaguru=0+598|.notdef=1+600|thaguru=2+598|rasubscriptguru=2+0|.notdef=5+600|thaguru=6+598|hasubscriptguru=6+0|.notdef=9+600|thaguru=10+598|vasubscriptguru=10+0|.notdef=13+600|thaguru=14+598|yapostformguru=14+666|.notdef=17+600|thaprehalfguru=18+598|gaguru=20+750|.notdef=21+600|thaprehalfguru=22+598|caguru=24+657|.notdef=25+600|thaprehalfguru=26+598|ttaguru=28+575|.notdef=29+600|thaprehalfguru=30+598|tthaguru=32+660|.notdef=33+600|thaprehalfguru=34+598|taguru=36+542|.notdef=37+600|thaprehalfguru=38+598|thaguru=40+598|.notdef=41+600|thaprehalfguru=42+598|daguru=44+617|.notdef=45+600|thaprehalfguru=46+598|naguru=48+648|.notdef=49+600|thaprehalfguru=50+598|paguru=52+593|.notdef=53+600|thaprehalfguru=54+598|maguru=56+596|.notdef=57+600|thaprehalfguru=58+598|laguru=60+674",
-            "input": "ਥ\tਥ੍ਰ\tਥ੍ਹ\tਥ੍ਵ\tਥ੍ਯ\tਥ੍ਗ\tਥ੍ਚ\tਥ੍ਟ\tਥ੍ਠ\tਥ੍ਤ\tਥ੍ਥ\tਥ੍ਦ\tਥ੍ਨ\tਥ੍ਪ\tਥ੍ਮ\tਥ੍ਲ",
+            "expectation": "thaguru=0+598|space=1+260|thaguru=2+598|rasubscriptguru=2+0|space=5+260|thaguru=6+598|hasubscriptguru=6+0|space=9+260|thaguru=10+598|vasubscriptguru=10+0|space=13+260|thaguru=14+598|yapostformguru=14+666|space=17+260|thaguru=18+598|halantguru=18+0|gaguru=20+750|space=21+260|thaguru=22+598|halantguru=22+0|caguru=24+657|space=25+260|thaguru=26+598|halantguru=26+0|ttaguru=28+575|space=29+260|thaguru=30+598|halantguru=30+0|tthaguru=32+660|space=33+260|thaguru=34+598|halantguru=34+0|taguru=36+542|space=37+260|thaguru=38+598|halantguru=38+0|thaguru=40+598|space=41+260|thaguru=42+598|halantguru=42+0|daguru=44+617|space=45+260|thaguru=46+598|halantguru=46+0|naguru=48+648|space=49+260|thaguru=50+598|halantguru=50+0|paguru=52+593|space=53+260|thaguru=54+598|halantguru=54+0|maguru=56+596|space=57+260|thaguru=58+598|halantguru=58+0|laguru=60+674",
+            "input": "ਥ ਥ੍ਰ ਥ੍ਹ ਥ੍ਵ ਥ੍ਯ ਥ੍ਗ ਥ੍ਚ ਥ੍ਟ ਥ੍ਠ ਥ੍ਤ ਥ੍ਥ ਥ੍ਦ ਥ੍ਨ ਥ੍ਪ ਥ੍ਮ ਥ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "kaguru=0+622|.notdef=1+600|karaguru=2+622|.notdef=5+600|kaguru=6+622|hasubscriptguru=6@36,0+0|.notdef=9+600|kaguru=10+622|vasubscriptguru=10@36,0+0|.notdef=13+600|kaguru=14+622|yapostformguru=14+666|.notdef=17+600|kaprehalfguru=18+622|gaguru=20+750|.notdef=21+600|kaprehalfguru=22+622|caguru=24+657|.notdef=25+600|kaprehalfguru=26+622|ttaguru=28+575|.notdef=29+600|kaprehalfguru=30+622|tthaguru=32+660|.notdef=33+600|kaprehalfguru=34+622|taguru=36+542|.notdef=37+600|kaprehalfguru=38+622|thaguru=40+598|.notdef=41+600|kaprehalfguru=42+622|daguru=44+617|.notdef=45+600|kaprehalfguru=46+622|naguru=48+648|.notdef=49+600|kaprehalfguru=50+622|paguru=52+593|.notdef=53+600|kaprehalfguru=54+622|maguru=56+596|.notdef=57+600|kaprehalfguru=58+622|laguru=60+674",
-            "input": "ਕ\tਕ੍ਰ\tਕ੍ਹ\tਕ੍ਵ\tਕ੍ਯ\tਕ੍ਗ\tਕ੍ਚ\tਕ੍ਟ\tਕ੍ਠ\tਕ੍ਤ\tਕ੍ਥ\tਕ੍ਦ\tਕ੍ਨ\tਕ੍ਪ\tਕ੍ਮ\tਕ੍ਲ",
+            "expectation": "kaguru=0+622|space=1+260|karaguru=2+622|space=5+260|kaguru=6+622|hasubscriptguru=6@36,0+0|space=9+260|kaguru=10+622|vasubscriptguru=10@36,0+0|space=13+260|kaguru=14+622|yapostformguru=14+666|space=17+260|kaguru=18+622|halantguru=18@33,0+0|gaguru=20+750|space=21+260|kaguru=22+622|halantguru=22@33,0+0|caguru=24+657|space=25+260|kaguru=26+622|halantguru=26@33,0+0|ttaguru=28+575|space=29+260|kaguru=30+622|halantguru=30@33,0+0|tthaguru=32+660|space=33+260|kaguru=34+622|halantguru=34@33,0+0|taguru=36+542|space=37+260|kaguru=38+622|halantguru=38@33,0+0|thaguru=40+598|space=41+260|kaguru=42+622|halantguru=42@33,0+0|daguru=44+617|space=45+260|kaguru=46+622|halantguru=46@33,0+0|naguru=48+648|space=49+260|kaguru=50+622|halantguru=50@33,0+0|paguru=52+593|space=53+260|kaguru=54+622|halantguru=54@33,0+0|maguru=56+596|space=57+260|kaguru=58+622|halantguru=58@33,0+0|laguru=60+674",
+            "input": "ਕ ਕ੍ਰ ਕ੍ਹ ਕ੍ਵ ਕ੍ਯ ਕ੍ਗ ਕ੍ਚ ਕ੍ਟ ਕ੍ਠ ਕ੍ਤ ਕ੍ਥ ਕ੍ਦ ਕ੍ਨ ਕ੍ਪ ਕ੍ਮ ਕ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ttaguru=0+575|.notdef=1+600|ttaguru=2+575|rasubscript1guru=2+0|.notdef=5+600|ttaguru=6+575|hasubscript1guru=6+0|.notdef=9+600|ttaguru=10+575|vasubscript1guru=10+0|.notdef=13+600|ttaguru=14+575|yapostformguru=14+666|.notdef=17+600|ttaprehalfguru=18+575|gaguru=20+750|.notdef=21+600|ttaprehalfguru=22+575|caguru=24+657|.notdef=25+600|ttaprehalfguru=26+575|ttaguru=28+575|.notdef=29+600|ttaprehalfguru=30+575|tthaguru=32+660|.notdef=33+600|ttaprehalfguru=34+575|taguru=36+542|.notdef=37+600|ttaprehalfguru=38+575|thaguru=40+598|.notdef=41+600|ttaprehalfguru=42+575|daguru=44+617|.notdef=45+600|ttaprehalfguru=46+575|naguru=48+648|.notdef=49+600|ttaprehalfguru=50+575|paguru=52+593|.notdef=53+600|ttaprehalfguru=54+575|maguru=56+596|.notdef=57+600|ttaprehalfguru=58+575|laguru=60+674",
-            "input": "ਟ\tਟ੍ਰ\tਟ੍ਹ\tਟ੍ਵ\tਟ੍ਯ\tਟ੍ਗ\tਟ੍ਚ\tਟ੍ਟ\tਟ੍ਠ\tਟ੍ਤ\tਟ੍ਥ\tਟ੍ਦ\tਟ੍ਨ\tਟ੍ਪ\tਟ੍ਮ\tਟ੍ਲ",
+            "expectation": "ttaguru=0+575|space=1+260|ttaguru=2+575|rasubscript1guru=2+0|space=5+260|ttaguru=6+575|hasubscript1guru=6+0|space=9+260|ttaguru=10+575|vasubscript1guru=10+0|space=13+260|ttaguru=14+575|yapostformguru=14+666|space=17+260|ttaguru=18+575|halantguru=18@-86,0+0|gaguru=20+750|space=21+260|ttaguru=22+575|halantguru=22@-86,0+0|caguru=24+657|space=25+260|ttaguru=26+575|halantguru=26@-86,0+0|ttaguru=28+575|space=29+260|ttaguru=30+575|halantguru=30@-86,0+0|tthaguru=32+660|space=33+260|ttaguru=34+575|halantguru=34@-86,0+0|taguru=36+542|space=37+260|ttaguru=38+575|halantguru=38@-86,0+0|thaguru=40+598|space=41+260|ttaguru=42+575|halantguru=42@-86,0+0|daguru=44+617|space=45+260|ttaguru=46+575|halantguru=46@-86,0+0|naguru=48+648|space=49+260|ttaguru=50+575|halantguru=50@-86,0+0|paguru=52+593|space=53+260|ttaguru=54+575|halantguru=54@-86,0+0|maguru=56+596|space=57+260|ttaguru=58+575|halantguru=58@-86,0+0|laguru=60+674",
+            "input": "ਟ ਟ੍ਰ ਟ੍ਹ ਟ੍ਵ ਟ੍ਯ ਟ੍ਗ ਟ੍ਚ ਟ੍ਟ ਟ੍ਠ ਟ੍ਤ ਟ੍ਥ ਟ੍ਦ ਟ੍ਨ ਟ੍ਪ ਟ੍ਮ ਟ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "daguru=0+617|.notdef=1+600|daguru=2+617|rasubscript1guru=2+0|.notdef=5+600|daguru=6+617|hasubscript1guru=6+0|.notdef=9+600|daguru=10+617|vasubscript1guru=10+0|.notdef=13+600|daguru=14+617|yapostformguru=14+666|.notdef=17+600|daprehalfguru=18+617|gaguru=20+750|.notdef=21+600|daprehalfguru=22+617|caguru=24+657|.notdef=25+600|daprehalfguru=26+617|ttaguru=28+575|.notdef=29+600|daprehalfguru=30+617|tthaguru=32+660|.notdef=33+600|daprehalfguru=34+617|taguru=36+542|.notdef=37+600|daprehalfguru=38+617|thaguru=40+598|.notdef=41+600|daprehalfguru=42+617|daguru=44+617|.notdef=45+600|daprehalfguru=46+617|naguru=48+648|.notdef=49+600|daprehalfguru=50+617|paguru=52+593|.notdef=53+600|daprehalfguru=54+617|maguru=56+596|.notdef=57+600|daprehalfguru=58+617|laguru=60+674",
-            "input": "ਦ\tਦ੍ਰ\tਦ੍ਹ\tਦ੍ਵ\tਦ੍ਯ\tਦ੍ਗ\tਦ੍ਚ\tਦ੍ਟ\tਦ੍ਠ\tਦ੍ਤ\tਦ੍ਥ\tਦ੍ਦ\tਦ੍ਨ\tਦ੍ਪ\tਦ੍ਮ\tਦ੍ਲ",
+            "expectation": "daguru=0+617|space=1+260|daguru=2+617|rasubscript1guru=2+0|space=5+260|daguru=6+617|hasubscript1guru=6+0|space=9+260|daguru=10+617|vasubscript1guru=10+0|space=13+260|daguru=14+617|yapostformguru=14+666|space=17+260|daguru=18+617|halantguru=18@-91,0+0|gaguru=20+750|space=21+260|daguru=22+617|halantguru=22@-91,0+0|caguru=24+657|space=25+260|daguru=26+617|halantguru=26@-91,0+0|ttaguru=28+575|space=29+260|daguru=30+617|halantguru=30@-91,0+0|tthaguru=32+660|space=33+260|daguru=34+617|halantguru=34@-91,0+0|taguru=36+542|space=37+260|daguru=38+617|halantguru=38@-91,0+0|thaguru=40+598|space=41+260|daguru=42+617|halantguru=42@-91,0+0|daguru=44+617|space=45+260|daguru=46+617|halantguru=46@-91,0+0|naguru=48+648|space=49+260|daguru=50+617|halantguru=50@-91,0+0|paguru=52+593|space=53+260|daguru=54+617|halantguru=54@-91,0+0|maguru=56+596|space=57+260|daguru=58+617|halantguru=58@-91,0+0|laguru=60+674",
+            "input": "ਦ ਦ੍ਰ ਦ੍ਹ ਦ੍ਵ ਦ੍ਯ ਦ੍ਗ ਦ੍ਚ ਦ੍ਟ ਦ੍ਠ ਦ੍ਤ ਦ੍ਥ ਦ੍ਦ ਦ੍ਨ ਦ੍ਪ ਦ੍ਮ ਦ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "phaguru=0+579|.notdef=1+600|phaguru=2+579|rasubscript1guru=2+0|.notdef=5+600|phaguru=6+579|hasubscript1guru=6+0|.notdef=9+600|phaguru=10+579|vasubscript1guru=10+0|.notdef=13+600|phaguru=14+579|yapostformguru=14+666|.notdef=17+600|phaprehalfguru=18+579|gaguru=20+750|.notdef=21+600|phaprehalfguru=22+579|caguru=24+657|.notdef=25+600|phaprehalfguru=26+579|ttaguru=28+575|.notdef=29+600|phaprehalfguru=30+579|tthaguru=32+660|.notdef=33+600|phaprehalfguru=34+579|taguru=36+542|.notdef=37+600|phaprehalfguru=38+579|thaguru=40+598|.notdef=41+600|phaprehalfguru=42+579|daguru=44+617|.notdef=45+600|phaprehalfguru=46+579|naguru=48+648|.notdef=49+600|phaprehalfguru=50+579|paguru=52+593|.notdef=53+600|phaprehalfguru=54+579|maguru=56+596|.notdef=57+600|phaprehalfguru=58+579|laguru=60+674",
-            "input": "ਫ\tਫ੍ਰ\tਫ੍ਹ\tਫ੍ਵ\tਫ੍ਯ\tਫ੍ਗ\tਫ੍ਚ\tਫ੍ਟ\tਫ੍ਠ\tਫ੍ਤ\tਫ੍ਥ\tਫ੍ਦ\tਫ੍ਨ\tਫ੍ਪ\tਫ੍ਮ\tਫ੍ਲ",
+            "expectation": "phaguru=0+579|space=1+260|phaguru=2+579|rasubscript1guru=2+0|space=5+260|phaguru=6+579|hasubscript1guru=6+0|space=9+260|phaguru=10+579|vasubscript1guru=10+0|space=13+260|phaguru=14+579|yapostformguru=14+666|space=17+260|phaguru=18+579|halantguru=18@-71,0+0|gaguru=20+750|space=21+260|phaguru=22+579|halantguru=22@-71,0+0|caguru=24+657|space=25+260|phaguru=26+579|halantguru=26@-71,0+0|ttaguru=28+575|space=29+260|phaguru=30+579|halantguru=30@-71,0+0|tthaguru=32+660|space=33+260|phaguru=34+579|halantguru=34@-71,0+0|taguru=36+542|space=37+260|phaguru=38+579|halantguru=38@-71,0+0|thaguru=40+598|space=41+260|phaguru=42+579|halantguru=42@-71,0+0|daguru=44+617|space=45+260|phaguru=46+579|halantguru=46@-71,0+0|naguru=48+648|space=49+260|phaguru=50+579|halantguru=50@-71,0+0|paguru=52+593|space=53+260|phaguru=54+579|halantguru=54@-71,0+0|maguru=56+596|space=57+260|phaguru=58+579|halantguru=58@-71,0+0|laguru=60+674",
+            "input": "ਫ ਫ੍ਰ ਫ੍ਹ ਫ੍ਵ ਫ੍ਯ ਫ੍ਗ ਫ੍ਚ ਫ੍ਟ ਫ੍ਠ ਫ੍ਤ ਫ੍ਥ ਫ੍ਦ ਫ੍ਨ ਫ੍ਪ ਫ੍ਮ ਫ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
@@ -103,122 +103,122 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "maguru=0+596|.notdef=1+600|maguru=2+596|rasubscriptguru=2+0|.notdef=5+600|maguru=6+596|hasubscriptguru=6+0|.notdef=9+600|maguru=10+596|vasubscriptguru=10+0|.notdef=13+600|maguru=14+596|yapostformguru=14+666|.notdef=17+600|maprehalfguru=18+596|gaguru=20+750|.notdef=21+600|maprehalfguru=22+596|caguru=24+657|.notdef=25+600|maprehalfguru=26+596|ttaguru=28+575|.notdef=29+600|maprehalfguru=30+596|tthaguru=32+660|.notdef=33+600|maprehalfguru=34+596|taguru=36+542|.notdef=37+600|maprehalfguru=38+596|thaguru=40+598|.notdef=41+600|maprehalfguru=42+596|daguru=44+617|.notdef=45+600|maprehalfguru=46+596|naguru=48+648|.notdef=49+600|maprehalfguru=50+596|paguru=52+593|.notdef=53+600|maprehalfguru=54+596|maguru=56+596|.notdef=57+600|maprehalfguru=58+596|laguru=60+674",
-            "input": "ਮ\tਮ੍ਰ\tਮ੍ਹ\tਮ੍ਵ\tਮ੍ਯ\tਮ੍ਗ\tਮ੍ਚ\tਮ੍ਟ\tਮ੍ਠ\tਮ੍ਤ\tਮ੍ਥ\tਮ੍ਦ\tਮ੍ਨ\tਮ੍ਪ\tਮ੍ਮ\tਮ੍ਲ",
+            "expectation": "maguru=0+596|space=1+260|maguru=2+596|rasubscriptguru=2+0|space=5+260|maguru=6+596|hasubscriptguru=6+0|space=9+260|maguru=10+596|vasubscriptguru=10+0|space=13+260|maguru=14+596|yapostformguru=14+666|space=17+260|maguru=18+596|halantguru=18+0|gaguru=20+750|space=21+260|maguru=22+596|halantguru=22+0|caguru=24+657|space=25+260|maguru=26+596|halantguru=26+0|ttaguru=28+575|space=29+260|maguru=30+596|halantguru=30+0|tthaguru=32+660|space=33+260|maguru=34+596|halantguru=34+0|taguru=36+542|space=37+260|maguru=38+596|halantguru=38+0|thaguru=40+598|space=41+260|maguru=42+596|halantguru=42+0|daguru=44+617|space=45+260|maguru=46+596|halantguru=46+0|naguru=48+648|space=49+260|maguru=50+596|halantguru=50+0|paguru=52+593|space=53+260|maguru=54+596|halantguru=54+0|maguru=56+596|space=57+260|maguru=58+596|halantguru=58+0|laguru=60+674",
+            "input": "ਮ ਮ੍ਰ ਮ੍ਹ ਮ੍ਵ ਮ੍ਯ ਮ੍ਗ ਮ੍ਚ ਮ੍ਟ ਮ੍ਠ ਮ੍ਤ ਮ੍ਥ ਮ੍ਦ ਮ੍ਨ ਮ੍ਪ ਮ੍ਮ ਮ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "paguru=0+593|.notdef=1+600|paguru=2+593|rasubscriptguru=2+0|.notdef=5+600|paguru=6+593|hasubscriptguru=6+0|.notdef=9+600|paguru=10+593|vasubscriptguru=10+0|.notdef=13+600|paguru=14+593|yapostformguru=14+666|.notdef=17+600|paprehalfguru=18+593|gaguru=20+750|.notdef=21+600|paprehalfguru=22+593|caguru=24+657|.notdef=25+600|paprehalfguru=26+593|ttaguru=28+575|.notdef=29+600|paprehalfguru=30+593|tthaguru=32+660|.notdef=33+600|paprehalfguru=34+593|taguru=36+542|.notdef=37+600|paprehalfguru=38+593|thaguru=40+598|.notdef=41+600|paprehalfguru=42+593|daguru=44+617|.notdef=45+600|paprehalfguru=46+593|naguru=48+648|.notdef=49+600|paprehalfguru=50+593|paguru=52+593|.notdef=53+600|paprehalfguru=54+593|maguru=56+596|.notdef=57+600|paprehalfguru=58+593|laguru=60+674",
-            "input": "ਪ\tਪ੍ਰ\tਪ੍ਹ\tਪ੍ਵ\tਪ੍ਯ\tਪ੍ਗ\tਪ੍ਚ\tਪ੍ਟ\tਪ੍ਠ\tਪ੍ਤ\tਪ੍ਥ\tਪ੍ਦ\tਪ੍ਨ\tਪ੍ਪ\tਪ੍ਮ\tਪ੍ਲ",
+            "expectation": "paguru=0+593|space=1+260|paguru=2+593|rasubscriptguru=2+0|space=5+260|paguru=6+593|hasubscriptguru=6+0|space=9+260|paguru=10+593|vasubscriptguru=10+0|space=13+260|paguru=14+593|yapostformguru=14+666|space=17+260|paguru=18+593|halantguru=18+0|gaguru=20+750|space=21+260|paguru=22+593|halantguru=22+0|caguru=24+657|space=25+260|paguru=26+593|halantguru=26+0|ttaguru=28+575|space=29+260|paguru=30+593|halantguru=30+0|tthaguru=32+660|space=33+260|paguru=34+593|halantguru=34+0|taguru=36+542|space=37+260|paguru=38+593|halantguru=38+0|thaguru=40+598|space=41+260|paguru=42+593|halantguru=42+0|daguru=44+617|space=45+260|paguru=46+593|halantguru=46+0|naguru=48+648|space=49+260|paguru=50+593|halantguru=50+0|paguru=52+593|space=53+260|paguru=54+593|halantguru=54+0|maguru=56+596|space=57+260|paguru=58+593|halantguru=58+0|laguru=60+674",
+            "input": "ਪ ਪ੍ਰ ਪ੍ਹ ਪ੍ਵ ਪ੍ਯ ਪ੍ਗ ਪ੍ਚ ਪ੍ਟ ਪ੍ਠ ਪ੍ਤ ਪ੍ਥ ਪ੍ਦ ਪ੍ਨ ਪ੍ਪ ਪ੍ਮ ਪ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "gaguru=0+750|.notdef=1+600|gaguru=2+750|rasubscriptguru=2+0|.notdef=5+600|gaguru=6+750|hasubscriptguru=6+0|.notdef=9+600|gaguru=10+750|vasubscriptguru=10+0|.notdef=13+600|gaguru=14+750|yapostformguru=14+666|.notdef=17+600|gaprehalfguru=18+750|gaguru=20+750|.notdef=21+600|gaprehalfguru=22+750|caguru=24+657|.notdef=25+600|gaprehalfguru=26+750|ttaguru=28+575|.notdef=29+600|gaprehalfguru=30+750|tthaguru=32+660|.notdef=33+600|gaprehalfguru=34+750|taguru=36+542|.notdef=37+600|gaprehalfguru=38+750|thaguru=40+598|.notdef=41+600|gaprehalfguru=42+750|daguru=44+617|.notdef=45+600|gaprehalfguru=46+750|naguru=48+648|.notdef=49+600|gaprehalfguru=50+750|paguru=52+593|.notdef=53+600|gaprehalfguru=54+750|maguru=56+596|.notdef=57+600|gaprehalfguru=58+750|laguru=60+674",
-            "input": "ਗ\tਗ੍ਰ\tਗ੍ਹ\tਗ੍ਵ\tਗ੍ਯ\tਗ੍ਗ\tਗ੍ਚ\tਗ੍ਟ\tਗ੍ਠ\tਗ੍ਤ\tਗ੍ਥ\tਗ੍ਦ\tਗ੍ਨ\tਗ੍ਪ\tਗ੍ਮ\tਗ੍ਲ",
+            "expectation": "gaguru=0+750|space=1+260|gaguru=2+750|rasubscriptguru=2+0|space=5+260|gaguru=6+750|hasubscriptguru=6+0|space=9+260|gaguru=10+750|vasubscriptguru=10+0|space=13+260|gaguru=14+750|yapostformguru=14+666|space=17+260|gaguru=18+750|halantguru=18+0|gaguru=20+750|space=21+260|gaguru=22+750|halantguru=22+0|caguru=24+657|space=25+260|gaguru=26+750|halantguru=26+0|ttaguru=28+575|space=29+260|gaguru=30+750|halantguru=30+0|tthaguru=32+660|space=33+260|gaguru=34+750|halantguru=34+0|taguru=36+542|space=37+260|gaguru=38+750|halantguru=38+0|thaguru=40+598|space=41+260|gaguru=42+750|halantguru=42+0|daguru=44+617|space=45+260|gaguru=46+750|halantguru=46+0|naguru=48+648|space=49+260|gaguru=50+750|halantguru=50+0|paguru=52+593|space=53+260|gaguru=54+750|halantguru=54+0|maguru=56+596|space=57+260|gaguru=58+750|halantguru=58+0|laguru=60+674",
+            "input": "ਗ ਗ੍ਰ ਗ੍ਹ ਗ੍ਵ ਗ੍ਯ ਗ੍ਗ ਗ੍ਚ ਗ੍ਟ ਗ੍ਠ ਗ੍ਤ ਗ੍ਥ ਗ੍ਦ ਗ੍ਨ ਗ੍ਪ ਗ੍ਮ ਗ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "jhaguru=0+594|.notdef=1+600|jhaguru=2+594|rasubscriptguru=2+0|.notdef=5+600|jhaguru=6+594|hasubscriptguru=6+0|.notdef=9+600|jhaguru=10+594|vasubscriptguru=10+0|.notdef=13+600|jhaguru=14+594|yapostformguru=14+666|.notdef=17+600|jhaprehalfguru=18+594|gaguru=20+750|.notdef=21+600|jhaprehalfguru=22+594|caguru=24+657|.notdef=25+600|jhaprehalfguru=26+594|ttaguru=28+575|.notdef=29+600|jhaprehalfguru=30+594|tthaguru=32+660|.notdef=33+600|jhaprehalfguru=34+594|taguru=36+542|.notdef=37+600|jhaprehalfguru=38+594|thaguru=40+598|.notdef=41+600|jhaprehalfguru=42+594|daguru=44+617|.notdef=45+600|jhaprehalfguru=46+594|naguru=48+648|.notdef=49+600|jhaprehalfguru=50+594|paguru=52+593|.notdef=53+600|jhaprehalfguru=54+594|maguru=56+596|.notdef=57+600|jhaprehalfguru=58+594|laguru=60+674",
-            "input": "ਝ\tਝ੍ਰ\tਝ੍ਹ\tਝ੍ਵ\tਝ੍ਯ\tਝ੍ਗ\tਝ੍ਚ\tਝ੍ਟ\tਝ੍ਠ\tਝ੍ਤ\tਝ੍ਥ\tਝ੍ਦ\tਝ੍ਨ\tਝ੍ਪ\tਝ੍ਮ\tਝ੍ਲ",
+            "expectation": "jhaguru=0+594|space=1+260|jhaguru=2+594|rasubscriptguru=2+0|space=5+260|jhaguru=6+594|hasubscriptguru=6+0|space=9+260|jhaguru=10+594|vasubscriptguru=10+0|space=13+260|jhaguru=14+594|yapostformguru=14+666|space=17+260|jhaguru=18+594|halantguru=18@-96,0+0|gaguru=20+750|space=21+260|jhaguru=22+594|halantguru=22@-96,0+0|caguru=24+657|space=25+260|jhaguru=26+594|halantguru=26@-96,0+0|ttaguru=28+575|space=29+260|jhaguru=30+594|halantguru=30@-96,0+0|tthaguru=32+660|space=33+260|jhaguru=34+594|halantguru=34@-96,0+0|taguru=36+542|space=37+260|jhaguru=38+594|halantguru=38@-96,0+0|thaguru=40+598|space=41+260|jhaguru=42+594|halantguru=42@-96,0+0|daguru=44+617|space=45+260|jhaguru=46+594|halantguru=46@-96,0+0|naguru=48+648|space=49+260|jhaguru=50+594|halantguru=50@-96,0+0|paguru=52+593|space=53+260|jhaguru=54+594|halantguru=54@-96,0+0|maguru=56+596|space=57+260|jhaguru=58+594|halantguru=58@-96,0+0|laguru=60+674",
+            "input": "ਝ ਝ੍ਰ ਝ੍ਹ ਝ੍ਵ ਝ੍ਯ ਝ੍ਗ ਝ੍ਚ ਝ੍ਟ ਝ੍ਠ ਝ੍ਤ ਝ੍ਥ ਝ੍ਦ ਝ੍ਨ ਝ੍ਪ ਝ੍ਮ ਝ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "tthaguru=0+660|.notdef=1+600|tthaguru=2+660|rasubscript1guru=2@-44,0+0|.notdef=5+600|tthaguru=6+660|hasubscript1guru=6@-44,0+0|.notdef=9+600|tthaguru=10+660|vasubscript1guru=10@-44,0+0|.notdef=13+600|tthaguru=14+660|yapostformguru=14+666|.notdef=17+600|tthaprehalfguru=18+660|gaguru=20+750|.notdef=21+600|tthaprehalfguru=22+660|caguru=24+657|.notdef=25+600|tthaprehalfguru=26+660|ttaguru=28+575|.notdef=29+600|tthaprehalfguru=30+660|tthaguru=32+660|.notdef=33+600|tthaprehalfguru=34+660|taguru=36+542|.notdef=37+600|tthaprehalfguru=38+660|thaguru=40+598|.notdef=41+600|tthaprehalfguru=42+660|daguru=44+617|.notdef=45+600|tthaprehalfguru=46+660|naguru=48+648|.notdef=49+600|tthaprehalfguru=50+660|paguru=52+593|.notdef=53+600|tthaprehalfguru=54+660|maguru=56+596|.notdef=57+600|tthaprehalfguru=58+660|laguru=60+674",
-            "input": "ਠ\tਠ੍ਰ\tਠ੍ਹ\tਠ੍ਵ\tਠ੍ਯ\tਠ੍ਗ\tਠ੍ਚ\tਠ੍ਟ\tਠ੍ਠ\tਠ੍ਤ\tਠ੍ਥ\tਠ੍ਦ\tਠ੍ਨ\tਠ੍ਪ\tਠ੍ਮ\tਠ੍ਲ",
+            "expectation": "tthaguru=0+660|space=1+260|tthaguru=2+660|rasubscript1guru=2@-44,0+0|space=5+260|tthaguru=6+660|hasubscript1guru=6@-44,0+0|space=9+260|tthaguru=10+660|vasubscript1guru=10@-44,0+0|space=13+260|tthaguru=14+660|yapostformguru=14+666|space=17+260|tthaguru=18+660|halantguru=18@-141,0+0|gaguru=20+750|space=21+260|tthaguru=22+660|halantguru=22@-141,0+0|caguru=24+657|space=25+260|tthaguru=26+660|halantguru=26@-141,0+0|ttaguru=28+575|space=29+260|tthaguru=30+660|halantguru=30@-141,0+0|tthaguru=32+660|space=33+260|tthaguru=34+660|halantguru=34@-141,0+0|taguru=36+542|space=37+260|tthaguru=38+660|halantguru=38@-141,0+0|thaguru=40+598|space=41+260|tthaguru=42+660|halantguru=42@-141,0+0|daguru=44+617|space=45+260|tthaguru=46+660|halantguru=46@-141,0+0|naguru=48+648|space=49+260|tthaguru=50+660|halantguru=50@-141,0+0|paguru=52+593|space=53+260|tthaguru=54+660|halantguru=54@-141,0+0|maguru=56+596|space=57+260|tthaguru=58+660|halantguru=58@-141,0+0|laguru=60+674",
+            "input": "ਠ ਠ੍ਰ ਠ੍ਹ ਠ੍ਵ ਠ੍ਯ ਠ੍ਗ ਠ੍ਚ ਠ੍ਟ ਠ੍ਠ ਠ੍ਤ ਠ੍ਥ ਠ੍ਦ ਠ੍ਨ ਠ੍ਪ ਠ੍ਮ ਠ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ddhaguru=0+646|.notdef=1+600|ddhaguru=2+646|rasubscript1guru=2@-2,0+0|.notdef=5+600|ddhaguru=6+646|hasubscript1guru=6@-2,0+0|.notdef=9+600|ddhaguru=10+646|vasubscript1guru=10@-2,0+0|.notdef=13+600|ddhaguru=14+646|yapostformguru=14+666|.notdef=17+600|ddhaprehalfguru=18+646|gaguru=20+750|.notdef=21+600|ddhaprehalfguru=22+646|caguru=24+657|.notdef=25+600|ddhaprehalfguru=26+646|ttaguru=28+575|.notdef=29+600|ddhaprehalfguru=30+646|tthaguru=32+660|.notdef=33+600|ddhaprehalfguru=34+646|taguru=36+542|.notdef=37+600|ddhaprehalfguru=38+646|thaguru=40+598|.notdef=41+600|ddhaprehalfguru=42+646|daguru=44+617|.notdef=45+600|ddhaprehalfguru=46+646|naguru=48+648|.notdef=49+600|ddhaprehalfguru=50+646|paguru=52+593|.notdef=53+600|ddhaprehalfguru=54+646|maguru=56+596|.notdef=57+600|ddhaprehalfguru=58+646|laguru=60+674",
-            "input": "ਢ\tਢ੍ਰ\tਢ੍ਹ\tਢ੍ਵ\tਢ੍ਯ\tਢ੍ਗ\tਢ੍ਚ\tਢ੍ਟ\tਢ੍ਠ\tਢ੍ਤ\tਢ੍ਥ\tਢ੍ਦ\tਢ੍ਨ\tਢ੍ਪ\tਢ੍ਮ\tਢ੍ਲ",
+            "expectation": "ddhaguru=0+646|space=1+260|ddhaguru=2+646|rasubscript1guru=2@-2,0+0|space=5+260|ddhaguru=6+646|hasubscript1guru=6@-2,0+0|space=9+260|ddhaguru=10+646|vasubscript1guru=10@-2,0+0|space=13+260|ddhaguru=14+646|yapostformguru=14+666|space=17+260|ddhaguru=18+646|halantguru=18@-71,0+0|gaguru=20+750|space=21+260|ddhaguru=22+646|halantguru=22@-71,0+0|caguru=24+657|space=25+260|ddhaguru=26+646|halantguru=26@-71,0+0|ttaguru=28+575|space=29+260|ddhaguru=30+646|halantguru=30@-71,0+0|tthaguru=32+660|space=33+260|ddhaguru=34+646|halantguru=34@-71,0+0|taguru=36+542|space=37+260|ddhaguru=38+646|halantguru=38@-71,0+0|thaguru=40+598|space=41+260|ddhaguru=42+646|halantguru=42@-71,0+0|daguru=44+617|space=45+260|ddhaguru=46+646|halantguru=46@-71,0+0|naguru=48+648|space=49+260|ddhaguru=50+646|halantguru=50@-71,0+0|paguru=52+593|space=53+260|ddhaguru=54+646|halantguru=54@-71,0+0|maguru=56+596|space=57+260|ddhaguru=58+646|halantguru=58@-71,0+0|laguru=60+674",
+            "input": "ਢ ਢ੍ਰ ਢ੍ਹ ਢ੍ਵ ਢ੍ਯ ਢ੍ਗ ਢ੍ਚ ਢ੍ਟ ਢ੍ਠ ਢ੍ਤ ਢ੍ਥ ਢ੍ਦ ਢ੍ਨ ਢ੍ਪ ਢ੍ਮ ਢ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "uni25CC=0+566|yakashguru=0+0",
+            "expectation": "uni25CC=0+566|yakashguru=0@-18,0+0",
             "input": "ੵ",
             "note": "Issue #389",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "baguru=0+608|.notdef=1+600|baguru=2+608|rasubscriptguru=2+0|.notdef=5+600|baguru=6+608|hasubscriptguru=6+0|.notdef=9+600|baguru=10+608|vasubscriptguru=10+0|.notdef=13+600|baguru=14+608|yapostformguru=14+666|.notdef=17+600|baprehalfguru=18+608|gaguru=20+750|.notdef=21+600|baprehalfguru=22+608|caguru=24+657|.notdef=25+600|baprehalfguru=26+608|ttaguru=28+575|.notdef=29+600|baprehalfguru=30+608|tthaguru=32+660|.notdef=33+600|baprehalfguru=34+608|taguru=36+542|.notdef=37+600|baprehalfguru=38+608|thaguru=40+598|.notdef=41+600|baprehalfguru=42+608|daguru=44+617|.notdef=45+600|baprehalfguru=46+608|naguru=48+648|.notdef=49+600|baprehalfguru=50+608|paguru=52+593|.notdef=53+600|baprehalfguru=54+608|maguru=56+596|.notdef=57+600|baprehalfguru=58+608|laguru=60+674",
-            "input": "ਬ\tਬ੍ਰ\tਬ੍ਹ\tਬ੍ਵ\tਬ੍ਯ\tਬ੍ਗ\tਬ੍ਚ\tਬ੍ਟ\tਬ੍ਠ\tਬ੍ਤ\tਬ੍ਥ\tਬ੍ਦ\tਬ੍ਨ\tਬ੍ਪ\tਬ੍ਮ\tਬ੍ਲ",
+            "expectation": "baguru=0+608|space=1+260|baguru=2+608|rasubscriptguru=2+0|space=5+260|baguru=6+608|hasubscriptguru=6+0|space=9+260|baguru=10+608|vasubscriptguru=10+0|space=13+260|baguru=14+608|yapostformguru=14+666|space=17+260|baguru=18+608|halantguru=18+0|gaguru=20+750|space=21+260|baguru=22+608|halantguru=22+0|caguru=24+657|space=25+260|baguru=26+608|halantguru=26+0|ttaguru=28+575|space=29+260|baguru=30+608|halantguru=30+0|tthaguru=32+660|space=33+260|baguru=34+608|halantguru=34+0|taguru=36+542|space=37+260|baguru=38+608|halantguru=38+0|thaguru=40+598|space=41+260|baguru=42+608|halantguru=42+0|daguru=44+617|space=45+260|baguru=46+608|halantguru=46+0|naguru=48+648|space=49+260|baguru=50+608|halantguru=50+0|paguru=52+593|space=53+260|baguru=54+608|halantguru=54+0|maguru=56+596|space=57+260|baguru=58+608|halantguru=58+0|laguru=60+674",
+            "input": "ਬ ਬ੍ਰ ਬ੍ਹ ਬ੍ਵ ਬ੍ਯ ਬ੍ਗ ਬ੍ਚ ਬ੍ਟ ਬ੍ਠ ਬ੍ਤ ਬ੍ਥ ਬ੍ਦ ਬ੍ਨ ਬ੍ਪ ਬ੍ਮ ਬ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "taguru=0+542|.notdef=1+600|taguru=2+542|rasubscript1guru=2@-29,0+0|.notdef=5+600|taguru=6+542|hasubscript1guru=6@-29,0+0|.notdef=9+600|taguru=10+542|vasubscript1guru=10@-29,0+0|.notdef=13+600|taguru=14+542|yapostformguru=14+666|.notdef=17+600|taprehalfguru=18+542|gaguru=20+750|.notdef=21+600|taprehalfguru=22+542|caguru=24+657|.notdef=25+600|taprehalfguru=26+542|ttaguru=28+575|.notdef=29+600|taprehalfguru=30+542|tthaguru=32+660|.notdef=33+600|taprehalfguru=34+542|taguru=36+542|.notdef=37+600|taprehalfguru=38+542|thaguru=40+598|.notdef=41+600|taprehalfguru=42+542|daguru=44+617|.notdef=45+600|taprehalfguru=46+542|naguru=48+648|.notdef=49+600|taprehalfguru=50+542|paguru=52+593|.notdef=53+600|taprehalfguru=54+542|maguru=56+596|.notdef=57+600|taprehalfguru=58+542|laguru=60+674",
-            "input": "ਤ\tਤ੍ਰ\tਤ੍ਹ\tਤ੍ਵ\tਤ੍ਯ\tਤ੍ਗ\tਤ੍ਚ\tਤ੍ਟ\tਤ੍ਠ\tਤ੍ਤ\tਤ੍ਥ\tਤ੍ਦ\tਤ੍ਨ\tਤ੍ਪ\tਤ੍ਮ\tਤ੍ਲ",
+            "expectation": "taguru=0+542|space=1+260|taguru=2+542|rasubscript1guru=2@-29,0+0|space=5+260|taguru=6+542|hasubscript1guru=6@-29,0+0|space=9+260|taguru=10+542|vasubscript1guru=10@-29,0+0|space=13+260|taguru=14+542|yapostformguru=14+666|space=17+260|taguru=18+542|halantguru=18@-129,0+0|gaguru=20+750|space=21+260|taguru=22+542|halantguru=22@-129,0+0|caguru=24+657|space=25+260|taguru=26+542|halantguru=26@-129,0+0|ttaguru=28+575|space=29+260|taguru=30+542|halantguru=30@-129,0+0|tthaguru=32+660|space=33+260|taguru=34+542|halantguru=34@-129,0+0|taguru=36+542|space=37+260|taguru=38+542|halantguru=38@-129,0+0|thaguru=40+598|space=41+260|taguru=42+542|halantguru=42@-129,0+0|daguru=44+617|space=45+260|taguru=46+542|halantguru=46@-129,0+0|naguru=48+648|space=49+260|taguru=50+542|halantguru=50@-129,0+0|paguru=52+593|space=53+260|taguru=54+542|halantguru=54@-129,0+0|maguru=56+596|space=57+260|taguru=58+542|halantguru=58@-129,0+0|laguru=60+674",
+            "input": "ਤ ਤ੍ਰ ਤ੍ਹ ਤ੍ਵ ਤ੍ਯ ਤ੍ਗ ਤ੍ਚ ਤ੍ਟ ਤ੍ਠ ਤ੍ਤ ਤ੍ਥ ਤ੍ਦ ਤ੍ਨ ਤ੍ਪ ਤ੍ਮ ਤ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "paguru=0+593|paprehalfguru=1+593",
+            "expectation": "paguru=0+593|paguru=1+593|halantguru=1+0",
             "input": "ਪਪ੍",
             "note": "Issue #1455",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "rraguru=0+569|.notdef=1+600|rraguru=2+569|rasubscriptguru=2@-13,0+0|.notdef=5+600|rraguru=6+569|hasubscriptguru=6@-13,0+0|.notdef=9+600|rraguru=10+569|vasubscriptguru=10@-13,0+0|.notdef=13+600|rraguru=14+569|yapostformguru=14+666|.notdef=17+600|ddanuktaprehalfguru=18+569|gaguru=20+750|.notdef=21+600|ddanuktaprehalfguru=22+569|caguru=24+657|.notdef=25+600|ddanuktaprehalfguru=26+569|ttaguru=28+575|.notdef=29+600|ddanuktaprehalfguru=30+569|tthaguru=32+660|.notdef=33+600|ddanuktaprehalfguru=34+569|taguru=36+542|.notdef=37+600|ddanuktaprehalfguru=38+569|thaguru=40+598|.notdef=41+600|ddanuktaprehalfguru=42+569|daguru=44+617|.notdef=45+600|ddanuktaprehalfguru=46+569|naguru=48+648|.notdef=49+600|ddanuktaprehalfguru=50+569|paguru=52+593|.notdef=53+600|ddanuktaprehalfguru=54+569|maguru=56+596|.notdef=57+600|ddanuktaprehalfguru=58+569|laguru=60+674",
-            "input": "ੜ\tੜ੍ਰ\tੜ੍ਹ\tੜ੍ਵ\tੜ੍ਯ\tੜ੍ਗ\tੜ੍ਚ\tੜ੍ਟ\tੜ੍ਠ\tੜ੍ਤ\tੜ੍ਥ\tੜ੍ਦ\tੜ੍ਨ\tੜ੍ਪ\tੜ੍ਮ\tੜ੍ਲ",
+            "expectation": "rraguru=0+569|space=1+260|rraguru=2+569|rasubscriptguru=2@-13,0+0|space=5+260|rraguru=6+569|hasubscriptguru=6@-13,0+0|space=9+260|rraguru=10+569|vasubscriptguru=10@-13,0+0|space=13+260|rraguru=14+569|yapostformguru=14+666|space=17+260|rraguru=18+569|halantguru=18@-54,0+0|gaguru=20+750|space=21+260|rraguru=22+569|halantguru=22@-54,0+0|caguru=24+657|space=25+260|rraguru=26+569|halantguru=26@-54,0+0|ttaguru=28+575|space=29+260|rraguru=30+569|halantguru=30@-54,0+0|tthaguru=32+660|space=33+260|rraguru=34+569|halantguru=34@-54,0+0|taguru=36+542|space=37+260|rraguru=38+569|halantguru=38@-54,0+0|thaguru=40+598|space=41+260|rraguru=42+569|halantguru=42@-54,0+0|daguru=44+617|space=45+260|rraguru=46+569|halantguru=46@-54,0+0|naguru=48+648|space=49+260|rraguru=50+569|halantguru=50@-54,0+0|paguru=52+593|space=53+260|rraguru=54+569|halantguru=54@-54,0+0|maguru=56+596|space=57+260|rraguru=58+569|halantguru=58@-54,0+0|laguru=60+674",
+            "input": "ੜ ੜ੍ਰ ੜ੍ਹ ੜ੍ਵ ੜ੍ਯ ੜ੍ਗ ੜ੍ਚ ੜ੍ਟ ੜ੍ਠ ੜ੍ਤ ੜ੍ਥ ੜ੍ਦ ੜ੍ਨ ੜ੍ਪ ੜ੍ਮ ੜ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "uguru=0+662|caguru=1+657|aamatraguru=1+235|raguru=3+579|nnaguru=4+622|space=5+260|kaguru=6+622|umatraguru=6+0|tippiguru=6@-20,0+0|jaguru=9+612|iimatraguru=9+259|danda.guru=11+379",
+            "expectation": "uguru=0+662|caguru=1+657|aamatraguru=1+235|raguru=3+579|nnaguru=4+622|space=5+260|kaguru=6+622|umatraguru=6+0|tippiguru=6@-20,0+0|jaguru=9+612|iimatraguru=9+259|uni0964.guru=11+379",
             "input": "ਉਚਾਰਣ ਕੁੰਜੀ।",
             "note": "Issue #113",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "sanuktaguru=0+603|.notdef=2+600|sanuktaguru=3+603|rasubscriptguru=3+0|.notdef=7+600|sanuktaguru=8+603|hasubscriptguru=8+0|.notdef=12+600|sanuktaguru=13+603|vasubscriptguru=13+0|.notdef=17+600|sanuktaguru=18+603|yapostformguru=18+666|.notdef=22+600|sanuktaprehalfguru=23+603|gaguru=26+750|.notdef=27+600|sanuktaprehalfguru=28+603|caguru=31+657|.notdef=32+600|sanuktaprehalfguru=33+603|ttaguru=36+575|.notdef=37+600|sanuktaprehalfguru=38+603|tthaguru=41+660|.notdef=42+600|sanuktaprehalfguru=43+603|taguru=46+542|.notdef=47+600|sanuktaprehalfguru=48+603|thaguru=51+598|.notdef=52+600|sanuktaprehalfguru=53+603|daguru=56+617|.notdef=57+600|sanuktaprehalfguru=58+603|naguru=61+648|.notdef=62+600|sanuktaprehalfguru=63+603|paguru=66+593|.notdef=67+600|sanuktaprehalfguru=68+603|maguru=71+596|.notdef=72+600|sanuktaprehalfguru=73+603|laguru=76+674",
-            "input": "ਸ਼\tਸ਼੍ਰ\tਸ਼੍ਹ\tਸ਼੍ਵ\tਸ਼੍ਯ\tਸ਼੍ਗ\tਸ਼੍ਚ\tਸ਼੍ਟ\tਸ਼੍ਠ\tਸ਼੍ਤ\tਸ਼੍ਥ\tਸ਼੍ਦ\tਸ਼੍ਨ\tਸ਼੍ਪ\tਸ਼੍ਮ\tਸ਼੍ਲ",
+            "expectation": "sanuktaguru=0+603|space=2+260|sanuktaguru=3+603|rasubscriptguru=3+0|space=7+260|sanuktaguru=8+603|hasubscriptguru=8+0|space=12+260|sanuktaguru=13+603|vasubscriptguru=13+0|space=17+260|sanuktaguru=18+603|yapostformguru=18+666|space=22+260|sanuktaguru=23+603|halantguru=23+0|gaguru=26+750|space=27+260|sanuktaguru=28+603|halantguru=28+0|caguru=31+657|space=32+260|sanuktaguru=33+603|halantguru=33+0|ttaguru=36+575|space=37+260|sanuktaguru=38+603|halantguru=38+0|tthaguru=41+660|space=42+260|sanuktaguru=43+603|halantguru=43+0|taguru=46+542|space=47+260|sanuktaguru=48+603|halantguru=48+0|thaguru=51+598|space=52+260|sanuktaguru=53+603|halantguru=53+0|daguru=56+617|space=57+260|sanuktaguru=58+603|halantguru=58+0|naguru=61+648|space=62+260|sanuktaguru=63+603|halantguru=63+0|paguru=66+593|space=67+260|sanuktaguru=68+603|halantguru=68+0|maguru=71+596|space=72+260|sanuktaguru=73+603|halantguru=73+0|laguru=76+674",
+            "input": "ਸ਼ ਸ਼੍ਰ ਸ਼੍ਹ ਸ਼੍ਵ ਸ਼੍ਯ ਸ਼੍ਗ ਸ਼੍ਚ ਸ਼੍ਟ ਸ਼੍ਠ ਸ਼੍ਤ ਸ਼੍ਥ ਸ਼੍ਦ ਸ਼੍ਨ ਸ਼੍ਪ ਸ਼੍ਮ ਸ਼੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "saguru=0+596|addakguru=0+0|jaguru=2+612|eematraguru=2+0|space=4+260|haguru=5+576|addakguru=5+0|thaguru=7+598|space=8+260|haguru=9+576|iimatraguru=9+259|space=11+260|laguru=12+674|addakguru=12+0|laguru=14+674|eematraguru=14@-28,0+0|space=16+260|paguru=17+593|aimatraguru=17+0|raguru=19+579|space=20+260|imatraguru=21+259|baguru=21+608|tippiguru=21+0|daguru=24+617|iimatraguru=24+259|space=26+260",
-            "input": "ਸੱਜੇ ਹੱਥ ਹੀ ਲੱਲੇ ਪੈਰ ਬਿੰਦੀ ",
+            "expectation": "saguru=0+596|addakguru=0+0|jaguru=2+612|eematraguru=2+0|space=4+260|haguru=5+576|addakguru=5+0|thaguru=7+598|space=8+260|haguru=9+576|iimatraguru=9+259|space=11+260|laguru=12+674|addakguru=12+0|laguru=14+674|eematraguru=14@-28,0+0|space=16+260|paguru=17+593|aimatraguru=17+0|raguru=19+579|space=20+260|imatraguru=21+259|baguru=21+608|tippiguru=21+0|daguru=24+617|iimatraguru=24+259",
+            "input": "ਸੱਜੇ ਹੱਥ ਹੀ ਲੱਲੇ ਪੈਰ ਬਿੰਦੀ",
             "note": "Issue #113",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "laguru=0+674|.notdef=1+600|laguru=2+674|rasubscript1guru=2@-25,0+0|.notdef=5+600|laguru=6+674|hasubscript1guru=6@-25,0+0|.notdef=9+600|laguru=10+674|vasubscript1guru=10@-25,0+0|.notdef=13+600|laguru=14+674|yapostformguru=14+666|.notdef=17+600|laprehalfguru=18+674|ngaguru=20+579|.notdef=21+600|laprehalfguru=22+674|caguru=24+657|.notdef=25+600|laprehalfguru=26+674|ttaguru=28+575|.notdef=29+600|laprehalfguru=30+674|tthaguru=32+660|.notdef=33+600|laprehalfguru=34+674|taguru=36+542|.notdef=37+600|laprehalfguru=38+674|thaguru=40+598|.notdef=41+600|laprehalfguru=42+674|daguru=44+617|.notdef=45+600|laprehalfguru=46+674|naguru=48+648|.notdef=49+600|laprehalfguru=50+674|paguru=52+593|.notdef=53+600|laprehalfguru=54+674|maguru=56+596|.notdef=57+600|laprehalfguru=58+674|laguru=60+674",
-            "input": "ਲ\tਲ੍ਰ\tਲ੍ਹ\tਲ੍ਵ\tਲ੍ਯ\tਲ੍ਙ\tਲ੍ਚ\tਲ੍ਟ\tਲ੍ਠ\tਲ੍ਤ\tਲ੍ਥ\tਲ੍ਦ\tਲ੍ਨ\tਲ੍ਪ\tਲ੍ਮ\tਲ੍ਲ",
+            "expectation": "laguru=0+674|space=1+260|laguru=2+674|rasubscript1guru=2@-25,0+0|space=5+260|laguru=6+674|hasubscript1guru=6@-25,0+0|space=9+260|laguru=10+674|vasubscript1guru=10@-25,0+0|space=13+260|laguru=14+674|yapostformguru=14+666|space=17+260|laguru=18+674|halantguru=18@-146,0+0|ngaguru=20+579|space=21+260|laguru=22+674|halantguru=22@-146,0+0|caguru=24+657|space=25+260|laguru=26+674|halantguru=26@-146,0+0|ttaguru=28+575|space=29+260|laguru=30+674|halantguru=30@-146,0+0|tthaguru=32+660|space=33+260|laguru=34+674|halantguru=34@-146,0+0|taguru=36+542|space=37+260|laguru=38+674|halantguru=38@-146,0+0|thaguru=40+598|space=41+260|laguru=42+674|halantguru=42@-146,0+0|daguru=44+617|space=45+260|laguru=46+674|halantguru=46@-146,0+0|naguru=48+648|space=49+260|laguru=50+674|halantguru=50@-146,0+0|paguru=52+593|space=53+260|laguru=54+674|halantguru=54@-146,0+0|maguru=56+596|space=57+260|laguru=58+674|halantguru=58@-146,0+0|laguru=60+674",
+            "input": "ਲ ਲ੍ਰ ਲ੍ਹ ਲ੍ਵ ਲ੍ਯ ਲ੍ਙ ਲ੍ਚ ਲ੍ਟ ਲ੍ਠ ਲ੍ਤ ਲ੍ਥ ਲ੍ਦ ਲ੍ਨ ਲ੍ਪ ਲ੍ਮ ਲ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "aaguru=0+977|vaguru=1+567|eematraguru=1+0|gaguru=3+750|iimatraguru=3+259|colon.guru=5+294|space=6+260|quotedbl.guru=7+502|lanuktaguru=8+674|quotedbl.guru=10+502|danda.guru=11+379|space=12+260|space=13+260|haguru=14+576|vaguru=15+567|aamatraguru=15+235|laguru=17+674|aamatraguru=17+235|space=19+260|paguru=20+593|tippiguru=20+0|jaguru=22+612|aamatraguru=22+235|baguru=24+608|iimatraguru=24+259|space=26+260",
+            "expectation": "aaguru=0+977|vaguru=1+567|eematraguru=1+0|gaguru=3+750|iimatraguru=3+259|colon.guru=5+294|space=6+260|quotedbl.guru=7+502|lanuktaguru=8+674|quotedbl.guru=10+502|uni0964.guru=11+379|space=12+260|space=13+260|haguru=14+576|vaguru=15+567|aamatraguru=15+235|laguru=17+674|aamatraguru=17+235|space=19+260|paguru=20+593|tippiguru=20+0|jaguru=22+612|aamatraguru=22+235|baguru=24+608|iimatraguru=24+259|space=26+260",
             "input": "ਆਵੇਗੀ: \"ਲ਼\"।  ਹਵਾਲਾ ਪੰਜਾਬੀ ",
             "note": "Issue #113",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "uni25CC=0+566|udaatguru=0+0",
+            "expectation": "uni25CC=0+566|udaatguru=0@-18,0+0",
             "input": "ੑ",
             "note": "Issue #389",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "khaguru=0+598|.notdef=1+600|khaguru=2+598|rasubscriptguru=2+0|.notdef=5+600|khaguru=6+598|hasubscriptguru=6+0|.notdef=9+600|khaguru=10+598|vasubscriptguru=10+0|.notdef=13+600|khaguru=14+598|yapostformguru=14+666|.notdef=17+600|khaprehalfguru=18+598|gaguru=20+750|.notdef=21+600|khaprehalfguru=22+598|caguru=24+657|.notdef=25+600|khaprehalfguru=26+598|ttaguru=28+575|.notdef=29+600|khaprehalfguru=30+598|tthaguru=32+660|.notdef=33+600|khaprehalfguru=34+598|taguru=36+542|.notdef=37+600|khaprehalfguru=38+598|thaguru=40+598|.notdef=41+600|khaprehalfguru=42+598|daguru=44+617|.notdef=45+600|khaprehalfguru=46+598|naguru=48+648|.notdef=49+600|khaprehalfguru=50+598|paguru=52+593|.notdef=53+600|khaprehalfguru=54+598|maguru=56+596|.notdef=57+600|khaprehalfguru=58+598|laguru=60+674",
-            "input": "ਖ\tਖ੍ਰ\tਖ੍ਹ\tਖ੍ਵ\tਖ੍ਯ\tਖ੍ਗ\tਖ੍ਚ\tਖ੍ਟ\tਖ੍ਠ\tਖ੍ਤ\tਖ੍ਥ\tਖ੍ਦ\tਖ੍ਨ\tਖ੍ਪ\tਖ੍ਮ\tਖ੍ਲ",
+            "expectation": "khaguru=0+598|space=1+260|khaguru=2+598|rasubscriptguru=2+0|space=5+260|khaguru=6+598|hasubscriptguru=6+0|space=9+260|khaguru=10+598|vasubscriptguru=10+0|space=13+260|khaguru=14+598|yapostformguru=14+666|space=17+260|khaguru=18+598|halantguru=18+0|gaguru=20+750|space=21+260|khaguru=22+598|halantguru=22+0|caguru=24+657|space=25+260|khaguru=26+598|halantguru=26+0|ttaguru=28+575|space=29+260|khaguru=30+598|halantguru=30+0|tthaguru=32+660|space=33+260|khaguru=34+598|halantguru=34+0|taguru=36+542|space=37+260|khaguru=38+598|halantguru=38+0|thaguru=40+598|space=41+260|khaguru=42+598|halantguru=42+0|daguru=44+617|space=45+260|khaguru=46+598|halantguru=46+0|naguru=48+648|space=49+260|khaguru=50+598|halantguru=50+0|paguru=52+593|space=53+260|khaguru=54+598|halantguru=54+0|maguru=56+596|space=57+260|khaguru=58+598|halantguru=58+0|laguru=60+674",
+            "input": "ਖ ਖ੍ਰ ਖ੍ਹ ਖ੍ਵ ਖ੍ਯ ਖ੍ਗ ਖ੍ਚ ਖ੍ਟ ਖ੍ਠ ਖ੍ਤ ਖ੍ਥ ਖ੍ਦ ਖ੍ਨ ਖ੍ਪ ਖ੍ਮ ਖ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "naguru=0+648|.notdef=1+600|naguru=2+648|rasubscript1guru=2@-24,0+0|.notdef=5+600|naguru=6+648|hasubscript1guru=6@-24,0+0|.notdef=9+600|naguru=10+648|vasubscript1guru=10@-24,0+0|.notdef=13+600|naguru=14+648|yapostformguru=14+666|.notdef=17+600|naprehalfguru=18+648|gaguru=20+750|.notdef=21+600|naprehalfguru=22+648|caguru=24+657|.notdef=25+600|naprehalfguru=26+648|ttaguru=28+575|.notdef=29+600|naprehalfguru=30+648|tthaguru=32+660|.notdef=33+600|naprehalfguru=34+648|taguru=36+542|.notdef=37+600|naprehalfguru=38+648|thaguru=40+598|.notdef=41+600|naprehalfguru=42+648|daguru=44+617|.notdef=45+600|naprehalfguru=46+648|naguru=48+648|.notdef=49+600|naprehalfguru=50+648|paguru=52+593|.notdef=53+600|naprehalfguru=54+648|maguru=56+596|.notdef=57+600|naprehalfguru=58+648|laguru=60+674",
-            "input": "ਨ\tਨ੍ਰ\tਨ੍ਹ\tਨ੍ਵ\tਨ੍ਯ\tਨ੍ਗ\tਨ੍ਚ\tਨ੍ਟ\tਨ੍ਠ\tਨ੍ਤ\tਨ੍ਥ\tਨ੍ਦ\tਨ੍ਨ\tਨ੍ਪ\tਨ੍ਮ\tਨ੍ਲ",
+            "expectation": "naguru=0+648|space=1+260|naguru=2+648|rasubscript1guru=2@-24,0+0|space=5+260|naguru=6+648|hasubscript1guru=6@-24,0+0|space=9+260|naguru=10+648|vasubscript1guru=10@-24,0+0|space=13+260|naguru=14+648|yapostformguru=14+666|space=17+260|naguru=18+648|halantguru=18@-140,0+0|gaguru=20+750|space=21+260|naguru=22+648|halantguru=22@-140,0+0|caguru=24+657|space=25+260|naguru=26+648|halantguru=26@-140,0+0|ttaguru=28+575|space=29+260|naguru=30+648|halantguru=30@-140,0+0|tthaguru=32+660|space=33+260|naguru=34+648|halantguru=34@-140,0+0|taguru=36+542|space=37+260|naguru=38+648|halantguru=38@-140,0+0|thaguru=40+598|space=41+260|naguru=42+648|halantguru=42@-140,0+0|daguru=44+617|space=45+260|naguru=46+648|halantguru=46@-140,0+0|naguru=48+648|space=49+260|naguru=50+648|halantguru=50@-140,0+0|paguru=52+593|space=53+260|naguru=54+648|halantguru=54@-140,0+0|maguru=56+596|space=57+260|naguru=58+648|halantguru=58@-140,0+0|laguru=60+674",
+            "input": "ਨ ਨ੍ਰ ਨ੍ਹ ਨ੍ਵ ਨ੍ਯ ਨ੍ਗ ਨ੍ਚ ਨ੍ਟ ਨ੍ਠ ਨ੍ਤ ਨ੍ਥ ਨ੍ਦ ਨ੍ਨ ਨ੍ਪ ਨ੍ਮ ਨ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "caguru=0+657|.notdef=1+600|caguru=2+657|rasubscript1guru=2@-49,0+0|.notdef=5+600|caguru=6+657|hasubscript1guru=6@-49,0+0|.notdef=9+600|caguru=10+657|vasubscript1guru=10@-49,0+0|.notdef=13+600|caguru=14+657|yapostformguru=14+666|.notdef=17+600|caprehalfguru=18+657|gaguru=20+750|.notdef=21+600|caprehalfguru=22+657|caguru=24+657|.notdef=25+600|caprehalfguru=26+657|ttaguru=28+575|.notdef=29+600|caprehalfguru=30+657|tthaguru=32+660|.notdef=33+600|caprehalfguru=34+657|taguru=36+542|.notdef=37+600|caprehalfguru=38+657|thaguru=40+598|.notdef=41+600|caprehalfguru=42+657|daguru=44+617|.notdef=45+600|caprehalfguru=46+657|naguru=48+648|.notdef=49+600|caprehalfguru=50+657|paguru=52+593|.notdef=53+600|caprehalfguru=54+657|maguru=56+596|.notdef=57+600|caprehalfguru=58+657|laguru=60+674",
-            "input": "ਚ\tਚ੍ਰ\tਚ੍ਹ\tਚ੍ਵ\tਚ੍ਯ\tਚ੍ਗ\tਚ੍ਚ\tਚ੍ਟ\tਚ੍ਠ\tਚ੍ਤ\tਚ੍ਥ\tਚ੍ਦ\tਚ੍ਨ\tਚ੍ਪ\tਚ੍ਮ\tਚ੍ਲ",
+            "expectation": "caguru=0+657|space=1+260|caguru=2+657|rasubscript1guru=2@-49,0+0|space=5+260|caguru=6+657|hasubscript1guru=6@-49,0+0|space=9+260|caguru=10+657|vasubscript1guru=10@-49,0+0|space=13+260|caguru=14+657|yapostformguru=14+666|space=17+260|caguru=18+657|halantguru=18@-53,0+0|gaguru=20+750|space=21+260|caguru=22+657|halantguru=22@-53,0+0|caguru=24+657|space=25+260|caguru=26+657|halantguru=26@-53,0+0|ttaguru=28+575|space=29+260|caguru=30+657|halantguru=30@-53,0+0|tthaguru=32+660|space=33+260|caguru=34+657|halantguru=34@-53,0+0|taguru=36+542|space=37+260|caguru=38+657|halantguru=38@-53,0+0|thaguru=40+598|space=41+260|caguru=42+657|halantguru=42@-53,0+0|daguru=44+617|space=45+260|caguru=46+657|halantguru=46@-53,0+0|naguru=48+648|space=49+260|caguru=50+657|halantguru=50@-53,0+0|paguru=52+593|space=53+260|caguru=54+657|halantguru=54@-53,0+0|maguru=56+596|space=57+260|caguru=58+657|halantguru=58@-53,0+0|laguru=60+674",
+            "input": "ਚ ਚ੍ਰ ਚ੍ਹ ਚ੍ਵ ਚ੍ਯ ਚ੍ਗ ਚ੍ਚ ਚ੍ਟ ਚ੍ਠ ਚ੍ਤ ਚ੍ਥ ਚ੍ਦ ਚ੍ਨ ਚ੍ਪ ਚ੍ਮ ਚ੍ਲ",
             "note": "Issue #529",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
@@ -229,7 +229,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "paguru=0+593|uni0951=0@0,275+0|danuktaguru=2+617|vaprehalfguru=4+567",
+            "expectation": "paguru=0+593|uni0951=0@0,275+0|danuktaguru=2+617|vaguru=4+567|halantguru=4@-82,0+0",
             "input": "ਪ॑ਦ਼ਵ੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -241,7 +241,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "naprehalfguru=0+648|uni0951=0@-195,275+0|raguru=3+579|tthaguru=4+660|yakashguru=4@-44,0+0|aumatraguru=4@-181,0+0|addakguru=4@93,0+0",
+            "expectation": "naguru=0+648|halantguru=0@-140,0+0|uni0951=0@-195,275+0|raguru=3+579|tthaguru=4+660|yakashguru=4@-44,0+0|aumatraguru=4@-181,0+0|addakguru=4@93,0+0",
             "input": "ਨ੍॑ਰਠੵੌੱ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -259,13 +259,13 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "iguru=0+816|oomatraguru=0@5,0+0|japrehalfguru=2+612|jhaguru=4+594|aumatraguru=4@3,0+0|panuktaguru=6+593|iimatraguru=6+259|uni0952=6@0,-355+0",
+            "expectation": "iguru=0+816|oomatraguru=0@5,0+0|jaguru=2+612|halantguru=2+0|jhaguru=4+594|aumatraguru=4@3,0+0|panuktaguru=6+593|iimatraguru=6+259|uni0952=6@0,-355+0",
             "input": "ਇੋਜ੍ਝੌਪ਼ੀ॒",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "khaprehalfguru=0+598|jhaguru=2+594|aumatraguru=2@3,0+0|aimatrabindiguru=2@3,0+0",
+            "expectation": "khaguru=0+598|halantguru=0+0|jhaguru=2+594|aumatraguru=2@3,0+0|aimatrabindiguru=2@3,0+0",
             "input": "ਖ੍ਝੌੈਂ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -283,7 +283,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ganuktaprehalfguru=0+750|nyaguru=2+567|uumatraguru=2@30,0+0",
+            "expectation": "ganuktaguru=0+750|halantguru=0+0|nyaguru=2+567|uumatraguru=2@30,0+0",
             "input": "ਗ਼੍ਞੂ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -295,19 +295,19 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "chaprehalfguru=0+634|tippiguru=0@-11,0+0|uni0952=0@0,-355+0",
+            "expectation": "chaguru=0+634|halantguru=0@-58,0+0|tippiguru=0@-11,0+0|uni0952=0@-68,-355+0",
             "input": "ਛ੍ੰ॒",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "baprehalfguru=0+608|nyaguru=2+567|uni0952=2@-26,-355+0",
+            "expectation": "baguru=0+608|halantguru=0+0|nyaguru=2+567|uni0952=2@-26,-355+0",
             "input": "ਬ੍ਞ॒",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ddhaprehalfguru=0+646|nyaprehalfguru=2+567|caguru=4+657|uni0952=4@0,-355+0|jhaguru=6+594|aumatraguru=6@3,0+0",
+            "expectation": "ddhaguru=0+646|halantguru=0@-71,0+0|nyaguru=2+567|halantguru=2@-82,0+0|caguru=4+657|uni0952=4@0,-355+0|jhaguru=6+594|aumatraguru=6@3,0+0",
             "input": "ਢ੍ਞ੍ਚ॒ਝੌ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -325,7 +325,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "nine.guru=0+551|uni0952=0@0,-355+0|taprehalfguru=2+542|tippiguru=2+0|addakbaraltguru=2+217|khaguru=6+598|uni0952=6@0,-355+0|phaguru=8+579|uni0951=8@-1,275+0",
+            "expectation": "nine.guru=0+551|uni0952=0@0,-355+0|taguru=2+542|halantguru=2@-129,0+0|tippiguru=2+0|addakbaraltguru=2+217|khaguru=6+598|uni0952=6@0,-355+0|phaguru=8+579|uni0951=8@-1,275+0",
             "input": "9॒ਤ੍ੰੱਖ॒ਫ॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -337,7 +337,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ubindiguru=0+662|fiveguru=2+551|uni0951=2@0,275+0|yaprehalfguru=4+695",
+            "expectation": "ubindiguru=0+662|fiveguru=2+551|uni0951=2@0,275+0|yaguru=4+695|halantguru=4+0",
             "input": "ਉਂ੫॑ਯ੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -355,19 +355,19 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "thaprehalfguru=0+598|lanuktaguru=2+674|umatralowguru=2+0|oomatraguru=2@-28,0+0|uni0952=2@0,-355+0|chaguru=6+634|yakashguru=6@-14,0+0",
+            "expectation": "thaguru=0+598|halantguru=0+0|lanuktaguru=2+674|umatralowguru=2+0|oomatraguru=2@-28,0+0|uni0952=2@0,-355+0|chaguru=6+634|yakashguru=6@-14,0+0",
             "input": "ਥ੍ਲ਼ੁੋ॒ਛੵ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "khanuktaprehalfguru=0+598|dhaguru=2+593|uni0951=2@0,275+0|aiguru=4+742|umatraguru=4@-143,0+0|ngaguru=6+579|udaatguru=6@5,0+0",
+            "expectation": "khanuktaguru=0+598|halantguru=0+0|dhaguru=2+593|uni0951=2@0,275+0|aiguru=4+742|umatraguru=4@-143,0+0|ngaguru=6+579|udaatguru=6@5,0+0",
             "input": "ਖ਼੍ਧ॑ਐੁਙੑ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "raprehalfguru=0+579|tthaguru=2+660|udaatguru=2@-44,0+0|oomatra1guru=2@-201,0+0|iimatraguru=2+259|uni0951=2@0,275+0|eeguru=7+557|uni0951=7@0,275+0",
+            "expectation": "raguru=0+579|halantguru=0@-54,0+0|tthaguru=2+660|udaatguru=2@-44,0+0|oomatra1guru=2@-201,0+0|iimatraguru=2+259|uni0951=2@0,275+0|eeguru=7+557|uni0951=7@0,275+0",
             "input": "ਰ੍ਠੑੋੀ॑ਏ॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -397,7 +397,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ddaguru=0+597|uni0951=0@-6,275+0|ganuktaprehalfguru=2+750|bhaguru=4+577|bindiguru=4@-9,0+0",
+            "expectation": "ddaguru=0+597|uni0951=0@-6,275+0|ganuktaguru=2+750|halantguru=2+0|bhaguru=4+577|bindiguru=4@-9,0+0",
             "input": "ਡ॑ਗ਼੍ਭਂ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -445,7 +445,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "laguru=0+674|aumatraguru=0@-28,0+0|vaprehalfguru=2+567|tthanuktaguru=4+660",
+            "expectation": "laguru=0+674|aumatraguru=0@-28,0+0|vaguru=2+567|halantguru=2@-82,0+0|tthanuktaguru=4+660",
             "input": "ਲੌਵ੍ਠ਼",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -463,13 +463,13 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "jaguru=0+612|uni0951=0@0,275+0|ngaprehalfguru=2+579|maguru=4+596|uni0952=4@0,-355+0|phanuktaguru=6+579|aimatraguru=6@-1,0+0|haguru=8+576|uni0952=8@0,-355+0",
+            "expectation": "jaguru=0+612|uni0951=0@0,275+0|ngaguru=2+579|halantguru=2@7,0+0|maguru=4+596|uni0952=4@0,-355+0|phanuktaguru=6+579|aimatraguru=6@-1,0+0|haguru=8+576|uni0952=8@0,-355+0",
             "input": "ਜ॑ਙ੍ਮ॒ਫ਼ੈਹ॒",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "five.guru=0+551|uni0952=0@0,-355+0|raprehalfguru=2+579|caguru=4+657|uni0951=4@0,275+0",
+            "expectation": "five.guru=0+551|uni0952=0@0,-355+0|raguru=2+579|halantguru=2@-54,0+0|caguru=4+657|uni0951=4@0,275+0",
             "input": "5॒ਰ੍ਚ॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -487,7 +487,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "sanuktaguru=0+603|uni0951=0@0,275+0|khanuktaguru=2+598|uni0951=2@0,275+0|caprehalfguru=4+657",
+            "expectation": "sanuktaguru=0+603|uni0951=0@0,275+0|khanuktaguru=2+598|uni0951=2@0,275+0|caguru=4+657|halantguru=4@-53,0+0",
             "input": "ਸ਼॑ਖ਼॑ਚ੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -499,7 +499,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "nyanuktaguru=0+567|dhaprehalfguru=2+593|kaguru=4+622|aumatraguru=4@-20,0+0",
+            "expectation": "nyanuktaguru=0+567|dhaguru=2+593|halantguru=2+0|kaguru=4+622|aumatraguru=4@-20,0+0",
             "input": "ਞ਼ਧ੍ਕੌ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -583,13 +583,13 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "nine.guru=0+551|uni0951=0@0,275+0|chanuktaguru=2+634|thaprehalfguru=4+598|phanuktaprehalfguru=6+579",
+            "expectation": "nine.guru=0+551|uni0951=0@0,275+0|chanuktaguru=2+634|thaguru=4+598|halantguru=4+0|phanuktaguru=6+579|halantguru=6@-55,0+0",
             "input": "9॑ਛ਼ਥ੍ਫ਼੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "nnanuktaguru=0+622|lanuktaprehalfguru=2+674",
+            "expectation": "nnanuktaguru=0+622|lanuktaguru=2+674|halantguru=2@-146,0+0",
             "input": "ਣ਼ਲ਼੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -607,25 +607,25 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "iiguru=0+816|umatraguru=0@-223,0+0|raprehalfguru=2+579|januktaguru=4+626|uni0951=4@0,275+0|bhaguru=6+577|udaatguru=6@-48,0+0|nyaguru=8+567|tippiguru=8+0",
+            "expectation": "iiguru=0+816|umatraguru=0@-223,0+0|raguru=2+579|halantguru=2@-54,0+0|januktaguru=4+626|uni0951=4@0,275+0|bhaguru=6+577|udaatguru=6@-48,0+0|nyaguru=8+567|tippiguru=8+0",
             "input": "ਈੁਰ੍ਜ਼॑ਭੑਞੰ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "thanuktaguru=0+598|gaprehalfguru=2+750|caguru=4+657|uni0951=4@0,275+0",
+            "expectation": "thanuktaguru=0+598|gaguru=2+750|halantguru=2+0|caguru=4+657|uni0951=4@0,275+0",
             "input": "ਥ਼ਗ੍ਚ॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "ganuktaguru=0+750|uni0951=0@0,275+0|canuktaguru=2+657|gaprehalfguru=4+750|jaguru=6+612|uni0951=6@0,275+0",
+            "expectation": "ganuktaguru=0+750|uni0951=0@0,275+0|canuktaguru=2+657|gaguru=4+750|halantguru=4+0|jaguru=6+612|uni0951=6@0,275+0",
             "input": "ਗ਼॑ਚ਼ਗ੍ਜ॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "januktaprehalfguru=0+626|ngaprehalfguru=2+579|ubindiguru=4+662|nyaguru=6+567|aimatraguru=6+0",
+            "expectation": "januktaguru=0+626|halantguru=0+0|ngaguru=2+579|halantguru=2@7,0+0|ubindiguru=4+662|nyaguru=6+567|aimatraguru=6+0",
             "input": "ਜ਼੍ਙ੍ਉਂਞੈ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -661,7 +661,7 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "naguru=0+648|umatraguru=0@-19,0+0|rraguru=2+569|uni0951=2@-3,275+0|haprehalfguru=4+576",
+            "expectation": "naguru=0+648|umatraguru=0@-19,0+0|rraguru=2+569|uni0951=2@-3,275+0|haguru=4+576|halantguru=4@-54,0+0",
             "input": "ਨੁੜ॑ਹ੍",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
@@ -673,13 +673,13 @@
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "uuguru=0+662|uni0951=0@0,275+0|chaguru=2+634|eematraguru=2@-11,0+0|halantguru=2+0|haprehalfguru=5+576|uni0952=5@0,-355+0|iguru=8+816|uumatraguru=8@26,0+0",
+            "expectation": "uuguru=0+662|uni0951=0@0,275+0|chaguru=2+634|eematraguru=2@-11,0+0|halantguru=2@-58,0+0|haguru=5+576|halantguru=5@-54,0+0|uni0952=5@0,-355+0|iguru=8+816|uumatraguru=8@26,0+0",
             "input": "ਊ॑ਛੇ੍ਹ੍॒ਇੂ",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
         },
         {
-            "expectation": "sanuktaguru=0+603|uni0951=0@0,275+0|chanuktaprehalfguru=2+634|uni0952=2@0,-355+0|five.guru=6+551|uni0951=6@0,275+0",
+            "expectation": "sanuktaguru=0+603|uni0951=0@0,275+0|chanuktaguru=2+634|halantguru=2@-58,0+0|uni0952=2@0,-355+0|five.guru=6+551|uni0951=6@0,275+0",
             "input": "ਸ਼॑ਛ਼੍॒5॑",
             "note": "Added by SIESTA",
             "only": "NotoSansGurmukhi-Regular.ttf"
