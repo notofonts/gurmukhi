@@ -70,7 +70,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -212,7 +212,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -343,7 +343,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -486,7 +486,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -609,7 +609,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -735,7 +735,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -796,7 +796,7 @@ The following glyphs do not have the recommended number of contours:
 
 	* b (U+0062): X=215.5,Y=536.5 (should be at x-height 536?) 
 
-	* 77 more.
+	* 78 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -854,7 +854,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -915,7 +915,7 @@ The following glyphs do not have the recommended number of contours:
 
 	* c (U+0063): X=360.0,Y=535.0 (should be at x-height 536?) 
 
-	* 62 more.
+	* 63 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -982,7 +982,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -1113,7 +1113,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -1218,7 +1218,7 @@ The following glyphs do not have the recommended number of contours:
 
 	- colon 
 
-	- 36 more.
+	- 35 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -1257,7 +1257,7 @@ Use -F or --full-lists to disable shortening of long lists.
 
 	* X (U+0058): X=236.0,Y=621.5 (should be at cap-height 622?) 
 
-	* 82 more.
+	* 83 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><br></div></details>
