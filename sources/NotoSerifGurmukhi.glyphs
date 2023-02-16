@@ -1,5 +1,5 @@
 {
-.appVersion = "3072";
+.appVersion = "3177";
 DisplayStrings = (
 "/uni25CC"
 );
@@ -432,6 +432,14 @@ name = abvs;
 {
 code = "script guru;\012sub kaguru halantguru by kaprehalfguru;\012sub khaguru halantguru by khaprehalfguru;\012sub gaguru halantguru by gaprehalfguru;\012sub ghaguru halantguru by ghaprehalfguru;\012sub ngaguru halantguru by ngaprehalfguru;\012sub caguru halantguru by caprehalfguru;\012sub chaguru halantguru by chaprehalfguru;\012sub jaguru halantguru by japrehalfguru;\012sub jhaguru halantguru by jhaprehalfguru;\012sub nyaguru halantguru by nyaprehalfguru;\012sub ttaguru halantguru by ttaprehalfguru;\012sub tthaguru halantguru by tthaprehalfguru;\012sub ddaguru halantguru by ddaprehalfguru;\012sub ddhaguru halantguru by ddhaprehalfguru;\012sub nnaguru halantguru by nnaprehalfguru;\012sub taguru halantguru by taprehalfguru;\012sub thaguru halantguru by thaprehalfguru;\012sub daguru halantguru by daprehalfguru;\012sub dhaguru halantguru by dhaprehalfguru;\012sub naguru halantguru by naprehalfguru;\012sub paguru halantguru by paprehalfguru;\012sub phaguru halantguru by phaprehalfguru;\012sub baguru halantguru by baprehalfguru;\012sub bhaguru halantguru by bhaprehalfguru;\012sub maguru halantguru by maprehalfguru;\012sub yaguru halantguru by yaprehalfguru;\012sub raguru halantguru by raprehalfguru;\012sub laguru halantguru by laprehalfguru;\012sub lanuktaguru halantguru by lanuktaprehalfguru;\012sub vaguru halantguru by vaprehalfguru;\012sub sanuktaguru halantguru by sanuktaprehalfguru;\012sub saguru halantguru by saprehalfguru;\012sub haguru halantguru by haprehalfguru;\012sub khanuktaguru halantguru by khanuktaprehalfguru;\012sub ganuktaguru halantguru by ganuktaprehalfguru;\012sub januktaguru halantguru by januktaprehalfguru;\012sub rraguru halantguru by ddanuktaprehalfguru;\012sub phanuktaguru halantguru by phanuktaprehalfguru;\012sub kanuktaguru halantguru by kanuktaprehalfguru;\012sub ghanuktaguru halantguru by ghanuktaprehalfguru;\012sub nganuktaguru halantguru by nganuktaprehalfguru;\012sub canuktaguru halantguru by canuktaprehalfguru;\012sub chanuktaguru halantguru by chanuktaprehalfguru;\012sub jhanuktaguru halantguru by jhanuktaprehalfguru;\012sub nyanuktaguru halantguru by nyanuktaprehalfguru;\012sub ttanuktaguru halantguru by ttanuktaprehalfguru;\012sub tthanuktaguru halantguru by tthanuktaprehalfguru;\012sub ddhanuktaguru halantguru by ddhanuktaprehalfguru;\012sub nnanuktaguru halantguru by nnanuktaprehalfguru;\012sub tanuktaguru halantguru by tanuktaprehalfguru;\012sub thanuktaguru halantguru by thanuktaprehalfguru;\012sub danuktaguru halantguru by danuktaprehalfguru;\012sub dhanuktaguru halantguru by dhanuktaprehalfguru;\012sub nanuktaguru halantguru by nanuktaprehalfguru;\012sub panuktaguru halantguru by panuktaprehalfguru;\012sub banuktaguru halantguru by banuktaprehalfguru;\012sub bhanuktaguru halantguru by bhanuktaprehalfguru;\012sub manuktaguru halantguru by manuktaprehalfguru;\012sub yanuktaguru halantguru by yanuktaprehalfguru;\012sub ranuktaguru halantguru by ranuktaprehalfguru;\012sub vanuktaguru halantguru by vanuktaprehalfguru;\012sub hanuktaguru halantguru by hanuktaprehalfguru;\012";
 name = haln;
+},
+{
+code = "# Automatic Code Start";
+name = abvm;
+},
+{
+code = "# Automatic Code Start\012\012# Separate bindi when positioned on left (See #23)\012pos bindiguru' <-150 0 0 0> iimatraguru;\012";
+name = dist;
 }
 );
 fontMaster = (

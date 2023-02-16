@@ -652,6 +652,9 @@ pos @class6 uni0952' <0 -375 0 0>;
 pos baguru' aumatraaddakguru' <$ba_aumatraaddak_fix 0 0 0> daguru' oomatrabindiguru';
 pos baguru' aumatraaddakguru' <$ba_aumatraaddak_fix 0 0 0> dhaguru' oomatrabindiguru';
 pos aumatraaddakguru' <$aumatraaddak_tta_fix 0 0 0> ttaguru' eematraguru';
+
+# Separate bindi when positioned on left (See #23)
+pos bindiguru' <$bindi_iimatra_fix 0 0 0> iimatraguru;
 ";
 tag = dist;
 }
@@ -719,7 +722,8 @@ numberValues = (
 70,
 41,
 -60,
--1
+-1,
+-100
 );
 stemValues = (
 26,
@@ -787,7 +791,8 @@ numberValues = (
 93,
 54,
 -70,
--1
+-1,
+-150
 );
 stemValues = (
 71,
@@ -853,7 +858,8 @@ numberValues = (
 93,
 88,
 -70,
--1
+-1,
+-200
 );
 stemValues = (
 110,
@@ -922,7 +928,8 @@ numberValues = (
 100,
 93,
 -85,
--35
+-35,
+-250
 );
 stemValues = (
 138,
@@ -992,7 +999,8 @@ numberValues = (
 64,
 45,
 -22,
--1
+-1,
+-75
 );
 stemValues = (
 26,
@@ -1061,7 +1069,8 @@ numberValues = (
 93,
 63,
 -45,
--1
+-1,
+-125
 );
 stemValues = (
 68,
@@ -1127,7 +1136,8 @@ numberValues = (
 93,
 58,
 -95,
--40
+-40,
+-175
 );
 stemValues = (
 133,
@@ -90549,6 +90559,9 @@ name = ba_aumatraaddak_fix;
 },
 {
 name = aumatraaddak_tta_fix;
+},
+{
+name = bindi_iimatra_fix;
 }
 );
 properties = (
