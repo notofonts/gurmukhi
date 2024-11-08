@@ -8,7 +8,8 @@ includeSubsets:
   name: GF_Latin_Core
 - from: Noto Serif
   ranges:
-    - start: 0x02BC
-      end: 0x2BC
+  - end: 700
+    start: 700
+recipeProvider: noto
 sources:
 - NotoSerifGurmukhi.glyphs
