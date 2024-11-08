@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Diffenator3</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	<style type="text/css">
+		@font-face {
+      font-family: "Font Before";
+      src: url();
+    }
+
+    @font-face {
+      font-family: "Font After";
+      src: url();
+    }
+
+    .font-before, .font-after {
+      font-variation-settings: "wght" 400, "wdth" 100;
+    }
+
+    .font-before {
+      font-family: "Font Before", "Adobe Notdef";
+    }
+
+    .font-after {
+      font-family: "Font After", "Adobe Notdef";
+    }
+
+	:root {
+	--node-pt-size: 40px;
+	}
+
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #b3d4f5 !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+    background-color: #ced9e4 !important;
+}
+.nav-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.nav-pills .nav-link{
+    background-color: #9fcaf5 !important;
+}
+h4 {
+    color: #6f7882 !important;
+}
+
+@font-face {
+    font-family: "Adobe NotDef";
+    src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+}
+
+.box-title {
+    width: 100%;
+    font-size: 8pt;
+    font-weight: 700;
+    border-top: 1px solid black;
+    padding-top: 5px;
+    margin-bottom: 10pt;
+    display: block;
+}
+
+.box {
+    margin-bottom: 20pt;
+    width: 100%;
+    float: left;
+}
+
+.box-text {}
+
+#ui-nav {
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+}
+
+#font-toggle {}
+
+.ui-nav-item {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: block;
+    font-size: 14pt;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* Stuff needed for the table differ */
+body {
+    font-family: Helvetica;
+}
+
+.node {
+    font-family: courier;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    padding: 5px;
+    display: block;
+    border: 1px dashed grey;
+    background-color: #e9e9ee;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.attr-before {
+    color: green;
+    cursor: text;
+}
+
+.attr-after {
+    color: red;
+    cursor: text;
+}
+
+.leaf {
+    font-weight: bold;
+}
+
+.old .cell .new {
+    display: none;
+}
+
+.new .cell .old {
+    display: none;
+}
+
+.both .cell .old {
+    opacity: 0.75;
+    color: red;
+}
+
+.both .cell .new {
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    color: green;
+}
+
+.spacer {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#ot-panel {
+    max-height: 400px;
+    overflow-y: scroll;
+    background: white;
+    padding: 10px;
+    display: none;
+   }
+
+   .cell{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    width: 50pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+  }
+  .cell-word{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .cell-glyph{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    border-radius: 5pt;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5pt;
+    margin: 5pt;
+    width: calc(var(--node-pt-size) * 2);
+    min-height: calc(var(--node-pt-size) * 2);
+    font-size: var(--node-pt-size);
+  }
+  .cell-glyph.font-before, .cell-word.font-before {
+    background: #eff6f2;
+  }
+  .cell-glyph.font-after, .cell-word.font-after {
+    background: #f7f4f4;
+  }
+
+  .cell-glyph:hover {
+    box-shadow: none;
+    background: #f0f0f5;
+  }
+  .cat-strings .cell {
+    clear: both;
+    position: static;
+    float: none;
+    text-align: left;
+  }
+  .codepoint {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10pt;
+    line-height: 10pt;
+  }
+  .box-title {
+    clear: both;
+  }
+  .node.closed::before {
+    content: "+";
+    margin-right: 5pt;
+  }
+  .node.open::before {
+    content: "-";
+    margin-right: 5pt;
+  }
+
+  .tooltip pre {
+    background-color: #6f7882;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .tooltip {
+    line-height: 1em;
+  }
+  .tooltip-inner {
+    max-width: 300px;
+  }
+
+  h1,h2,h3,h4,h5 {
+    clear: both;
+  }
+
+  #locationnav li {
+    white-space: wrap;
+  }
+
+  #userdefined div { width: 100%; }
+  
+/* The following rules are used in the WASM version, not in the CLI version.
+   But we keep them here so we can share them between the two versions. */
+
+   .modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+  }
+
+  .fontdrop {
+    padding: 30px;
+    border-radius: 20px;
+    outline: 3px dashed #ffffffff;
+    outline-offset: -20px;
+  }
+
+  #fontbefore {
+    background-color: #ddffdddd;
+  }
+
+  #fontafter {
+    background-color: #ffdddddd;
+  }
+
+  .dragging {
+    background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+    outline: 5px dashed #ffffffff;
+  }
+
+  #diffkerns {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+		</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+		<div id="ui-nav">
+		  <div class="ui-nav-item" id="fonttoggle">Old</div>
+		  <div class="ui-nav-item" id="fontanimate">Animate</div>
+		  <div id="axes">
+		  </div>
+		</div>
+	
+	<div class="row">
+		<div class="col-2">
+			<ul class="nav nav-pills" id="locationnav">
+			</ul>
+		</div>
+		<div class="col-9 mt-3">
+			<div id="title"></div>
+			<div id="cmapdiff"> </div>
+			<div id="main"></div>
+			<div id="userdefined">
+				<h4>User defined sample text</h4>
+				<div contenteditable="true" class="font-before cell-word">
+					You can type your own text here to see it previewed in the fonts.
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div id="diffkerns"> </div>
+			<div id="difftable"> </div>
+		</div>
+	</div>
+	<script type="module">
+		function renderTableDiff(node, toplevel) {
+  var wrapper = $("<div> </div>");
+  if (!node) {
+    return wrapper;
+  }
+  if (Array.isArray(node) && node.length == 2) {
+    var before = $("<span/>");
+    before.addClass("attr-before");
+    before.html(" " + node[0] + " ");
+    var after = $("<span/>");
+    after.addClass("attr-after");
+    after.append(renderTableDiff(node[1], true).children());
+    wrapper.append(before);
+    wrapper.append(after);
+    return wrapper;
+  }
+  if (node.constructor != Object) {
+    var thing = $("<span/>");
+    thing.html(node);
+    wrapper.append(thing);
+    return wrapper;
+  }
+  for (const [key, value] of Object.entries(node)) {
+    var display = $("<div/>");
+    display.addClass("node");
+    if (!toplevel) {
+      display.hide();
+    }
+    display.append(key);
+    display.append(renderTableDiff(value, false).children());
+    if (display.children(".node").length > 0) {
+      display.addClass("closed");
+    }
+    wrapper.append(display);
+  }
+  return wrapper;
+}
+
+function addAGlyph(glyph, where) {
+  let title = "";
+  if (glyph.name) {
+    title = "name: " + glyph.name;
+  }
+  let cp =
+    "<br>U+" +
+    glyph.string.codePointAt(0).toString(16).padStart(4, "0").toUpperCase();
+  where.append(`
+        <div class="cell-glyph font-before">
+        <div data-toggle="tooltip" data-html="true" data-title="${glyph.differing_pixels} pixels"> ${glyph.string}
+        <div class="codepoint" data-toggle="tooltip" data-html="true" data-title="${title}">
+		${cp}
+        </div>
+        </div>
+    `);
+}
+
+function addAWord(diff, where) {
+  if (!diff.buffer_b) {
+    diff.buffer_b = diff.buffer_a;
+  }
+  where.append(`
+		<div class="cell-word font-before">
+		<span data-toggle="tooltip" data-html="true" data-title="Before: <pre>${diff.buffer_a}</pre>After: <pre>${diff.buffer_b}</pre><br>difference: ${diff.differing_pixels} pixels">
+		${diff.word}
+		</span>
+		</div>
+	`);
+}
+
+function diffTables(report) {
+  $("#difftable").empty();
+  $("#difftable").append(`<h4 class="mt-2 box-title">Table-level details</h4>`);
+  $("#difftable").append(
+    renderTableDiff({ tables: report["tables"] }, true).children()
+  );
+  $("#difftable .node").on("click", function (e) {
+    $(this).toggleClass("closed open");
+    $(this).children(".node").toggle();
+    e.stopPropagation();
+  });
+}
+function diffKerns(report) {
+  $("#diffkerns").empty();
+  $("#diffkerns").append(`<h4 class="mt-2">Modified Kerns</h4>`);
+  $("#diffkerns").append(
+    `<table class="table table-striped" id="diffkerns"><tr><th>Pair</th><th>Old</old><th>New</th></table>`
+  );
+  for (let [pair, value] of Object.entries(report["kerns"])) {
+    if (pair == "error") {
+      $("#diffkerns").append(`<p class="text-danger">Error: ${value}</p>`);
+      continue;
+    } else {
+      let row = $("<tr>");
+      row.append(`<td>${pair}</td>`);
+      row.append(`<td>${serializeKernBefore(value)}</td>`);
+      row.append(`<td>${serializeKernAfter(value)}</td>`);
+      $("#diffkerns table").append(row);
+    }
+  }
+}
+
+function serializeKernBefore(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[0], -1);
+  }
+  return serializeKern(kern, 0);
+}
+
+function serializeKernAfter(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[1], -1);
+  }
+  return serializeKern(kern, 1);
+}
+
+function serializeKern(kern, index) {
+  let string = "";
+  if (kern === null || kern === undefined) {
+    return "(null)";
+  }
+  if (kern.x) {
+    string += serializeKernValue(kern.x, index);
+  } else if (kern.y) {
+    string = "0";
+  }
+
+  if (kern.y) {
+    string += "," + serializeKernValue(kern.y, index);
+  }
+  if (!kern.x_placement && !kern.y_placement) {
+    return string;
+  }
+  string += "@";
+  if (kern.x_placement) {
+    string += serializeKernValue(kern.x_placement, index);
+  } else if (kern.y_placement) {
+    string += "0";
+  }
+  if (kern.y_placement) {
+    string += "," + serializeKernValue(kern.y_placement, index);
+  }
+  return string;
+}
+
+function serializeKernValue(kern, index) {
+  if (typeof kern == "number") {
+    return kern;
+  }
+  let string = "(";
+  let verybig = Object.entries(kern).length > 5;
+  for (let [key, value] of Object.entries(kern)) {
+    if (key == "default") {
+      string += value[index] + " ";
+    } else {
+      string += value[index] + "@" + key + " ";
+    }
+    if (verybig) {
+      string += "<br>";
+    }
+  }
+  return string.trim() + ")";
+}
+
+function cmapDiff(report) {
+  if (report.cmap_diff && (report.cmap_diff.new || report.cmap_diff.missing)) {
+    $("#cmapdiff").append(
+      `<h4 class="mt-2">Added and Removed Encoded Glyphs</h4>`
+    );
+    if (report["cmap_diff"]["new"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Added Glyphs</h4>`);
+      let added = $("<div>");
+      for (let glyph of report["cmap_diff"]["new"]) {
+        addAGlyph(glyph, added);
+      }
+      $("#cmapdiff").append(added);
+    }
+
+    if (report["cmap_diff"]["missing"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Removed Glyphs</h4>`);
+      let missing = $("<div>");
+      for (let glyph of report["cmap_diff"]["missing"]) {
+        addAGlyph(glyph, missing);
+      }
+      $("#cmapdiff").append(missing);
+    }
+  } else {
+    $("#cmapdiff").append(`<p>No changes to encoded glyphs</p>`);
+  }
+}
+
+function setupAnimation() {
+  $("#fonttoggle").click(function () {
+    if ($(this).text() == "Old") {
+      $(this).text("New");
+      $(".font-before").removeClass("font-before").addClass("font-after");
+    } else {
+      $(this).text("Old");
+      $(".font-after").removeClass("font-after").addClass("font-before");
+    }
+  });
+
+  let animationHandle;
+  function animate() {
+    $("#fonttoggle").click();
+    animationHandle = setTimeout(animate, 1000);
+  }
+  $("#fontanimate").click(function () {
+    if ($(this).text() == "Animate") {
+      $(this).text("Stop");
+      animate();
+    } else {
+      $(this).text("Animate");
+      clearTimeout(animationHandle);
+    }
+  });
+}
+
+export {
+  renderTableDiff,
+  addAGlyph,
+  addAWord,
+  cmapDiff,
+  diffTables,
+  diffKerns,
+  setupAnimation,
+};
+
+	var report = {"tables":{"GPOS":{"feature_list":{"abvm":{"1":[null,3],"2":[null,4],"3":[null,5]},"dist":{"0":[3,6]},"mark":{"0":[6,9],"1":[null,10],"2":[null,11]}},"lookup_list":{"2":{"0":{"marks":{"anchor_1":[{"nuktaguru":{"x":-283,"y":0},"umatraguru":{"x":{"default":-305,"wght=900":-332,"wdth=62.5":-231,"wght=100":-293,"wdth=62.5,wght=100":-220,"wdth=62.5,wght=900":-264},"y":{"default":0,"wdth=62.5":3}},"uumatraguru":{"x":{"wdth=62.5":-231,"wdth=62.5,wght=100":-220,"default":-305,"wdth=62.5,wght=900":-264,"wght=100":-293,"wght=900":-332},"y":0},"uni0952":{"x":{"default":-249,"wght=704.9927":-261,"wght=100":-248,"wght=900":-271,"wdth=62.5,wght=900":-231,"wdth=62.5":-200,"wdth=62.5,wght=100":-199},"y":0}},null],"anchor_2":[{"halantguru":{"x":0,"y":0}},null],"anchor_3":[{"udaatguru":{"x":{"wght=100":-148,"wght=704.9927":-214,"wdth=62.5,wght=900":-204,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=900":-247,"default":-170},"y":0},"yakashguru":{"x":{"wdth=62.5,wght=900":-204,"default":-170,"wght=100":-148,"wght=900":-247,"wght=704.9927":-214,"wdth=62.5":-139,"wdth=62.5,wght=100":-103},"y":0},"rasubscriptguru":{"x":{"wdth=62.5,wght=900":-204,"wght=100":-148,"wdth=62.5":-139,"wght=900":-247,"default":-170,"wdth=62.5,wght=100":-103,"wght=704.9927":-214},"y":0},"hasubscriptguru":{"x":{"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=704.9927":-214,"wdth=62.5,wght=900":-204,"wght=100":-148,"wght=900":-247},"y":0},"vasubscriptguru":{"x":{"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"default":-170,"wght=704.9927":-214,"wght=900":-247,"wght=100":-148},"y":0},"rasubscripthalantguru":{"x":{"wght=704.9927":-214,"wght=900":-247,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=100":-148,"wdth=62.5":-139,"default":-170},"y":0},"hasubscripthalantguru":{"x":{"wdth=62.5,wght=900":-204,"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=100":-148,"wght=704.9927":-214,"wght=900":-247},"y":0},"rasubscriptuguru":{"x":{"wght=900":-247,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wght=100":-148,"wdth=62.5":-140,"default":-170,"wdth=62.5,wght=100":-103},"y":0},"rasubscriptuuguru":{"x":{"wdth=62.5,wght=100":-103,"wght=100":-148,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wdth=62.5":-139,"default":-170,"wght=900":-247},"y":0},"rasubscript1guru":{"x":{"wght=900":-247,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"default":-170,"wght=100":-148,"wdth=62.5":-139},"y":0},"hasubscript1guru":{"x":{"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wdth=62.5":-139,"default":-170,"wght=100":-148,"wght=900":-247,"wdth=62.5,wght=100":-103},"y":0},"vasubscript1guru":{"x":{"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wdth=62.5":-139,"wght=900":-247,"wdth=62.5,wght=100":-103,"default":-170,"wght=100":-148},"y":0}},null]},"bases":{"aguru":[{"anchor_1":{"x":{"wght=100":297,"wght=900":352,"wdth=62.5":236,"wdth=62.5,wght=100":217,"wdth=62.5,wght=900":287,"wght=704.9927":342,"default":294},"y":0}},null],"aaguru":{"anchor_1":[{"x":{"wght=704.9927":342,"wdth=62.5,wght=100":217,"wdth=62.5":236,"default":294,"wght=900":350,"wdth=62.5,wght=900":287,"wght=100":297},"y":0},null]},"iguru":{"anchor_1":[{"x":{"wdth=62.5":436,"wght=704.9927":599,"default":537,"wght=100":519,"wdth=62.5,wght=100":393,"wght=900":661,"wdth=62.5,wght=900":530},"y":0},null]},"iiguru":[{"anchor_1":{"x":{"wdth=62.5,wght=100":209,"wght=900":336,"wght=704.9927":324,"wdth=62.5,wght=900":267,"default":288,"wdth=62.5":229,"wght=100":290},"y":0}},null],"eeguru":[{"anchor_1":{"x":{"wght=100":270,"wdth=62.5,wght=100":196,"wght=900":318,"wdth=62.5,wght=900":250,"wdth=62.5":210,"wght=704.9927":305,"default":278},"y":0}},null],"aiguru":[{"anchor_1":{"x":{"wdth=62.5":236,"wght=704.9927":342,"default":294,"wdth=62.5,wght=100":217,"wght=900":352,"wght=100":297,"wdth=62.5,wght=900":287},"y":0}},null],"ooguru":[{"anchor_1":{"x":{"wght=900":359,"wght=100":320,"default":336,"wght=704.9927":359,"wdth=62.5,wght=100":231,"wdth=62.5":232,"wdth=62.5,wght=900":281},"y":0}},null],"auguru":[{"anchor_1":{"x":{"wght=900":352,"wght=100":297,"default":294,"wdth=62.5":236,"wdth=62.5,wght=900":287,"wdth=62.5,wght=100":217,"wght=704.9927":342},"y":0}},null],"kaguru":{"anchor_2":[{"x":{"default":655,"wdth=62.5":486,"wght=704.9927":692,"wdth=62.5,wght=100":467,"wdth=62.5,wght=900":553,"wght=100":620,"wght=900":718},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=900":357,"wght=100":490,"wght=900":478,"default":488,"wdth=62.5":351,"wght=704.9927":482,"wdth=62.5,wght=100":364},"y":0},null]},"khaguru":[{"anchor_2":{"x":{"wght=704.9927":648,"wdth=62.5,wght=100":420,"wdth=62.5,wght=900":527,"wght=100":545,"wght=900":676,"wdth=62.5":451,"default":598},"y":0}},null],"gaguru":[{"anchor_2":{"x":{"default":750,"wdth=62.5":571,"wdth=62.5,wght=100":517,"wdth=62.5,wght=900":710,"wght=100":674,"wght=704.9927":836,"wght=900":887},"y":0}},null],"ghaguru":[{"anchor_2":{"x":{"wdth=62.5":570,"wdth=62.5,wght=900":721,"wght=900":863,"wdth=62.5,wght=100":541,"default":757,"wght=100":706,"wght=704.9927":815},"y":0}},null],"ngaguru":[{"anchor_2":{"x":{"wght=100":544,"wght=900":662,"wght=704.9927":639,"wdth=62.5":448,"wdth=62.5,wght=100":433,"wdth=62.5,wght=900":529,"default":586},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=900":341,"default":414,"wght=100":423,"wdth=62.5,wght=100":333,"wght=900":419,"wdth=62.5":321,"wght=704.9927":430},"y":0}},null],"caguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":528,"wdth=62.5,wght=100":404,"wght=704.9927":692,"wght=100":519,"wght=900":685,"default":604,"wdth=62.5":450},"y":0},"anchor_3":{"x":{"wght=704.9927":432,"default":438,"wght=100":427,"wght=900":411,"wdth=62.5":316,"wdth=62.5,wght=900":311,"wdth=62.5,wght=100":317},"y":0}},null],"chaguru":{"anchor_1":[{"x":{"default":317,"wdth=62.5,wght=900":275,"wght=100":309,"wght=704.9927":344,"wdth=62.5,wght=100":225,"wght=900":354,"wdth=62.5":238},"y":0},null],"anchor_2":[{"x":{"wdth=62.5,wght=900":513,"wght=704.9927":653,"wdth=62.5,wght=100":406,"default":576,"wght=100":547,"wght=900":678,"wdth=62.5":446},"y":0},null],"anchor_3":[{"x":{"wght=100":448,"wdth=62.5":326,"wght=704.9927":444,"wdth=62.5,wght=100":307,"default":450,"wdth=62.5,wght=900":337,"wght=900":436},"y":0},null]},"jaguru":[{"anchor_2":{"x":{"wght=704.9927":659,"wght=900":674,"wdth=62.5,wght=100":421,"default":612,"wdth=62.5":458,"wght=100":562,"wdth=62.5,wght=900":541},"y":0}},null],"jhaguru":{"anchor_2":[{"x":{"wdth=62.5,wght=100":360,"wdth=62.5,wght=900":446,"wght=704.9927":532,"default":498,"wght=900":546,"wdth=62.5":379,"wght=100":458},"y":0},null]},"nyaguru":{"anchor_1":[{"x":{"wght=704.9927":324,"default":292,"wght=100":288,"wdth=62.5,wght=100":209,"wght=900":326,"wdth=62.5,wght=900":258,"wdth=62.5":218},"y":0},null],"anchor_2":[{"x":{"wdth=62.5,wght=100":352,"wght=900":574,"wdth=62.5,wght=900":478,"wght=704.9927":543,"wdth=62.5":386,"default":485,"wght=100":428},"y":0},null]},"ttaguru":[{"anchor_1":{"x":{"wght=704.9927":334,"wdth=62.5,wght=100":232,"wdth=62.5,wght=900":270,"default":292,"wght=900":332,"wdth=62.5":246},"y":0},"anchor_2":{"x":{"wght=704.9927":572,"default":489,"wght=100":444,"wdth=62.5,wght=100":368,"wdth=62.5":390,"wght=900":588,"wdth=62.5,wght=900":476},"y":0}},null],"tthaguru":{"anchor_1":[{"x":{"default":330,"wdth=62.5,wght=900":275,"wght=100":319,"wght=900":368,"wdth=62.5,wght=100":233,"wght=704.9927":350,"wdth=62.5":247},"y":0},null],"anchor_2":[{"x":{"wght=100":454,"wght=900":631,"wdth=62.5,wght=100":364,"default":519,"wdth=62.5,wght=900":491,"wght=704.9927":588,"wdth=62.5":402},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=900":323,"wght=704.9927":427,"wght=100":432,"default":446,"wdth=62.5":309,"wdth=62.5,wght=100":305,"wght=900":427},"y":0},null]},"ddaguru":{"anchor_1":[{"x":{"wdth=62.5,wght=100":192,"wdth=62.5,wght=900":247,"wght=900":337,"default":281,"wght=704.9927":319,"wdth=62.5":216,"wght=100":269},"y":0},null],"anchor_2":[{"x":{"wght=100":400,"wdth=62.5,wght=900":445,"wght=704.9927":521,"wght=900":570,"wdth=62.5":355,"default":450,"wdth=62.5,wght=100":322},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=100":261,"default":366,"wght=704.9927":375,"wght=100":357,"wght=900":378,"wdth=62.5":286,"wdth=62.5,wght=900":290},"y":0},null]},"ddhaguru":{"anchor_2":[{"x":{"default":575,"wght=900":671,"wdth=62.5,wght=100":386,"wdth=62.5,wght=900":542,"wdth=62.5":435,"wght=100":502,"wght=704.9927":658},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=100":327,"wdth=62.5,wght=900":356,"wght=900":442,"wght=704.9927":464,"default":474,"wght=100":458,"wdth=62.5":342},"y":0},null]},"nnaguru":[{"anchor_2":{"x":{"default":505,"wght=100":459,"wght=704.9927":582,"wght=900":624,"wdth=62.5,wght=100":374,"wdth=62.5,wght=900":491,"wdth=62.5":404},"y":0}},null],"taguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":390,"wght=704.9927":478,"default":413,"wght=100":369,"wght=900":529,"wdth=62.5":316,"wdth=62.5,wght=100":289},"y":0},"anchor_3":{"x":{"wdth=62.5":235,"wdth=62.5,wght=900":235,"wght=704.9927":340,"default":343,"wght=100":337,"wght=900":339,"wdth=62.5,wght=100":235},"y":0}},null],"thaguru":[{"anchor_2":{"x":{"default":598,"wght=704.9927":648,"wdth=62.5,wght=900":532,"wght=100":546,"wdth=62.5":455,"wght=900":681,"wdth=62.5,wght=100":418},"y":0}},null],"daguru":[{"anchor_2":{"x":{"wght=900":629,"wdth=62.5":428,"wdth=62.5,wght=100":374,"wdth=62.5,wght=900":504,"default":526,"wght=100":460,"wght=704.9927":605},"y":0}},null],"dhaguru":[{"anchor_2":{"x":{"wght=100":543,"wght=900":676,"wght=704.9927":643,"wdth=62.5":450,"wdth=62.5,wght=100":416,"default":593,"wdth=62.5,wght=900":527},"y":0}},null],"naguru":{"anchor_1":[{"x":{"wdth=62.5,wght=100":230,"default":324,"wght=704.9927":344,"wdth=62.5":242,"wght=100":314,"wdth=62.5,wght=900":278,"wght=900":362},"y":0},null],"anchor_2":[{"x":{"wdth=62.5":395,"wdth=62.5,wght=100":367,"wdth=62.5,wght=900":486,"default":508,"wght=900":628,"wght=100":463,"wght=704.9927":582},"y":0},null],"anchor_3":[{"x":{"wght=100":440,"wdth=62.5,wght=100":323,"wdth=62.5":328,"wdth=62.5,wght=900":345,"default":454,"wght=900":459,"wght=704.9927":455},"y":0},null]},"paguru":[{"anchor_2":{"x":{"wght=704.9927":643,"wght=100":543,"default":593,"wdth=62.5,wght=100":416,"wdth=62.5,wght=900":522,"wght=900":671,"wdth=62.5":446},"y":0}},null],"phaguru":{"anchor_2":[{"x":{"wdth=62.5":386,"wdth=62.5,wght=900":495,"wght=100":452,"default":508,"wght=900":612,"wght=704.9927":589,"wdth=62.5,wght=100":354},"y":0},null]},"baguru":[{"anchor_2":{"x":{"wght=900":690,"default":608,"wdth=62.5,wght=100":429,"wght=704.9927":657,"wdth=62.5":458,"wdth=62.5,wght=900":537,"wght=100":565},"y":0}},null],"bhaguru":{"anchor_1":[{"x":{"wght=100":255,"default":261,"wght=900":308,"wght=704.9927":308,"wdth=62.5":199,"wdth=62.5,wght=100":184,"wdth=62.5,wght=900":247},"y":0},null],"anchor_2":[{"x":{"wght=900":569,"wdth=62.5,wght=100":304,"wdth=62.5":339,"wght=100":392,"default":448,"wght=704.9927":519},"y":0},null],"anchor_3":[{"x":{"wght=100":351,"wdth=62.5":263,"wght=900":362,"wdth=62.5,wght=100":249,"wdth=62.5,wght=900":278,"default":359,"wght=704.9927":378},"y":0},null]},"maguru":[{"anchor_2":{"x":{"wght=900":651,"wdth=62.5,wght=900":542,"wght=100":544,"default":596,"wdth=62.5":439,"wdth=62.5,wght=100":412,"wght=704.9927":631},"y":0}},null],"yaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=100":488,"wdth=62.5,wght=900":653,"wght=704.9927":763,"wght=900":809,"default":695,"wdth=62.5":526,"wght=100":644},"y":0}},null],"raguru":[{"anchor_2":{"x":{"default":525,"wdth=62.5":389,"wght=900":625,"wdth=62.5,wght=100":353,"wght=100":456,"wght=704.9927":613,"wdth=62.5,wght=900":481},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=100":263,"wdth=62.5,wght=900":264,"default":360,"wght=100":355,"wght=704.9927":353,"wght=900":347,"wdth=62.5":255},"y":0}},null],"laguru":{"anchor_1":[{"x":{"default":337,"wght=900":376,"wdth=62.5":253,"wdth=62.5,wght=100":240,"wdth=62.5,wght=900":288,"wght=100":328,"wght=704.9927":359},"y":0},null],"anchor_2":[{"x":{"wdth=62.5":406,"wght=704.9927":597,"default":528,"wdth=62.5,wght=100":376,"wght=100":473,"wdth=62.5,wght=900":497,"wght=900":636},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=900":355,"wght=100":470,"default":479,"wght=900":477,"wght=704.9927":485,"wdth=62.5":342,"wdth=62.5,wght=100":336},"y":0},null]},"lanuktaguru":{"anchor_2":[{"x":{"wdth=62.5,wght=100":376,"wght=100":473,"wght=704.9927":597,"wght=900":636,"wdth=62.5":406,"default":528,"wdth=62.5,wght=900":497},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=900":379,"wght=100":470,"wght=704.9927":485,"wdth=62.5,wght=100":343,"default":479,"wdth=62.5":351,"wght=900":477},"y":0},null]},"vaguru":{"anchor_1":[{"x":{"wdth=62.5":218,"wdth=62.5,wght=100":209,"wdth=62.5,wght=900":258,"default":292,"wght=900":326,"wght=100":288,"wght=704.9927":324},"y":0},null],"anchor_2":[{"x":{"wdth=62.5":386,"default":485,"wght=100":428,"wght=900":574,"wdth=62.5,wght=100":352,"wght=704.9927":543,"wdth=62.5,wght=900":478},"y":0},null]},"sanuktaguru":[{"anchor_2":{"x":{"wdth=62.5":449,"wght=704.9927":651,"wdth=62.5,wght=100":415,"wght=900":688,"default":603,"wght=100":549,"wdth=62.5,wght=900":568},"y":0}},null],"saguru":[{"anchor_2":{"x":{"wdth=62.5":443,"wdth=62.5,wght=100":415,"wdth=62.5,wght=900":548,"wght=900":671,"wght=704.9927":636,"default":596,"wght=100":549},"y":0}},null],"haguru":[{"anchor_2":{"x":{"default":522,"wght=704.9927":610,"wdth=62.5,wght=900":477,"wdth=62.5":389,"wght=100":453,"wght=900":621,"wdth=62.5,wght=100":350},"y":0},"anchor_3":{"x":{"wght=704.9927":350,"wdth=62.5,wght=900":264,"wght=100":353,"wdth=62.5":255,"wght=900":347,"wdth=62.5,wght=100":263,"default":357},"y":0}},null],"khanuktaguru":[{"anchor_2":{"x":{"wdth=62.5":451,"wdth=62.5,wght=900":527,"wdth=62.5,wght=100":420,"wght=704.9927":648,"default":598,"wght=100":545,"wght=900":676},"y":0}},null],"ganuktaguru":[{"anchor_2":{"x":{"wdth=62.5":571,"wdth=62.5,wght=900":710,"wdth=62.5,wght=100":517,"default":750,"wght=100":674,"wght=704.9927":845,"wght=900":887},"y":0}},null],"januktaguru":[{"anchor_2":{"x":{"default":626,"wght=704.9927":678,"wght=900":720,"wdth=62.5,wght=100":421,"wdth=62.5,wght=900":600,"wdth=62.5":474,"wght=100":562},"y":0}},null],"rraguru":{"anchor_2":[{"x":{"wdth=62.5,wght=100":364,"wdth=62.5,wght=900":444,"wght=900":592,"wght=100":472,"wght=704.9927":561,"default":515,"wdth=62.5":391},"y":0},null],"anchor_3":[{"x":{"wght=100":389,"wdth=62.5,wght=900":287,"wdth=62.5,wght=100":299,"wght=704.9927":381,"wdth=62.5":289,"wght=900":371,"default":386},"y":0},null]},"phanuktaguru":{"anchor_2":[{"x":{"wdth=62.5,wght=900":495,"wght=900":612,"default":524,"wdth=62.5":386,"wdth=62.5,wght=100":354,"wght=100":452,"wght=704.9927":596},"y":0},null]},"kanuktaguru":{"anchor_2":[{"x":{"default":655,"wdth=62.5,wght=100":467,"wdth=62.5,wght=900":553,"wght=704.9927":692,"wght=100":620,"wdth=62.5":486,"wght=900":718},"y":0},null],"anchor_3":[{"x":{"wght=704.9927":482,"wght=900":478,"wdth=62.5,wght=900":357,"wght=100":490,"wdth=62.5":351,"default":488,"wdth=62.5,wght=100":364},"y":0},null]},"ghanuktaguru":[{"anchor_2":{"x":{"wdth=62.5":570,"default":757,"wdth=62.5,wght=900":721,"wdth=62.5,wght=100":541,"wght=704.9927":815,"wght=100":706,"wght=900":863},"y":0}},null],"nganuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":529,"wght=100":544,"wght=900":662,"wdth=62.5":448,"wght=704.9927":634,"default":586,"wdth=62.5,wght=100":433},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=900":341,"wght=704.9927":430,"wght=100":423,"default":414,"wght=900":419,"wdth=62.5":321,"wdth=62.5,wght=100":333},"y":0}},null],"canuktaguru":[{"anchor_2":{"x":{"wght=100":519,"wght=900":685,"wdth=62.5":450,"wdth=62.5,wght=100":404,"wdth=62.5,wght=900":528,"wght=704.9927":702,"default":604},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=100":317,"wdth=62.5,wght=900":311,"wdth=62.5":316,"wght=900":411,"wght=100":427,"wght=704.9927":432,"default":438},"y":0}},null],"chanuktaguru":{"anchor_2":[{"x":{"wdth=62.5,wght=100":406,"wght=100":547,"wght=704.9927":653,"wght=900":678,"wdth=62.5,wght=900":513,"default":576,"wdth=62.5":446},"y":0},null],"anchor_3":[{"x":{"wdth=62.5,wght=900":337,"wght=100":448,"wght=900":436,"default":450,"wdth=62.5":326,"wght=704.9927":444,"wdth=62.5,wght=100":307},"y":0},null]},"jhanuktaguru":{"anchor_2":[{"x":{"wght=900":546,"wdth=62.5":379,"default":498,"wght=100":458,"wdth=62.5,wght=100":360,"wdth=62.5,wght=900":446,"wght=704.9927":533},"y":0},null]},"nyanuktaguru":{"anchor_2":[{"x":{"wght=900":574,"default":485,"wght=100":428,"wdth=62.5":386,"wght=704.9927":533,"wdth=62.5,wght=100":352,"wdth=62.5,wght=900":478},"y":0},null]},"ttanuktaguru":[{"anchor_2":{"x":{"default":507,"wght=100":444,"wght=704.9927":572,"wght=900":588,"wdth=62.5":390,"wdth=62.5,wght=900":476,"wdth=62.5,wght=100":368},"y":0}},null],"tthanuktaguru":{"anchor_2":[{"x":{"default":519,"wght=100":454,"wght=900":631,"wght=704.9927":588,"wdth=62.5":402,"wdth=62.5,wght=100":364,"wdth=62.5,wght=900":491},"y":0},null],"anchor_3":[{"x":{"wght=100":454,"wdth=62.5,wght=100":305,"default":490,"wght=704.9927":427,"wght=900":427,"wdth=62.5":309,"wdth=62.5,wght=900":323},"y":0},null]},"ddhanuktaguru":{"anchor_2":[{"x":{"default":594,"wght=900":671,"wdth=62.5,wght=900":542,"wght=100":502,"wdth=62.5,wght=100":386,"wdth=62.5":435,"wght=704.9927":661},"y":0},null],"anchor_3":[{"x":{"wght=100":459,"default":476,"wght=704.9927":464,"wdth=62.5":342,"wght=900":442,"wdth=62.5,wght=100":327,"wdth=62.5,wght=900":356},"y":0},null]},"nnanuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":491,"default":545,"wght=900":624,"wght=704.9927":612,"wdth=62.5":404,"wdth=62.5,wght=100":374,"wght=100":459},"y":0}},null],"tanuktaguru":[{"anchor_2":{"x":{"wght=704.9927":478,"wght=900":529,"wdth=62.5,wght=100":289,"default":413,"wght=100":369,"wdth=62.5":326,"wdth=62.5,wght=900":400},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=100":235,"wdth=62.5,wght=900":235,"wght=100":337,"wght=704.9927":340,"default":343,"wdth=62.5":235,"wght=900":339},"y":0}},null],"thanuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":532,"wdth=62.5":455,"wght=900":681,"default":598,"wght=100":546,"wdth=62.5,wght=100":418,"wght=704.9927":648},"y":0}},null],"danuktaguru":[{"anchor_2":{"x":{"wdth=62.5":428,"default":526,"wght=704.9927":593,"wght=100":460,"wght=900":629,"wdth=62.5,wght=100":374,"wdth=62.5,wght=900":504},"y":0}},null],"dhanuktaguru":[{"anchor_2":{"x":{"wdth=62.5":450,"wdth=62.5,wght=100":416,"default":593,"wght=704.9927":643,"wdth=62.5,wght=900":527,"wght=100":543,"wght=900":676},"y":0}},null],"nanuktaguru":{"anchor_2":[{"x":{"wdth=62.5,wght=100":367,"wght=900":628,"wdth=62.5":395,"wght=704.9927":582,"default":508,"wdth=62.5,wght=900":486,"wght=100":463},"y":0},null],"anchor_3":[{"x":{"default":454,"wdth=62.5":328,"wght=100":440,"wght=900":459,"wdth=62.5,wght=100":323,"wght=704.9927":455,"wdth=62.5,wght=900":345},"y":0},null]},"panuktaguru":[{"anchor_2":{"x":{"wght=900":671,"wght=704.9927":643,"wdth=62.5":446,"wdth=62.5,wght=100":416,"wdth=62.5,wght=900":522,"default":593,"wght=100":543},"y":0}},null],"banuktaguru":[{"anchor_2":{"x":{"wght=704.9927":657,"wdth=62.5":458,"default":608,"wdth=62.5,wght=100":429,"wght=100":565,"wdth=62.5,wght=900":537,"wght=900":690},"y":0}},null],"bhanuktaguru":{"anchor_2":[{"x":{"wdth=62.5":339,"wdth=62.5,wght=900":448,"wght=100":392,"wght=704.9927":519,"wdth=62.5,wght=100":304,"wght=900":569,"default":452},"y":0},null],"anchor_3":[{"x":{"wght=100":351,"wdth=62.5,wght=900":278,"wght=704.9927":378,"wdth=62.5,wght=100":249,"default":359,"wght=900":362,"wdth=62.5":263},"y":0},null]},"manuktaguru":[{"anchor_2":{"x":{"wght=704.9927":631,"wdth=62.5,wght=100":412,"wdth=62.5,wght=900":542,"wght=900":651,"default":596,"wght=100":544,"wdth=62.5":439},"y":0}},null],"yanuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=100":488,"wght=900":809,"wght=704.9927":763,"default":695,"wght=100":644,"wdth=62.5":526,"wdth=62.5,wght=900":653},"y":0}},null],"ranuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=100":353,"wdth=62.5":389,"wght=100":456,"wdth=62.5,wght=900":481,"default":525,"wght=704.9927":623,"wght=900":625},"y":0},"anchor_3":{"x":{"wght=100":355,"wght=900":347,"wght=704.9927":409,"wdth=62.5":255,"default":360,"wdth=62.5,wght=100":263,"wdth=62.5,wght=900":264},"y":0}},null],"vanuktaguru":{"anchor_2":[{"x":{"wght=100":428,"wght=704.9927":533,"default":495,"wght=900":574,"wdth=62.5":386,"wdth=62.5,wght=100":352,"wdth=62.5,wght=900":478},"y":0},null]},"hanuktaguru":[{"anchor_2":{"x":{"wdth=62.5,wght=900":477,"default":523,"wght=704.9927":620,"wdth=62.5":389,"wght=100":453,"wght=900":621,"wdth=62.5,wght=100":350},"y":0},"anchor_3":{"x":{"wdth=62.5,wght=900":264,"default":357,"wght=704.9927":406,"wght=100":353,"wght=900":347,"wdth=62.5":255,"wdth=62.5,wght=100":263},"y":0}},null],"iibindiguru":[{"anchor_1":{"x":{"wght=900":305,"default":278,"wght=704.9927":305,"wdth=62.5,wght=900":305,"wdth=62.5":215},"y":0}},null],"eebindiguru":[{"anchor_1":{"x":{"wdth=62.5,wght=900":250,"default":278,"wght=704.9927":305,"wght=100":270,"wdth=62.5":210,"wght=900":318,"wdth=62.5,wght=100":196},"y":0}},null],"aibindiguru":[{"anchor_1":{"x":{"wdth=62.5,wght=100":217,"wdth=62.5":236,"default":294,"wght=900":352,"wdth=62.5,wght=900":287,"wght=100":297,"wght=704.9927":342},"y":0}},null],"oobindiguru":[{"anchor_1":{"x":{"wdth=62.5,wght=900":317,"wght=900":369,"wght=100":324,"wght=704.9927":357,"wdth=62.5":256,"wdth=62.5,wght=100":240,"default":334},"y":0}},null],"aubindiguru":[{"anchor_1":{"x":{"wght=704.9927":342,"wdth=62.5,wght=100":217,"wght=900":352,"default":294,"wdth=62.5":236,"wght=100":297,"wdth=62.5,wght=900":287},"y":0}},null],"iiaddakguru":[{"anchor_1":{"x":{"wdth=62.5,wght=900":267,"wght=100":290,"wght=704.9927":324,"wdth=62.5":229,"default":288,"wdth=62.5,wght=100":209,"wght=900":336},"y":0}},null],"eeaddakguru":[{"anchor_1":{"x":{"wght=100":270,"wdth=62.5,wght=100":196,"wdth=62.5,wght=900":250,"wght=704.9927":305,"default":278,"wght=900":318,"wdth=62.5":210},"y":0}},null],"aiaddakguru":[{"anchor_1":{"x":{"wght=704.9927":342,"default":294,"wght=900":352,"wdth=62.5":236,"wdth=62.5,wght=100":217,"wdth=62.5,wght=900":287,"wght=100":297},"y":0}},null],"ooaddakguru":[{"anchor_1":{"x":{"wght=704.9927":359,"wdth=62.5":232,"default":336,"wdth=62.5,wght=900":281,"wdth=62.5,wght=100":231,"wght=100":320,"wght=900":359},"y":0}},null],"auaddakguru":[{"anchor_1":{"x":{"wght=100":297,"default":294,"wght=900":352,"wdth=62.5":236,"wdth=62.5,wght=900":287,"wght=704.9927":342,"wdth=62.5,wght=100":217},"y":0}},null]}}},"3":{"0":{"type":["chained_sequence_context","mark_to_base"],"rules":[["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0 addakguru' lookup lookup_0"],null],"marks":[null,{"anchor_0":{"nuktaguru":{"x":-283,"y":0},"umatraguru":{"x":{"wdth=62.5,wght=100":-220,"wdth=62.5":-231,"wdth=62.5,wght=900":-264,"default":-305,"wght=900":-332,"wght=100":-293},"y":{"wdth=62.5":3,"default":0}},"uumatraguru":{"x":{"wdth=62.5":-231,"wdth=62.5,wght=100":-220,"wdth=62.5,wght=900":-264,"default":-305,"wght=100":-293,"wght=900":-332},"y":0},"uni0952":{"x":{"wght=100":-248,"wdth=62.5,wght=900":-231,"wght=704.9927":-261,"wdth=62.5":-200,"wdth=62.5,wght=100":-199,"wght=900":-271,"default":-249},"y":0}}}],"bases":[null,{"aguru":{"anchor_0":{"x":{"wdth=62.5":236,"wght=100":297,"wght=704.9927":342,"default":294,"wdth=62.5,wght=900":287,"wght=900":352,"wdth=62.5,wght=100":217},"y":0}},"aaguru":{"anchor_0":{"x":{"wdth=62.5":236,"wdth=62.5,wght=900":287,"wght=900":350,"wght=704.9927":342,"wdth=62.5,wght=100":217,"default":294,"wght=100":297},"y":0}},"iguru":{"anchor_0":{"x":{"wght=704.9927":599,"wght=900":661,"wdth=62.5,wght=900":530,"wdth=62.5":436,"wght=100":519,"wdth=62.5,wght=100":393,"default":537},"y":0}},"iiguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":209,"wght=900":336,"wdth=62.5":229,"default":288,"wght=100":290,"wght=704.9927":324,"wdth=62.5,wght=900":267},"y":0}},"eeguru":{"anchor_0":{"x":{"wght=900":318,"wght=100":270,"default":278,"wdth=62.5":210,"wdth=62.5,wght=100":196,"wght=704.9927":305,"wdth=62.5,wght=900":250},"y":0}},"aiguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":217,"wght=100":297,"wght=900":352,"wdth=62.5":236,"wdth=62.5,wght=900":287,"wght=704.9927":342,"default":294},"y":0}},"ooguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":231,"default":336,"wght=900":359,"wdth=62.5":232,"wdth=62.5,wght=900":281,"wght=704.9927":359,"wght=100":320},"y":0}},"auguru":{"anchor_0":{"x":{"wght=100":297,"wght=900":352,"wdth=62.5":236,"wdth=62.5,wght=900":287,"wght=704.9927":342,"wdth=62.5,wght=100":217,"default":294},"y":0}},"chaguru":{"anchor_0":{"x":{"default":317,"wght=100":309,"wdth=62.5":238,"wdth=62.5,wght=900":275,"wght=704.9927":344,"wght=900":354,"wdth=62.5,wght=100":225},"y":0}},"nyaguru":{"anchor_0":{"x":{"default":292,"wdth=62.5,wght=100":209,"wdth=62.5,wght=900":258,"wght=900":326,"wght=100":288,"wght=704.9927":324,"wdth=62.5":218},"y":0}},"ttaguru":{"anchor_0":{"x":{"wght=704.9927":334,"wdth=62.5,wght=100":232,"wght=900":332,"default":292,"wdth=62.5,wght=900":270,"wdth=62.5":246},"y":0}},"tthaguru":{"anchor_0":{"x":{"default":330,"wdth=62.5":247,"wdth=62.5,wght=100":233,"wdth=62.5,wght=900":275,"wght=100":319,"wght=704.9927":350,"wght=900":368},"y":0}},"ddaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":192,"wght=100":269,"wght=704.9927":319,"wght=900":337,"wdth=62.5,wght=900":247,"wdth=62.5":216,"default":281},"y":0}},"naguru":{"anchor_0":{"x":{"wght=900":362,"wdth=62.5":242,"default":324,"wdth=62.5,wght=100":230,"wdth=62.5,wght=900":278,"wght=100":314,"wght=704.9927":344},"y":0}},"bhaguru":{"anchor_0":{"x":{"default":261,"wdth=62.5,wght=900":247,"wdth=62.5,wght=100":184,"wght=100":255,"wght=900":308,"wdth=62.5":199,"wght=704.9927":308},"y":0}},"laguru":{"anchor_0":{"x":{"default":337,"wght=100":328,"wght=704.9927":359,"wdth=62.5,wght=100":240,"wght=900":376,"wdth=62.5,wght=900":288,"wdth=62.5":253},"y":0}},"vaguru":{"anchor_0":{"x":{"default":292,"wdth=62.5":218,"wdth=62.5,wght=100":209,"wdth=62.5,wght=900":258,"wght=704.9927":324,"wght=900":326,"wght=100":288},"y":0}},"iibindiguru":{"anchor_0":{"x":{"wght=704.9927":305,"wdth=62.5":215,"default":278,"wdth=62.5,wght=900":305,"wght=900":305},"y":0}},"eebindiguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":196,"wdth=62.5,wght=900":250,"wght=900":318,"wght=704.9927":305,"default":278,"wght=100":270,"wdth=62.5":210},"y":0}},"aibindiguru":{"anchor_0":{"x":{"wdth=62.5":236,"wght=704.9927":342,"wdth=62.5,wght=100":217,"default":294,"wdth=62.5,wght=900":287,"wght=100":297,"wght=900":352},"y":0}},"oobindiguru":{"anchor_0":{"x":{"wght=704.9927":357,"wdth=62.5":256,"wght=900":369,"wght=100":324,"wdth=62.5,wght=100":240,"wdth=62.5,wght=900":317,"default":334},"y":0}},"aubindiguru":{"anchor_0":{"x":{"wght=704.9927":342,"wght=900":352,"wdth=62.5,wght=900":287,"default":294,"wght=100":297,"wdth=62.5":236,"wdth=62.5,wght=100":217},"y":0}},"iiaddakguru":{"anchor_0":{"x":{"wght=900":336,"wdth=62.5,wght=100":209,"default":288,"wght=100":290,"wdth=62.5":229,"wght=704.9927":324,"wdth=62.5,wght=900":267},"y":0}},"eeaddakguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":250,"wdth=62.5":210,"wght=704.9927":305,"default":278,"wght=100":270,"wdth=62.5,wght=100":196,"wght=900":318},"y":0}},"aiaddakguru":{"anchor_0":{"x":{"wdth=62.5":236,"wdth=62.5,wght=100":217,"default":294,"wght=100":297,"wght=900":352,"wdth=62.5,wght=900":287,"wght=704.9927":342},"y":0}},"ooaddakguru":{"anchor_0":{"x":{"wght=900":359,"default":336,"wdth=62.5,wght=900":281,"wght=100":320,"wdth=62.5,wght=100":231,"wdth=62.5":232,"wght=704.9927":359},"y":0}},"auaddakguru":{"anchor_0":{"x":{"default":294,"wght=704.9927":342,"wdth=62.5":236,"wght=100":297,"wdth=62.5,wght=100":217,"wght=900":352,"wdth=62.5,wght=900":287},"y":0}}}]},"1":[{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0 addakguru' lookup lookup_0"]},null],"2":[{"type":"chained_sequence_context","rules":["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0"]},null],"3":[{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0"]},null],"4":[{"type":"chained_sequence_context","rules":["[NULL CR space adakbindiguru bindiguru visargaguru aguru aaguru iguru iiguru uguru uuguru eeguru aiguru ooguru auguru kaguru khaguru gaguru ghaguru ngaguru caguru chaguru jaguru jhaguru nyaguru ttaguru tthaguru ddaguru ddhaguru nnaguru taguru thaguru daguru dhaguru naguru paguru phaguru baguru bhaguru maguru yaguru raguru laguru lanuktaguru vaguru sanuktaguru saguru haguru nuktaguru aamatraguru imatraguru iimatraguru umatraguru uumatraguru eematraguru aimatraguru oomatraguru aumatraguru halantguru udaatguru khanuktaguru ganuktaguru januktaguru rraguru phanuktaguru zeroguru oneguru twoguru threeguru fourguru fiveguru sixguru sevenguru eightguru nineguru tippiguru addakguru iriguru uraguru ekonkarguru yakashguru uni0A76 uni262C unuktaguru uunuktaguru kanuktaguru ghanuktaguru nganuktaguru canuktaguru chanuktaguru jhanuktaguru nyanuktaguru ttanuktaguru tthanuktaguru ddhanuktaguru nnanuktaguru tanuktaguru thanuktaguru danuktaguru dhanuktaguru nanuktaguru panuktaguru banuktaguru bhanuktaguru manuktaguru yanuktaguru ranuktaguru vanuktaguru hanuktaguru rasubscriptguru hasubscriptguru vasubscriptguru yapostformguru rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru karaguru rasubscript1guru hasubscript1guru vasubscript1guru phunuktaguru phuunuktaguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru addakbaraltguru umatralowguru uumatralowguru oomatra1guru oomatrabindi1guru uuUIguru uumatraUIguru udaatUIguru yakashUIguru uunuktaUIguru hasubscriptUIguru vasubscriptUIguru rasubscripthalantUIguru hasubscripthalantUIguru vasubscripthalantUIguru udaathalantUIguru yakashhalantUIguru rasubscriptuUIguru hasubscriptuUIguru vasubscriptuUIguru udaatuUIguru yakashuUIguru rasubscriptuuUIguru hasubscriptuuUIguru vasubscriptuuUIguru udaatuuUIguru yakashuuUIguru hasubscript1UIguru vasubscript1UIguru phuunuktaUIguru uubindiUIguru uubindinuktaUIguru umatralowUIguru uumatralowUIguru iiaddakguru uaddakguru uuaddakguru eeaddakguru aiaddakguru ooaddakguru auaddakguru iimatraaddakguru eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru unuktaaddakguru uunuktaaddakguru uuUIaddakguru uunuktaUIaddakguru uraaddakguru kaUIguru gaUIguru taUIguru baUIguru raUIguru laUIguru sanuktaUIguru umatralow1guru exclam.guru quotedbl.guru numbersign.guru percent.guru quotesingle.guru parenleft.guru parenright.guru asterisk.guru plus.guru comma.guru hyphen.guru period.guru slash.guru zero.guru one.guru two.guru three.guru four.guru five.guru six.guru seven.guru eight.guru nine.guru colon.guru semicolon.guru less.guru equal.guru greater.guru question.guru bracketleft.guru backslash.guru bracketright.guru asciicircum.guru underscore.guru braceleft.guru bar.guru braceright.guru asciitilde.guru uni00A0.guru uni00AD.guru endash.guru emdash.guru quoteleft.guru quoteright.guru quotedblleft.guru quotedblright.guru ellipsis.guru multiply.guru divide.guru minus.guru uni20B9.guru uni0951 uni0952 uni0964.guru uni0965.guru uniA830 uniA831 uniA832 uniA833 uniA834 uniA835 uniA836 uniA837 uniA838 uniA839 uni2010 uni200B uni200C uni200D uni25CC uaddakaltguru eematraaddakaltguru oomatraaddakaltguru] uni0951' lookup lookup_4"]},null],"5":[{"type":"chained_sequence_context","rules":["[NULL CR space adakbindiguru bindiguru visargaguru aguru aaguru iguru iiguru uguru uuguru eeguru aiguru ooguru auguru kaguru khaguru gaguru ghaguru ngaguru caguru chaguru jaguru jhaguru nyaguru ttaguru tthaguru ddaguru ddhaguru nnaguru taguru thaguru daguru dhaguru naguru paguru phaguru baguru bhaguru maguru yaguru raguru laguru lanuktaguru vaguru sanuktaguru saguru haguru nuktaguru aamatraguru imatraguru iimatraguru umatraguru uumatraguru eematraguru aimatraguru oomatraguru aumatraguru halantguru udaatguru khanuktaguru ganuktaguru januktaguru rraguru phanuktaguru zeroguru oneguru twoguru threeguru fourguru fiveguru sixguru sevenguru eightguru nineguru tippiguru addakguru iriguru uraguru ekonkarguru yakashguru uni0A76 uni262C unuktaguru uunuktaguru kanuktaguru ghanuktaguru nganuktaguru canuktaguru chanuktaguru jhanuktaguru nyanuktaguru ttanuktaguru tthanuktaguru ddhanuktaguru nnanuktaguru tanuktaguru thanuktaguru danuktaguru dhanuktaguru nanuktaguru panuktaguru banuktaguru bhanuktaguru manuktaguru yanuktaguru ranuktaguru vanuktaguru hanuktaguru rasubscriptguru hasubscriptguru vasubscriptguru yapostformguru rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru karaguru rasubscript1guru hasubscript1guru vasubscript1guru phunuktaguru phuunuktaguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru addakbaraltguru umatralowguru uumatralowguru oomatra1guru oomatrabindi1guru uuUIguru uumatraUIguru udaatUIguru yakashUIguru uunuktaUIguru hasubscriptUIguru vasubscriptUIguru rasubscripthalantUIguru hasubscripthalantUIguru vasubscripthalantUIguru udaathalantUIguru yakashhalantUIguru rasubscriptuUIguru hasubscriptuUIguru vasubscriptuUIguru udaatuUIguru yakashuUIguru rasubscriptuuUIguru hasubscriptuuUIguru vasubscriptuuUIguru udaatuuUIguru yakashuuUIguru hasubscript1UIguru vasubscript1UIguru phuunuktaUIguru uubindiUIguru uubindinuktaUIguru umatralowUIguru uumatralowUIguru iiaddakguru uaddakguru uuaddakguru eeaddakguru aiaddakguru ooaddakguru auaddakguru iimatraaddakguru eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru unuktaaddakguru uunuktaaddakguru uuUIaddakguru uunuktaUIaddakguru uraaddakguru kaUIguru gaUIguru taUIguru baUIguru raUIguru laUIguru sanuktaUIguru umatralow1guru exclam.guru quotedbl.guru numbersign.guru percent.guru quotesingle.guru parenleft.guru parenright.guru asterisk.guru plus.guru comma.guru hyphen.guru period.guru slash.guru zero.guru one.guru two.guru three.guru four.guru five.guru six.guru seven.guru eight.guru nine.guru colon.guru semicolon.guru less.guru equal.guru greater.guru question.guru bracketleft.guru backslash.guru bracketright.guru asciicircum.guru underscore.guru braceleft.guru bar.guru braceright.guru asciitilde.guru uni00A0.guru uni00AD.guru endash.guru emdash.guru quoteleft.guru quoteright.guru quotedblleft.guru quotedblright.guru ellipsis.guru multiply.guru divide.guru minus.guru uni20B9.guru uni0951 uni0952 uni0964.guru uni0965.guru uniA830 uniA831 uniA832 uniA833 uniA834 uniA835 uniA836 uniA837 uniA838 uniA839 uni2010 uni200B uni200C uni200D uni25CC uaddakaltguru eematraaddakaltguru oomatraaddakaltguru] uni0952' lookup lookup_4"]},null],"6":[{"type":"chained_sequence_context","rules":["[rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru umatralowguru uumatralowguru umatralow1guru] uni0952' lookup lookup_5"]},null],"7":[{"type":"chained_sequence_context","rules":["baguru'  aumatraaddakguru' lookup lookup_4 daguru'  oomatrabindiguru' "]},null],"8":[{"type":"chained_sequence_context","rules":["baguru'  aumatraaddakguru' lookup lookup_4 dhaguru'  oomatrabindiguru' "]},null],"9":[{"type":"chained_sequence_context","rules":["aumatraaddakguru' lookup lookup_5 ttaguru'  eematraguru' "]},null],"10":[{"type":"chained_sequence_context","rules":["bindiguru' lookup lookup_4 iimatraguru"]},null]},"4":{"0":{"type":["single","mark_to_base"],"bindiguru":[{"x_placement":{"wght=100":-100,"wght=900":-250,"wght=704.9927":-200,"wdth=62.5":-125,"wdth=62.5,wght=900":-175,"default":-150,"wdth=62.5,wght=100":-75}},null],"aumatraaddakguru":[{"x_placement":{"wght=100":-60,"wght=900":-85,"wdth=62.5,wght=100":-22,"default":-70,"wdth=62.5":-45,"wdth=62.5,wght=900":-95}},null],"marks":[null,{"anchor_0":{"udaatguru":{"x":{"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"default":-170,"wght=100":-148,"wght=900":-247},"y":0},"yakashguru":{"x":{"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=704.9927":-214,"wght=100":-148},"y":0},"rasubscriptguru":{"x":{"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"wght=704.9927":-214,"default":-170,"wdth=62.5":-139},"y":0},"hasubscriptguru":{"x":{"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"wdth=62.5,wght=100":-103,"wght=704.9927":-214,"wdth=62.5":-139,"default":-170},"y":0},"vasubscriptguru":{"x":{"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=100":-148,"default":-170,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=704.9927":-214},"y":0},"rasubscripthalantguru":{"x":{"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"wdth=62.5,wght=100":-103,"wght=704.9927":-214,"wdth=62.5":-139,"default":-170},"y":0},"hasubscripthalantguru":{"x":{"wght=100":-148,"wdth=62.5,wght=900":-204,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"default":-170,"wght=704.9927":-214,"wght=900":-247},"y":0},"rasubscriptuguru":{"x":{"default":-170,"wght=704.9927":-214,"wdth=62.5":-140,"wght=900":-247,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=100":-148},"y":0},"rasubscriptuuguru":{"x":{"wght=704.9927":-214,"wght=900":-247,"default":-170,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"wght=100":-148,"wdth=62.5,wght=900":-204},"y":0},"rasubscript1guru":{"x":{"wdth=62.5":-139,"wght=900":-247,"default":-170,"wght=100":-148,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=704.9927":-214},"y":0},"hasubscript1guru":{"x":{"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=100":-148,"wght=704.9927":-214,"default":-170,"wght=900":-247,"wdth=62.5":-139},"y":0},"vasubscript1guru":{"x":{"wght=100":-148,"wght=704.9927":-214,"wdth=62.5,wght=900":-204,"wght=900":-247,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"default":-170},"y":0}}}],"bases":[null,{"kaguru":{"anchor_0":{"x":{"wght=704.9927":482,"wdth=62.5,wght=100":364,"wght=900":478,"wdth=62.5":351,"wght=100":490,"wdth=62.5,wght=900":357,"default":488},"y":0}},"ngaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":341,"wght=704.9927":430,"wght=900":419,"wdth=62.5":321,"wdth=62.5,wght=100":333,"default":414,"wght=100":423},"y":0}},"caguru":{"anchor_0":{"x":{"wdth=62.5":316,"wdth=62.5,wght=100":317,"wght=100":427,"wght=704.9927":432,"default":438,"wght=900":411,"wdth=62.5,wght=900":311},"y":0}},"chaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":307,"wdth=62.5,wght=900":337,"wght=704.9927":444,"wght=900":436,"wght=100":448,"default":450,"wdth=62.5":326},"y":0}},"tthaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":323,"default":446,"wght=100":432,"wght=900":427,"wght=704.9927":427,"wdth=62.5":309,"wdth=62.5,wght=100":305},"y":0}},"ddaguru":{"anchor_0":{"x":{"wght=100":357,"wdth=62.5,wght=100":261,"wght=900":378,"default":366,"wght=704.9927":375,"wdth=62.5":286,"wdth=62.5,wght=900":290},"y":0}},"ddhaguru":{"anchor_0":{"x":{"wght=704.9927":464,"wdth=62.5":342,"wght=900":442,"default":474,"wdth=62.5,wght=100":327,"wdth=62.5,wght=900":356,"wght=100":458},"y":0}},"taguru":{"anchor_0":{"x":{"default":343,"wght=900":339,"wdth=62.5,wght=100":235,"wght=100":337,"wdth=62.5":235,"wdth=62.5,wght=900":235,"wght=704.9927":340},"y":0}},"naguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":345,"wght=900":459,"wdth=62.5,wght=100":323,"wght=100":440,"wght=704.9927":455,"default":454,"wdth=62.5":328},"y":0}},"bhaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":278,"wght=100":351,"wght=704.9927":378,"default":359,"wdth=62.5":263,"wght=900":362,"wdth=62.5,wght=100":249},"y":0}},"raguru":{"anchor_0":{"x":{"wght=704.9927":353,"wght=900":347,"wght=100":355,"wdth=62.5,wght=100":263,"wdth=62.5,wght=900":264,"default":360,"wdth=62.5":255},"y":0}},"laguru":{"anchor_0":{"x":{"wght=704.9927":485,"default":479,"wght=900":477,"wdth=62.5":342,"wdth=62.5,wght=100":336,"wdth=62.5,wght=900":355,"wght=100":470},"y":0}},"lanuktaguru":{"anchor_0":{"x":{"wght=100":470,"wght=704.9927":485,"wght=900":477,"wdth=62.5":351,"default":479,"wdth=62.5,wght=100":343,"wdth=62.5,wght=900":379},"y":0}},"haguru":{"anchor_0":{"x":{"wdth=62.5":255,"wdth=62.5,wght=100":263,"wdth=62.5,wght=900":264,"default":357,"wght=100":353,"wght=704.9927":350,"wght=900":347},"y":0}},"rraguru":{"anchor_0":{"x":{"default":386,"wght=100":389,"wght=704.9927":381,"wght=900":371,"wdth=62.5,wght=100":299,"wdth=62.5":289,"wdth=62.5,wght=900":287},"y":0}},"kanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":364,"default":488,"wdth=62.5":351,"wght=704.9927":482,"wght=900":478,"wdth=62.5,wght=900":357,"wght=100":490},"y":0}},"nganuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":341,"wght=704.9927":430,"wdth=62.5":321,"wght=900":419,"wght=100":423,"default":414,"wdth=62.5,wght=100":333},"y":0}},"canuktaguru":{"anchor_0":{"x":{"wght=900":411,"wdth=62.5":316,"wdth=62.5,wght=100":317,"wdth=62.5,wght=900":311,"default":438,"wght=100":427,"wght=704.9927":432},"y":0}},"chanuktaguru":{"anchor_0":{"x":{"wdth=62.5":326,"wdth=62.5,wght=900":337,"wght=100":448,"wdth=62.5,wght=100":307,"wght=704.9927":444,"default":450,"wght=900":436},"y":0}},"tthanuktaguru":{"anchor_0":{"x":{"default":490,"wght=900":427,"wght=704.9927":427,"wdth=62.5":309,"wdth=62.5,wght=100":305,"wdth=62.5,wght=900":323,"wght=100":454},"y":0}},"ddhanuktaguru":{"anchor_0":{"x":{"wght=100":459,"default":476,"wght=704.9927":464,"wght=900":442,"wdth=62.5":342,"wdth=62.5,wght=100":327,"wdth=62.5,wght=900":356},"y":0}},"tanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":235,"wght=900":339,"wdth=62.5":235,"wdth=62.5,wght=900":235,"default":343,"wght=100":337,"wght=704.9927":340},"y":0}},"nanuktaguru":{"anchor_0":{"x":{"wght=900":459,"default":454,"wght=100":440,"wght=704.9927":455,"wdth=62.5":328,"wdth=62.5,wght=100":323,"wdth=62.5,wght=900":345},"y":0}},"bhanuktaguru":{"anchor_0":{"x":{"wght=704.9927":378,"wght=900":362,"wdth=62.5,wght=100":249,"default":359,"wght=100":351,"wdth=62.5":263,"wdth=62.5,wght=900":278},"y":0}},"ranuktaguru":{"anchor_0":{"x":{"wght=100":355,"wdth=62.5,wght=900":264,"wdth=62.5,wght=100":263,"wght=704.9927":409,"wght=900":347,"wdth=62.5":255,"default":360},"y":0}},"hanuktaguru":{"anchor_0":{"x":{"wdth=62.5":255,"wdth=62.5,wght=900":264,"wght=900":347,"default":357,"wght=100":353,"wdth=62.5,wght=100":263,"wght=704.9927":406},"y":0}}}]},"1":[{"type":"single","uni0951":{"y_placement":275},"uni0952":{"y_placement":-355}},null]},"5":{"0":{"type":["single","mark_to_base"],"aumatraaddakguru":[{"x_placement":{"wdth=62.5,wght=900":-40,"wght=900":-35,"default":-1}},null],"marks":[null,{"anchor_0":{"halantguru":{"x":0,"y":0}}}],"bases":[null,{"kaguru":{"anchor_0":{"x":{"wght=704.9927":692,"wdth=62.5":486,"wdth=62.5,wght=100":467,"default":655,"wght=900":718,"wght=100":620,"wdth=62.5,wght=900":553},"y":0}},"khaguru":{"anchor_0":{"x":{"wght=900":676,"wght=100":545,"wdth=62.5":451,"wdth=62.5,wght=100":420,"default":598,"wdth=62.5,wght=900":527,"wght=704.9927":648},"y":0}},"gaguru":{"anchor_0":{"x":{"wght=704.9927":836,"wdth=62.5,wght=900":710,"wght=100":674,"wght=900":887,"wdth=62.5":571,"default":750,"wdth=62.5,wght=100":517},"y":0}},"ghaguru":{"anchor_0":{"x":{"default":757,"wght=704.9927":815,"wght=100":706,"wdth=62.5":570,"wdth=62.5,wght=100":541,"wdth=62.5,wght=900":721,"wght=900":863},"y":0}},"ngaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":529,"wdth=62.5,wght=100":433,"wght=100":544,"default":586,"wght=900":662,"wght=704.9927":639,"wdth=62.5":448},"y":0}},"caguru":{"anchor_0":{"x":{"wght=704.9927":692,"wght=900":685,"default":604,"wdth=62.5":450,"wdth=62.5,wght=100":404,"wdth=62.5,wght=900":528,"wght=100":519},"y":0}},"chaguru":{"anchor_0":{"x":{"default":576,"wght=100":547,"wght=900":678,"wdth=62.5,wght=900":513,"wght=704.9927":653,"wdth=62.5,wght=100":406,"wdth=62.5":446},"y":0}},"jaguru":{"anchor_0":{"x":{"wght=704.9927":659,"wdth=62.5":458,"wght=100":562,"wdth=62.5,wght=100":421,"wght=900":674,"wdth=62.5,wght=900":541,"default":612},"y":0}},"jhaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":360,"default":498,"wght=100":458,"wdth=62.5,wght=900":446,"wght=704.9927":532,"wght=900":546,"wdth=62.5":379},"y":0}},"nyaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":478,"wght=704.9927":543,"wdth=62.5,wght=100":352,"default":485,"wght=100":428,"wght=900":574,"wdth=62.5":386},"y":0}},"ttaguru":{"anchor_0":{"x":{"wght=900":588,"wdth=62.5":390,"wght=100":444,"wdth=62.5,wght=100":368,"wght=704.9927":572,"wdth=62.5,wght=900":476,"default":489},"y":0}},"tthaguru":{"anchor_0":{"x":{"wght=900":631,"wght=100":454,"default":519,"wght=704.9927":588,"wdth=62.5":402,"wdth=62.5,wght=100":364,"wdth=62.5,wght=900":491},"y":0}},"ddaguru":{"anchor_0":{"x":{"wght=900":570,"wdth=62.5":355,"wdth=62.5,wght=900":445,"wdth=62.5,wght=100":322,"default":450,"wght=100":400,"wght=704.9927":521},"y":0}},"ddhaguru":{"anchor_0":{"x":{"wght=704.9927":658,"default":575,"wdth=62.5,wght=900":542,"wght=900":671,"wdth=62.5,wght=100":386,"wdth=62.5":435,"wght=100":502},"y":0}},"nnaguru":{"anchor_0":{"x":{"wght=100":459,"wght=704.9927":582,"default":505,"wght=900":624,"wdth=62.5":404,"wdth=62.5,wght=100":374,"wdth=62.5,wght=900":491},"y":0}},"taguru":{"anchor_0":{"x":{"wght=900":529,"default":413,"wght=704.9927":478,"wdth=62.5,wght=900":390,"wght=100":369,"wdth=62.5":316,"wdth=62.5,wght=100":289},"y":0}},"thaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":418,"wght=704.9927":648,"wght=900":681,"wdth=62.5":455,"wght=100":546,"wdth=62.5,wght=900":532,"default":598},"y":0}},"daguru":{"anchor_0":{"x":{"wght=704.9927":605,"wdth=62.5,wght=100":374,"default":526,"wdth=62.5,wght=900":504,"wdth=62.5":428,"wght=100":460,"wght=900":629},"y":0}},"dhaguru":{"anchor_0":{"x":{"default":593,"wght=900":676,"wdth=62.5":450,"wdth=62.5,wght=100":416,"wght=704.9927":643,"wdth=62.5,wght=900":527,"wght=100":543},"y":0}},"naguru":{"anchor_0":{"x":{"default":508,"wght=704.9927":582,"wght=100":463,"wght=900":628,"wdth=62.5":395,"wdth=62.5,wght=100":367,"wdth=62.5,wght=900":486},"y":0}},"paguru":{"anchor_0":{"x":{"wght=100":543,"wght=704.9927":643,"wdth=62.5":446,"wdth=62.5,wght=100":416,"wght=900":671,"default":593,"wdth=62.5,wght=900":522},"y":0}},"phaguru":{"anchor_0":{"x":{"wght=704.9927":589,"default":508,"wdth=62.5,wght=100":354,"wdth=62.5,wght=900":495,"wght=100":452,"wght=900":612,"wdth=62.5":386},"y":0}},"baguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":429,"default":608,"wght=900":690,"wdth=62.5,wght=900":537,"wght=704.9927":657,"wdth=62.5":458,"wght=100":565},"y":0}},"bhaguru":{"anchor_0":{"x":{"wdth=62.5":339,"wdth=62.5,wght=100":304,"default":448,"wght=704.9927":519,"wght=900":569,"wght=100":392},"y":0}},"maguru":{"anchor_0":{"x":{"wght=704.9927":631,"wght=100":544,"default":596,"wdth=62.5,wght=100":412,"wdth=62.5,wght=900":542,"wdth=62.5":439,"wght=900":651},"y":0}},"yaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":488,"wght=704.9927":763,"default":695,"wdth=62.5":526,"wdth=62.5,wght=900":653,"wght=900":809,"wght=100":644},"y":0}},"raguru":{"anchor_0":{"x":{"default":525,"wght=100":456,"wdth=62.5,wght=900":481,"wght=900":625,"wght=704.9927":613,"wdth=62.5":389,"wdth=62.5,wght=100":353},"y":0}},"laguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":497,"wght=900":636,"wdth=62.5,wght=100":376,"wght=704.9927":597,"wght=100":473,"default":528,"wdth=62.5":406},"y":0}},"lanuktaguru":{"anchor_0":{"x":{"wdth=62.5":406,"wdth=62.5,wght=100":376,"wght=704.9927":597,"default":528,"wght=100":473,"wght=900":636,"wdth=62.5,wght=900":497},"y":0}},"vaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":352,"wght=100":428,"wdth=62.5,wght=900":478,"wght=704.9927":543,"wght=900":574,"default":485,"wdth=62.5":386},"y":0}},"sanuktaguru":{"anchor_0":{"x":{"wght=900":688,"wdth=62.5":449,"wdth=62.5,wght=100":415,"wght=704.9927":651,"wdth=62.5,wght=900":568,"default":603,"wght=100":549},"y":0}},"saguru":{"anchor_0":{"x":{"wdth=62.5":443,"wdth=62.5,wght=100":415,"wdth=62.5,wght=900":548,"wght=100":549,"wght=704.9927":636,"default":596,"wght=900":671},"y":0}},"haguru":{"anchor_0":{"x":{"default":522,"wght=704.9927":610,"wdth=62.5":389,"wdth=62.5,wght=900":477,"wght=900":621,"wght=100":453,"wdth=62.5,wght=100":350},"y":0}},"khanuktaguru":{"anchor_0":{"x":{"wdth=62.5":451,"wght=704.9927":648,"wght=900":676,"default":598,"wdth=62.5,wght=900":527,"wght=100":545,"wdth=62.5,wght=100":420},"y":0}},"ganuktaguru":{"anchor_0":{"x":{"wght=900":887,"wght=704.9927":845,"wdth=62.5,wght=100":517,"default":750,"wght=100":674,"wdth=62.5":571,"wdth=62.5,wght=900":710},"y":0}},"januktaguru":{"anchor_0":{"x":{"wght=704.9927":678,"default":626,"wght=900":720,"wght=100":562,"wdth=62.5":474,"wdth=62.5,wght=100":421,"wdth=62.5,wght=900":600},"y":0}},"rraguru":{"anchor_0":{"x":{"wght=900":592,"wdth=62.5,wght=900":444,"wght=100":472,"wdth=62.5":391,"wght=704.9927":561,"default":515,"wdth=62.5,wght=100":364},"y":0}},"phanuktaguru":{"anchor_0":{"x":{"wdth=62.5":386,"default":524,"wdth=62.5,wght=100":354,"wght=100":452,"wght=704.9927":596,"wght=900":612,"wdth=62.5,wght=900":495},"y":0}},"kanuktaguru":{"anchor_0":{"x":{"wght=704.9927":692,"wght=100":620,"default":655,"wght=900":718,"wdth=62.5":486,"wdth=62.5,wght=100":467,"wdth=62.5,wght=900":553},"y":0}},"ghanuktaguru":{"anchor_0":{"x":{"wdth=62.5":570,"wght=704.9927":815,"default":757,"wght=100":706,"wght=900":863,"wdth=62.5,wght=100":541,"wdth=62.5,wght=900":721},"y":0}},"nganuktaguru":{"anchor_0":{"x":{"wght=900":662,"wght=100":544,"wdth=62.5,wght=900":529,"wdth=62.5":448,"default":586,"wght=704.9927":634,"wdth=62.5,wght=100":433},"y":0}},"canuktaguru":{"anchor_0":{"x":{"wght=704.9927":702,"default":604,"wght=900":685,"wdth=62.5":450,"wdth=62.5,wght=900":528,"wdth=62.5,wght=100":404,"wght=100":519},"y":0}},"chanuktaguru":{"anchor_0":{"x":{"wght=900":678,"wdth=62.5":446,"wdth=62.5,wght=100":406,"wght=704.9927":653,"wdth=62.5,wght=900":513,"default":576,"wght=100":547},"y":0}},"jhanuktaguru":{"anchor_0":{"x":{"wght=704.9927":533,"wdth=62.5":379,"wght=900":546,"wdth=62.5,wght=100":360,"wdth=62.5,wght=900":446,"wght=100":458,"default":498},"y":0}},"nyanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":478,"default":485,"wght=900":574,"wdth=62.5,wght=100":352,"wght=100":428,"wdth=62.5":386,"wght=704.9927":533},"y":0}},"ttanuktaguru":{"anchor_0":{"x":{"wght=704.9927":572,"wght=100":444,"wdth=62.5":390,"default":507,"wght=900":588,"wdth=62.5,wght=100":368,"wdth=62.5,wght=900":476},"y":0}},"tthanuktaguru":{"anchor_0":{"x":{"wdth=62.5":402,"wght=900":631,"wght=100":454,"wdth=62.5,wght=100":364,"wdth=62.5,wght=900":491,"default":519,"wght=704.9927":588},"y":0}},"ddhanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":386,"wght=900":671,"wdth=62.5,wght=900":542,"wght=100":502,"default":594,"wght=704.9927":661,"wdth=62.5":435},"y":0}},"nnanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":374,"wdth=62.5,wght=900":491,"wght=704.9927":612,"default":545,"wght=100":459,"wght=900":624,"wdth=62.5":404},"y":0}},"tanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":289,"wdth=62.5,wght=900":400,"wght=704.9927":478,"wght=100":369,"wdth=62.5":326,"wght=900":529,"default":413},"y":0}},"thanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":532,"wdth=62.5,wght=100":418,"wght=100":546,"wdth=62.5":455,"wght=900":681,"wght=704.9927":648,"default":598},"y":0}},"danuktaguru":{"anchor_0":{"x":{"wght=100":460,"default":526,"wdth=62.5,wght=100":374,"wght=704.9927":593,"wght=900":629,"wdth=62.5":428,"wdth=62.5,wght=900":504},"y":0}},"dhanuktaguru":{"anchor_0":{"x":{"default":593,"wdth=62.5":450,"wght=900":676,"wdth=62.5,wght=100":416,"wdth=62.5,wght=900":527,"wght=100":543,"wght=704.9927":643},"y":0}},"nanuktaguru":{"anchor_0":{"x":{"wght=900":628,"default":508,"wdth=62.5":395,"wdth=62.5,wght=100":367,"wght=704.9927":582,"wdth=62.5,wght=900":486,"wght=100":463},"y":0}},"panuktaguru":{"anchor_0":{"x":{"wdth=62.5":446,"wdth=62.5,wght=100":416,"wght=704.9927":643,"wght=100":543,"wdth=62.5,wght=900":522,"default":593,"wght=900":671},"y":0}},"banuktaguru":{"anchor_0":{"x":{"wght=900":690,"wdth=62.5":458,"wght=704.9927":657,"wdth=62.5,wght=100":429,"wdth=62.5,wght=900":537,"wght=100":565,"default":608},"y":0}},"bhanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":304,"wdth=62.5,wght=900":448,"wght=704.9927":519,"wght=100":392,"wght=900":569,"default":452,"wdth=62.5":339},"y":0}},"manuktaguru":{"anchor_0":{"x":{"wght=704.9927":631,"wdth=62.5,wght=900":542,"wght=900":651,"wght=100":544,"default":596,"wdth=62.5":439,"wdth=62.5,wght=100":412},"y":0}},"yanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":488,"wdth=62.5":526,"default":695,"wght=100":644,"wdth=62.5,wght=900":653,"wght=704.9927":763,"wght=900":809},"y":0}},"ranuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=100":353,"wdth=62.5,wght=900":481,"wght=704.9927":623,"wght=100":456,"wght=900":625,"wdth=62.5":389,"default":525},"y":0}},"vanuktaguru":{"anchor_0":{"x":{"wght=900":574,"wght=100":428,"wdth=62.5":386,"default":495,"wdth=62.5,wght=900":478,"wdth=62.5,wght=100":352,"wght=704.9927":533},"y":0}},"hanuktaguru":{"anchor_0":{"x":{"wdth=62.5,wght=900":477,"wght=900":621,"wght=704.9927":620,"wdth=62.5":389,"wdth=62.5,wght=100":350,"default":523,"wght=100":453},"y":0}}}]},"1":[{"type":"single","uni0952":{"y_placement":-375}},null]},"6":{"0":{"type":["mark_to_base","chained_sequence_context"],"marks":[{"anchor_0":{"adakbindiguru":{"x":{"wght=900":-70,"wdth=62.5,wght=900":-54,"wght=100":-94,"default":-89,"wdth=62.5":-64,"wght=704.9927":-80,"wdth=62.5,wght=100":-77},"y":622},"bindiguru":{"x":{"wght=100":-95,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wght=704.9927":-80,"wdth=62.5,wght=900":-54,"default":-90,"wght=900":-70},"y":622},"eematraguru":{"x":{"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=900":-54,"wght=100":-94,"default":-89,"wdth=62.5,wght=100":-77,"wght=704.9927":-80},"y":622},"aimatraguru":{"x":{"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"default":-89,"wght=704.9927":-80,"wght=900":-70,"wght=100":-94,"wdth=62.5":-64},"y":622},"oomatraguru":{"x":{"wght=704.9927":-80,"default":-89,"wght=900":-70,"wght=100":-94,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"wdth=62.5":-64},"y":622},"aumatraguru":{"x":{"wdth=62.5":-64,"default":-89,"wght=704.9927":-80,"wght=900":-70,"wdth=62.5,wght=900":-54,"wght=100":-94,"wdth=62.5,wght=100":-77},"y":622},"tippiguru":{"x":{"wght=100":-94,"wght=704.9927":-80,"wdth=62.5,wght=100":-77,"wght=900":-70,"wdth=62.5,wght=900":-54,"default":-89,"wdth=62.5":-64},"y":622},"eematrabindiguru":{"x":{"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"default":-89,"wght=704.9927":-80,"wght=100":-94},"y":622},"aimatrabindiguru":{"x":{"wdth=62.5,wght=900":-54,"wght=100":-94,"wght=704.9927":-80,"default":-89,"wdth=62.5":-64,"wght=900":-70,"wdth=62.5,wght=100":-77},"y":622},"oomatrabindiguru":{"x":{"wght=900":-70,"wdth=62.5,wght=100":-77,"wght=100":-94,"wdth=62.5":-64,"wdth=62.5,wght=900":-54,"wght=704.9927":-80,"default":-89},"y":622},"aumatrabindiguru":{"x":{"wght=704.9927":-80,"wght=900":-70,"wdth=62.5,wght=900":-54,"default":-89,"wght=100":-94,"wdth=62.5":-64,"wdth=62.5,wght=100":-77},"y":622},"oomatra1guru":{"x":{"default":-89,"wght=900":-79,"wght=704.9927":-80,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wght=100":-94,"wdth=62.5,wght=900":-54},"y":622},"oomatrabindi1guru":{"x":{"wght=900":-79,"wdth=62.5,wght=900":-54,"wght=100":-94,"wght=704.9927":-80,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"default":-89},"y":622},"eematraaddakguru":{"x":{"wdth=62.5":-64,"default":-89,"wght=100":-94,"wght=704.9927":-80,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"wght=900":-70},"y":622},"aimatraaddakguru":{"x":{"default":-89,"wght=100":-94,"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=100":-70,"wdth=62.5,wght=900":-54,"wght=704.9927":-80},"y":622},"oomatraaddakguru":{"x":{"wdth=62.5":-64,"wght=900":-70,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"default":-89,"wght=704.9927":-80,"wght=100":-94},"y":622},"aumatraaddakguru":{"x":{"wdth=62.5":-64,"wght=704.9927":-80,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"wght=100":-94,"default":-89,"wght=900":-70},"y":622},"uni0951":{"x":{"wdth=62.5,wght=100":-77,"wght=100":-94,"default":-89,"wght=704.9927":-80,"wdth=62.5,wght=900":-54,"wdth=62.5":-64,"wght=900":-70},"y":622}},"anchor_1":{"nuktaguru":{"x":-283,"y":0},"umatraguru":{"x":{"wdth=62.5,wght=900":-264,"default":-305,"wdth=62.5":-231,"wght=100":-293,"wght=900":-332,"wdth=62.5,wght=100":-220},"y":{"wdth=62.5":3,"default":0}},"uumatraguru":{"x":{"wght=900":-332,"wdth=62.5,wght=100":-220,"wdth=62.5,wght=900":-264,"wdth=62.5":-231,"default":-305,"wght=100":-293},"y":0},"uni0952":{"x":{"wght=900":-271,"wdth=62.5,wght=100":-199,"wdth=62.5":-200,"wdth=62.5,wght=900":-231,"wght=100":-248,"wght=704.9927":-261,"default":-249},"y":0}},"anchor_2":{"udaatguru":{"x":{"wdth=62.5,wght=900":-204,"default":-170,"wght=704.9927":-214,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=900":-247,"wght=100":-148},"y":0},"yakashguru":{"x":{"wght=100":-148,"wdth=62.5,wght=900":-204,"default":-170,"wght=900":-247,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"wght=704.9927":-214},"y":0},"rasubscriptguru":{"x":{"wdth=62.5":-139,"wght=900":-247,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"wght=100":-148,"default":-170},"y":0},"hasubscriptguru":{"x":{"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=100":-148,"wdth=62.5":-139,"default":-170,"wght=704.9927":-214,"wght=900":-247},"y":0},"vasubscriptguru":{"x":{"wdth=62.5,wght=100":-103,"wght=100":-148,"wght=704.9927":-214,"wdth=62.5,wght=900":-204,"default":-170,"wght=900":-247,"wdth=62.5":-139},"y":0},"rasubscripthalantguru":{"x":{"wght=900":-247,"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"default":-170,"wght=100":-148,"wdth=62.5,wght=900":-204},"y":0},"hasubscripthalantguru":{"x":{"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"default":-170,"wght=900":-247,"wdth=62.5":-139,"wght=100":-148},"y":0},"rasubscriptuguru":{"x":{"wght=900":-247,"default":-170,"wdth=62.5":-140,"wght=100":-148,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wdth=62.5,wght=100":-103},"y":0},"rasubscriptuuguru":{"x":{"default":-170,"wdth=62.5":-139,"wght=704.9927":-214,"wght=100":-148,"wdth=62.5,wght=100":-103,"wght=900":-247,"wdth=62.5,wght=900":-204},"y":0},"rasubscript1guru":{"x":{"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"wght=100":-148},"y":0},"hasubscript1guru":{"x":{"wdth=62.5":-139,"wght=100":-148,"wght=900":-247,"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"default":-170,"wdth=62.5,wght=900":-204},"y":0},"vasubscript1guru":{"x":{"wght=900":-247,"wght=100":-148,"default":-170,"wght=704.9927":-214,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204},"y":0}}},null],"bases":[{"uni25CC":{"anchor_0":{"x":{"wdth=62.5,wght=100":296,"default":323,"wght=704.9927":349,"wght=100":310,"wght=900":371,"wdth=62.5":320,"wdth=62.5,wght=900":358},"y":622},"anchor_1":{"x":283,"y":0},"anchor_2":{"x":{"wdth=62.5":359,"default":378,"wght=704.9927":353,"wght=100":400,"wdth=62.5,wght=100":379,"wght=900":331,"wdth=62.5,wght=900":322},"y":0}}},null],"rules":[null,["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0 addakguru' lookup lookup_0"]]},"1":[null,{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0 addakguru' lookup lookup_0"]}],"2":[null,{"type":"chained_sequence_context","rules":["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0"]}],"3":[null,{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [aumatraguru aumatrabindiguru]' lookup lookup_0"]}],"4":[null,{"type":"chained_sequence_context","rules":["[NULL CR space adakbindiguru bindiguru visargaguru aguru aaguru iguru iiguru uguru uuguru eeguru aiguru ooguru auguru kaguru khaguru gaguru ghaguru ngaguru caguru chaguru jaguru jhaguru nyaguru ttaguru tthaguru ddaguru ddhaguru nnaguru taguru thaguru daguru dhaguru naguru paguru phaguru baguru bhaguru maguru yaguru raguru laguru lanuktaguru vaguru sanuktaguru saguru haguru nuktaguru aamatraguru imatraguru iimatraguru umatraguru uumatraguru eematraguru aimatraguru oomatraguru aumatraguru halantguru udaatguru khanuktaguru ganuktaguru januktaguru rraguru phanuktaguru zeroguru oneguru twoguru threeguru fourguru fiveguru sixguru sevenguru eightguru nineguru tippiguru addakguru iriguru uraguru ekonkarguru yakashguru uni0A76 uni262C unuktaguru uunuktaguru kanuktaguru ghanuktaguru nganuktaguru canuktaguru chanuktaguru jhanuktaguru nyanuktaguru ttanuktaguru tthanuktaguru ddhanuktaguru nnanuktaguru tanuktaguru thanuktaguru danuktaguru dhanuktaguru nanuktaguru panuktaguru banuktaguru bhanuktaguru manuktaguru yanuktaguru ranuktaguru vanuktaguru hanuktaguru rasubscriptguru hasubscriptguru vasubscriptguru yapostformguru rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru karaguru rasubscript1guru hasubscript1guru vasubscript1guru phunuktaguru phuunuktaguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru addakbaraltguru umatralowguru uumatralowguru oomatra1guru oomatrabindi1guru uuUIguru uumatraUIguru udaatUIguru yakashUIguru uunuktaUIguru hasubscriptUIguru vasubscriptUIguru rasubscripthalantUIguru hasubscripthalantUIguru vasubscripthalantUIguru udaathalantUIguru yakashhalantUIguru rasubscriptuUIguru hasubscriptuUIguru vasubscriptuUIguru udaatuUIguru yakashuUIguru rasubscriptuuUIguru hasubscriptuuUIguru vasubscriptuuUIguru udaatuuUIguru yakashuuUIguru hasubscript1UIguru vasubscript1UIguru phuunuktaUIguru uubindiUIguru uubindinuktaUIguru umatralowUIguru uumatralowUIguru iiaddakguru uaddakguru uuaddakguru eeaddakguru aiaddakguru ooaddakguru auaddakguru iimatraaddakguru eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru unuktaaddakguru uunuktaaddakguru uuUIaddakguru uunuktaUIaddakguru uraaddakguru kaUIguru gaUIguru taUIguru baUIguru raUIguru laUIguru sanuktaUIguru umatralow1guru exclam.guru quotedbl.guru numbersign.guru percent.guru quotesingle.guru parenleft.guru parenright.guru asterisk.guru plus.guru comma.guru hyphen.guru period.guru slash.guru zero.guru one.guru two.guru three.guru four.guru five.guru six.guru seven.guru eight.guru nine.guru colon.guru semicolon.guru less.guru equal.guru greater.guru question.guru bracketleft.guru backslash.guru bracketright.guru asciicircum.guru underscore.guru braceleft.guru bar.guru braceright.guru asciitilde.guru uni00A0.guru uni00AD.guru endash.guru emdash.guru quoteleft.guru quoteright.guru quotedblleft.guru quotedblright.guru ellipsis.guru multiply.guru divide.guru minus.guru uni20B9.guru uni0951 uni0952 uni0964.guru uni0965.guru uniA830 uniA831 uniA832 uniA833 uniA834 uniA835 uniA836 uniA837 uniA838 uniA839 uni2010 uni200B uni200C uni200D uni25CC uaddakaltguru eematraaddakaltguru oomatraaddakaltguru] uni0951' lookup lookup_7"]}],"5":[null,{"type":"chained_sequence_context","rules":["[NULL CR space adakbindiguru bindiguru visargaguru aguru aaguru iguru iiguru uguru uuguru eeguru aiguru ooguru auguru kaguru khaguru gaguru ghaguru ngaguru caguru chaguru jaguru jhaguru nyaguru ttaguru tthaguru ddaguru ddhaguru nnaguru taguru thaguru daguru dhaguru naguru paguru phaguru baguru bhaguru maguru yaguru raguru laguru lanuktaguru vaguru sanuktaguru saguru haguru nuktaguru aamatraguru imatraguru iimatraguru umatraguru uumatraguru eematraguru aimatraguru oomatraguru aumatraguru halantguru udaatguru khanuktaguru ganuktaguru januktaguru rraguru phanuktaguru zeroguru oneguru twoguru threeguru fourguru fiveguru sixguru sevenguru eightguru nineguru tippiguru addakguru iriguru uraguru ekonkarguru yakashguru uni0A76 uni262C unuktaguru uunuktaguru kanuktaguru ghanuktaguru nganuktaguru canuktaguru chanuktaguru jhanuktaguru nyanuktaguru ttanuktaguru tthanuktaguru ddhanuktaguru nnanuktaguru tanuktaguru thanuktaguru danuktaguru dhanuktaguru nanuktaguru panuktaguru banuktaguru bhanuktaguru manuktaguru yanuktaguru ranuktaguru vanuktaguru hanuktaguru rasubscriptguru hasubscriptguru vasubscriptguru yapostformguru rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru karaguru rasubscript1guru hasubscript1guru vasubscript1guru phunuktaguru phuunuktaguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru addakbaraltguru umatralowguru uumatralowguru oomatra1guru oomatrabindi1guru uuUIguru uumatraUIguru udaatUIguru yakashUIguru uunuktaUIguru hasubscriptUIguru vasubscriptUIguru rasubscripthalantUIguru hasubscripthalantUIguru vasubscripthalantUIguru udaathalantUIguru yakashhalantUIguru rasubscriptuUIguru hasubscriptuUIguru vasubscriptuUIguru udaatuUIguru yakashuUIguru rasubscriptuuUIguru hasubscriptuuUIguru vasubscriptuuUIguru udaatuuUIguru yakashuuUIguru hasubscript1UIguru vasubscript1UIguru phuunuktaUIguru uubindiUIguru uubindinuktaUIguru umatralowUIguru uumatralowUIguru iiaddakguru uaddakguru uuaddakguru eeaddakguru aiaddakguru ooaddakguru auaddakguru iimatraaddakguru eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru unuktaaddakguru uunuktaaddakguru uuUIaddakguru uunuktaUIaddakguru uraaddakguru kaUIguru gaUIguru taUIguru baUIguru raUIguru laUIguru sanuktaUIguru umatralow1guru exclam.guru quotedbl.guru numbersign.guru percent.guru quotesingle.guru parenleft.guru parenright.guru asterisk.guru plus.guru comma.guru hyphen.guru period.guru slash.guru zero.guru one.guru two.guru three.guru four.guru five.guru six.guru seven.guru eight.guru nine.guru colon.guru semicolon.guru less.guru equal.guru greater.guru question.guru bracketleft.guru backslash.guru bracketright.guru asciicircum.guru underscore.guru braceleft.guru bar.guru braceright.guru asciitilde.guru uni00A0.guru uni00AD.guru endash.guru emdash.guru quoteleft.guru quoteright.guru quotedblleft.guru quotedblright.guru ellipsis.guru multiply.guru divide.guru minus.guru uni20B9.guru uni0951 uni0952 uni0964.guru uni0965.guru uniA830 uniA831 uniA832 uniA833 uniA834 uniA835 uniA836 uniA837 uniA838 uniA839 uni2010 uni200B uni200C uni200D uni25CC uaddakaltguru eematraaddakaltguru oomatraaddakaltguru] uni0952' lookup lookup_7"]}],"6":[null,{"type":"chained_sequence_context","rules":["[rasubscripthalantguru hasubscripthalantguru vasubscripthalantguru udaathalantguru yakashhalantguru rasubscriptuguru hasubscriptuguru vasubscriptuguru udaatuguru yakashuguru rasubscriptuuguru hasubscriptuuguru vasubscriptuuguru udaatuuguru yakashuuguru umatralowguru uumatralowguru umatralow1guru] uni0952' lookup lookup_8"]}],"7":[null,{"type":"chained_sequence_context","rules":["baguru'  aumatraaddakguru' lookup lookup_7 daguru'  oomatrabindiguru' "]}],"8":[null,{"type":"chained_sequence_context","rules":["baguru'  aumatraaddakguru' lookup lookup_7 dhaguru'  oomatrabindiguru' "]}],"9":[null,{"type":"chained_sequence_context","rules":["aumatraaddakguru' lookup lookup_8 ttaguru'  eematraguru' "]}],"10":[null,{"type":"chained_sequence_context","rules":["bindiguru' lookup lookup_7 iimatraguru"]}]},"7":[null,[{"type":"single","bindiguru":{"x_placement":{"wght=100":-100,"wght=704.9927":-200,"default":-150,"wght=900":-250,"wdth=62.5":-125,"wdth=62.5,wght=100":-75,"wdth=62.5,wght=900":-175}},"aumatraaddakguru":{"x_placement":{"wdth=62.5,wght=100":-22,"wdth=62.5,wght=900":-95,"wght=900":-85,"default":-70,"wght=100":-60,"wdth=62.5":-45}}},{"type":"single","uni0951":{"y_placement":275},"uni0952":{"y_placement":-355}}]],"8":[null,[{"type":"single","aumatraaddakguru":{"x_placement":{"wght=900":-35,"default":-1,"wdth=62.5,wght=900":-40}}},{"type":"single","uni0952":{"y_placement":-375}}]],"9":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"adakbindiguru":{"x":{"wdth=62.5,wght=100":-77,"wght=900":-70,"wght=704.9927":-80,"wdth=62.5":-64,"wdth=62.5,wght=900":-54,"default":-89,"wght=100":-94},"y":622},"bindiguru":{"x":{"default":-90,"wght=100":-95,"wdth=62.5":-64,"wght=704.9927":-80,"wght=900":-70,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54},"y":622},"eematraguru":{"x":{"wght=100":-94,"wdth=62.5,wght=900":-54,"wght=704.9927":-80,"default":-89,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wght=900":-70},"y":622},"aimatraguru":{"x":{"wght=900":-70,"default":-89,"wdth=62.5,wght=900":-54,"wdth=62.5,wght=100":-77,"wght=100":-94,"wdth=62.5":-64,"wght=704.9927":-80},"y":622},"oomatraguru":{"x":{"wght=704.9927":-80,"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wght=100":-94,"default":-89,"wdth=62.5,wght=900":-54},"y":622},"aumatraguru":{"x":{"wdth=62.5":-64,"default":-89,"wght=100":-94,"wght=704.9927":-80,"wght=900":-70,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54},"y":622},"tippiguru":{"x":{"wdth=62.5,wght=900":-54,"wght=704.9927":-80,"wght=900":-70,"default":-89,"wdth=62.5,wght=100":-77,"wght=100":-94,"wdth=62.5":-64},"y":622},"eematrabindiguru":{"x":{"wght=704.9927":-80,"wdth=62.5,wght=100":-77,"wght=900":-70,"wdth=62.5":-64,"default":-89,"wdth=62.5,wght=900":-54,"wght=100":-94},"y":622},"aimatrabindiguru":{"x":{"default":-89,"wght=100":-94,"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"wght=704.9927":-80},"y":622},"oomatrabindiguru":{"x":{"wght=900":-70,"wdth=62.5":-64,"wdth=62.5,wght=900":-54,"wdth=62.5,wght=100":-77,"default":-89,"wght=704.9927":-80,"wght=100":-94},"y":622},"aumatrabindiguru":{"x":{"default":-89,"wght=704.9927":-80,"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wght=900":-70,"wdth=62.5,wght=900":-54,"wght=100":-94},"y":622},"oomatra1guru":{"x":{"wdth=62.5,wght=900":-54,"wght=100":-94,"default":-89,"wdth=62.5":-64,"wght=900":-79,"wght=704.9927":-80,"wdth=62.5,wght=100":-77},"y":622},"oomatrabindi1guru":{"x":{"wdth=62.5":-64,"default":-89,"wght=100":-94,"wght=704.9927":-80,"wght=900":-79,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54},"y":622},"eematraaddakguru":{"x":{"wdth=62.5":-64,"wght=100":-94,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"default":-89,"wght=704.9927":-80,"wght=900":-70},"y":622},"aimatraaddakguru":{"x":{"wdth=62.5":-64,"wdth=62.5,wght=100":-70,"wdth=62.5,wght=900":-54,"default":-89,"wght=100":-94,"wght=704.9927":-80,"wght=900":-70},"y":622},"oomatraaddakguru":{"x":{"wdth=62.5,wght=100":-77,"wght=100":-94,"wdth=62.5,wght=900":-54,"default":-89,"wght=900":-70,"wght=704.9927":-80,"wdth=62.5":-64},"y":622},"aumatraaddakguru":{"x":{"wdth=62.5":-64,"wght=100":-94,"wdth=62.5,wght=100":-77,"wght=900":-70,"default":-89,"wght=704.9927":-80,"wdth=62.5,wght=900":-54},"y":622},"uni0951":{"x":{"wdth=62.5":-64,"wdth=62.5,wght=100":-77,"wdth=62.5,wght=900":-54,"default":-89,"wght=100":-94,"wght=900":-70,"wght=704.9927":-80},"y":622}}},"bases":{"uni25CC":{"anchor_0":{"x":{"wght=900":371,"wght=100":310,"wdth=62.5":320,"wdth=62.5,wght=100":296,"wght=704.9927":349,"wdth=62.5,wght=900":358,"default":323},"y":622}}}}]],"10":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"nuktaguru":{"x":-283,"y":0},"umatraguru":{"x":{"wdth=62.5":-231,"wdth=62.5,wght=100":-220,"default":-305,"wdth=62.5,wght=900":-264,"wght=900":-332,"wght=100":-293},"y":{"wdth=62.5":3,"default":0}},"uumatraguru":{"x":{"wdth=62.5,wght=100":-220,"wdth=62.5":-231,"wdth=62.5,wght=900":-264,"default":-305,"wght=100":-293,"wght=900":-332},"y":0},"uni0952":{"x":{"wdth=62.5,wght=900":-231,"default":-249,"wght=100":-248,"wght=704.9927":-261,"wght=900":-271,"wdth=62.5":-200,"wdth=62.5,wght=100":-199},"y":0}}},"bases":{"uni25CC":{"anchor_0":{"x":283,"y":0}}}}]],"11":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"udaatguru":{"x":{"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"default":-170,"wght=704.9927":-214},"y":0},"yakashguru":{"x":{"wdth=62.5":-139,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"default":-170,"wdth=62.5,wght=100":-103,"wght=704.9927":-214},"y":0},"rasubscriptguru":{"x":{"wght=100":-148,"wght=704.9927":-214,"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=900":-247,"wdth=62.5,wght=900":-204},"y":0},"hasubscriptguru":{"x":{"wdth=62.5,wght=100":-103,"default":-170,"wdth=62.5,wght=900":-204,"wght=900":-247,"wght=100":-148,"wght=704.9927":-214,"wdth=62.5":-139},"y":0},"vasubscriptguru":{"x":{"wght=900":-247,"default":-170,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"wght=100":-148},"y":0},"rasubscripthalantguru":{"x":{"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=704.9927":-214,"default":-170,"wght=100":-148,"wght=900":-247},"y":0},"hasubscripthalantguru":{"x":{"wdth=62.5":-139,"wght=100":-148,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"default":-170,"wght=704.9927":-214,"wght=900":-247},"y":0},"rasubscriptuguru":{"x":{"wght=100":-148,"wght=704.9927":-214,"default":-170,"wdth=62.5,wght=900":-204,"wght=900":-247,"wdth=62.5":-140,"wdth=62.5,wght=100":-103},"y":0},"rasubscriptuuguru":{"x":{"wdth=62.5,wght=100":-103,"wght=900":-247,"wght=100":-148,"wdth=62.5,wght=900":-204,"default":-170,"wdth=62.5":-139,"wght=704.9927":-214},"y":0},"rasubscript1guru":{"x":{"wdth=62.5":-139,"wght=704.9927":-214,"wdth=62.5,wght=100":-103,"wdth=62.5,wght=900":-204,"wght=100":-148,"wght=900":-247,"default":-170},"y":0},"hasubscript1guru":{"x":{"wght=100":-148,"default":-170,"wght=900":-247,"wdth=62.5,wght=100":-103,"wdth=62.5":-139,"wdth=62.5,wght=900":-204,"wght=704.9927":-214},"y":0},"vasubscript1guru":{"x":{"wdth=62.5,wght=900":-204,"default":-170,"wght=100":-148,"wght=704.9927":-214,"wdth=62.5":-139,"wdth=62.5,wght=100":-103,"wght=900":-247},"y":0}}},"bases":{"uni25CC":{"anchor_0":{"x":{"wdth=62.5,wght=900":322,"wght=704.9927":353,"default":378,"wght=100":400,"wght=900":331,"wdth=62.5":359,"wdth=62.5,wght=100":379},"y":0}}}}]]}},"GSUB":{"lookup_list":{"10":{"0":{"rules":{"0":["[tthaguru naguru tthanuktaguru nanuktaguru] [udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru]' lookup lookup_1","[bindiguru tippiguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru] addakguru' lookup lookup_11"],"1":["[tthaguru naguru tthanuktaguru nanuktaguru] [eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru]' lookup lookup_1",null],"2":["[tthaguru naguru tthanuktaguru nanuktaguru] [udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [oomatraguru oomatrabindiguru]' lookup lookup_11",null],"3":["[tthaguru naguru tthanuktaguru nanuktaguru] [oomatraguru oomatrabindiguru]' lookup lookup_11",null],"4":["[bindiguru tippiguru iibindiguru ubindiguru uubindiguru eebindiguru aibindiguru oobindiguru aubindiguru iimatrabindiguru eematrabindiguru aimatrabindiguru oomatrabindiguru aumatrabindiguru ubindinuktaguru uubindinuktaguru] addakguru' lookup lookup_11",null]}},"1":[null,{"type":"chained_sequence_context","rules":["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [oomatraguru oomatrabindiguru]' lookup lookup_11"]}],"2":[null,{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [oomatraguru oomatrabindiguru]' lookup lookup_11"]}],"3":[null,{"type":"chained_sequence_context","rules":["[udaatguru yakashguru rasubscript1guru hasubscript1guru vasubscript1guru] [tthaguru naguru tthanuktaguru nanuktaguru] [eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru]' lookup lookup_1"]}],"4":[null,{"type":"chained_sequence_context","rules":["[tthaguru naguru tthanuktaguru nanuktaguru] [eematraaddakguru aimatraaddakguru oomatraaddakguru aumatraaddakguru]' lookup lookup_1"]}]}}},"HVAR":{"item_variation_store_offset":{"item_variation_data_count":[5,3],"item_variation_data_offsets":{"0":{"item_count":[2,32],"region_index_count":[1,6],"region_indexes":{"0":[3,0],"1":[null,1],"2":[null,2],"3":[null,3],"4":[null,4],"5":[null,5]},"delta_sets":{"error":"There are 192 changes, check manually!"}},"1":{"item_count":[29,50],"word_delta_count":[0,1],"region_indexes":{"0":[0,3],"1":[1,0],"2":[2,1],"3":[3,2]},"delta_sets":{"error":"There are 350 changes, check manually!"}},"2":{"item_count":[43,8],"word_delta_count":[1,3],"region_indexes":{"0":[3,0],"1":[0,2],"2":[1,3],"3":[2,1]},"delta_sets":{"error":"There are 297 changes, check manually!"}},"3":[{"item_count":9,"word_delta_count":2,"region_index_count":6,"region_indexes":[0,3,1,2,4,5],"delta_sets":[255,117,255,100,51,76,41,202,255,210,255,193,0,5,9,19,255,230,255,88,44,78,0,249,0,0,255,112,0,0,7,28,0,0,255,141,0,0,4,7,0,0,255,255,0,0,1,1,0,0,255,116,0,27,0,48,0,0,255,116,19,34,0,45,0,0,255,116,32,47,0,27]},null],"4":[{"item_count":7,"word_delta_count":2,"region_index_count":6,"region_indexes":[2,3,0,1,4,5],"delta_sets":[0,137,255,77,180,86,22,2,0,182,255,29,183,102,18,15,0,134,255,123,185,69,18,53,0,146,254,131,186,72,28,24,0,137,255,62,189,88,16,254,0,131,255,81,219,78,2,11,0,132,255,69,221,71,244,57]},null]}},"advance_width_mapping_offset":{"entry_format":[21,5],"map_data":{"error":"There are 560 changes, check manually!"}}},"OS/2":{"fs_selection":[192,448]},"STAT":{"offset_to_axis_value_offsets":{"axis_value_offsets":{"1":{"value_name_id":["259","260"]},"2":{"value_name_id":["260","262"]},"4":{"value_name_id":["262","266"]},"5":{"value_name_id":["263","268"]},"6":{"value_name_id":["264","270"]},"7":{"value_name_id":["265","272"]},"8":{"value_name_id":["266","274"]},"9":{"value_name_id":["288","276"]},"10":{"value_name_id":["279","277"]},"11":{"value_name_id":["270","278"]},"12":{"value_name_id":["294","279"]}}}},"fvar":{"axis_instance_arrays_offset":{"instances":{"0":{"subfamily_name_id":["295","258"],"post_script_name_id":[null,"259"]},"1":{"subfamily_name_id":["296","260"],"post_script_name_id":[null,"261"]},"2":{"subfamily_name_id":["297","262"],"post_script_name_id":[null,"263"]},"3":{"subfamily_name_id":["298","264"],"post_script_name_id":[null,"265"]},"4":{"subfamily_name_id":["299","266"],"post_script_name_id":[null,"267"]},"5":{"subfamily_name_id":["300","268"],"post_script_name_id":[null,"269"]},"6":{"subfamily_name_id":["301","270"],"post_script_name_id":[null,"271"]},"7":{"subfamily_name_id":["302","272"],"post_script_name_id":[null,"273"]},"8":{"subfamily_name_id":["303","274"],"post_script_name_id":[null,"275"]}}},"instance_size":[12,14]},"head":{"checksum_adjustment":[3524870749,617100145],"modified":[3762755434,3813908536]},"hhea":{"caret_slope_rise":[1,1000]},"name":{"LICENSE_DESCRIPTION":{"en-US":["This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL","This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"]},"LICENSE_URL":{"en-US":["https://scripts.sil.org/OFL","https://openfontlicense.org"]},"256":{"en":[null,"Weight"]},"257":{"en":[null,"Width"]},"258":{"en":[null,"Thin"]},"259":{"en-US":["ExtraLight","NotoSansGurmukhi-Thin"],"en":[null,"NotoSansGurmukhi-Thin"]},"260":{"en-US":["Light","ExtraLight"],"en":[null,"ExtraLight"]},"262":{"en-US":["Medium","Light"],"en":[null,"Light"]},"263":{"en-US":["SemiBold","NotoSansGurmukhi-Light"],"en":[null,"NotoSansGurmukhi-Light"]},"264":{"en-US":["Bold","Regular"],"en":[null,"Regular"]},"265":{"en-US":["ExtraBold","NotoSansGurmukhi-Regular"],"en":[null,"NotoSansGurmukhi-Regular"]},"266":{"en-US":["Black","Medium"],"en":[null,"Medium"]},"270":{"en-US":["SemiCondensed","Bold"],"en":[null,"Bold"]},"279":{"en-US":["Condensed","Normal"]},"288":[{"en-US":"ExtraCondensed"},null],"294":[{"en-US":"Normal"},null],"295":[{"en":"Thin","en-US":"Thin"},null],"296":[{"en":"ExtraLight","en-US":"ExtraLight"},null],"297":[{"en":"Light","en-US":"Light"},null],"298":[{"en":"Regular","en-US":"Regular"},null],"299":[{"en":"Medium","en-US":"Medium"},null],"300":[{"en":"SemiBold","en-US":"SemiBold"},null],"301":[{"en":"Bold","en-US":"Bold"},null],"302":[{"en":"ExtraBold","en-US":"ExtraBold"},null],"303":[{"en":"Black","en-US":"Black"},null],"261":[null,{"en":"NotoSansGurmukhi-ExtraLight","en-US":"NotoSansGurmukhi-ExtraLight"}],"267":[null,{"en":"NotoSansGurmukhi-Medium","en-US":"NotoSansGurmukhi-Medium"}],"268":[null,{"en":"SemiBold","en-US":"SemiBold"}],"269":[null,{"en":"NotoSansGurmukhi-SemiBold","en-US":"NotoSansGurmukhi-SemiBold"}],"271":[null,{"en":"NotoSansGurmukhi-Bold","en-US":"NotoSansGurmukhi-Bold"}],"272":[null,{"en":"ExtraBold","en-US":"ExtraBold"}],"273":[null,{"en":"NotoSansGurmukhi-ExtraBold","en-US":"NotoSansGurmukhi-ExtraBold"}],"274":[null,{"en":"Black","en-US":"Black"}],"275":[null,{"en":"NotoSansGurmukhi-Black","en-US":"NotoSansGurmukhi-Black"}],"276":[null,{"en-US":"ExtraCondensed"}],"277":[null,{"en-US":"Condensed"}],"278":[null,{"en-US":"SemiCondensed"}]}},"cmap_diff":{}};
+		function buildLocation_statichtml(loc) {
+  // Set font styles to appropriate axis locations
+  let rule = document.styleSheets[0].cssRules[2].style;
+  let cssSetting = "";
+  let textLocation = "Default";
+  if (loc.coords) {
+    cssSetting = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `"${axis}" ${value}`;
+      })
+      .join(", ");
+    textLocation = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `${axis}=${value}`;
+      })
+      .join(" ");
+    rule.setProperty("font-variation-settings", cssSetting);
+  }
+
+  $("#main").empty();
+
+  $("#title").html(`<h4 class="mt-2">${textLocation}</h2>`);
+
+  if (loc.glyphs) {
+    $("#main").append("<h4>Modified Glyphs</h4>");
+    let glyphs = $("<div>");
+    for (let glyph of loc.glyphs) {
+      addAGlyph(glyph, glyphs);
+    }
+    $("#main").append(glyphs);
+  }
+
+  if (loc.words) {
+    $("#main").append("<h4>Modified Words</h4>");
+    for (let [script, words] of Object.entries(loc.words)) {
+      let scriptTitle = $(`<h6>${script}</h6>`);
+      $("#main").append(scriptTitle);
+      let worddiv = $("<div>");
+      for (let word of words) {
+        addAWord(word, worddiv);
+      }
+      $("#main").append(worddiv);
+    }
+  }
+  $('[data-toggle="tooltip"]').tooltip();
+}
+
+$(function () {
+  if (report["tables"]) {
+    diffTables(report);
+  }
+  if (report["kerns"]) {
+    diffKerns(report);
+  }
+  cmapDiff(report);
+  $('[data-toggle="tooltip"]').tooltip();
+  if (!report["locations"]) {
+    $("#title").html("<h4 class='mt-2'>No differences found</h4>");
+    $("#ui-nav").hide();
+    return;
+  }
+
+  for (var [index, loc] of report["locations"].entries()) {
+    var loc_nav = $(`<li class="nav-item">
+		<a class="nav-link text-secondary" href="#" data-index="${index}">${loc.location.replaceAll(
+      ",",
+      ",\u200b"
+    )}</a>
+	</li>`);
+    $("#locationnav").append(loc_nav);
+  }
+  $("#locationnav li a").on("click", function (e) {
+    $("#locationnav li a").removeClass("active");
+    $(this).addClass("active");
+    buildLocation_statichtml(report.locations[$(this).data("index")]);
+  });
+  $("#locationnav li a").eq(0).click();
+
+  document.styleSheets[0].cssRules[0].style.setProperty(
+    "src",
+    "url(old-NotoSansGurmukhi[wdth,wght].ttf)"
+  );
+  document.styleSheets[0].cssRules[1].style.setProperty(
+    "src",
+    "url(new-NotoSansGurmukhi[wdth,wght].ttf)"
+  );
+  setupAnimation();
+});
+
+	</script>
+</body>
+
+</html>
