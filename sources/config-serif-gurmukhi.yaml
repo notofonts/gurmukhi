@@ -1,3 +1,5 @@
+recipeProvider: noto
+buildUIVF: false
 buildVariable: true
 category:
 - SERIF

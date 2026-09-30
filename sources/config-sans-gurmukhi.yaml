@@ -1,3 +1,5 @@
+recipeProvider: noto
+buildUIVF: false
 buildVariable: true
 familyName: Noto Sans Gurmukhi
 googleFonts: true
